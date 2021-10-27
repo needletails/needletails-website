@@ -1,0 +1,23 @@
+export const state = () => ({
+  securityDrivenURL: null,
+  securityDrivenWebmURL: null,
+  securityDrivenOggURL: null,
+  solutionsURL: null,
+  solutionsWebmURL: null,
+  solutionsOggURL: null,
+  buildProjectURL: null,
+  buildProjectWebmURL: null,
+  buildProjectOggURL: null,
+  whatWeDoURL: null,
+  whatWeDoWebmURL: null,
+  whatWeDoOggURL: null,
+  cartisimCEOURL: null,
+  daRioURL: null,
+  facebook: null,
+  instagram: null,
+  twitter: null,
+  linkedin: null,
+  whatApp: null,
+  whatAppQRCode: null,
+  solutionsPosterURL: null
+})
