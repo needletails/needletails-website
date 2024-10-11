@@ -1,125 +1,67 @@
 <template>
   <footer class="footer">
+    <iframe
+  allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write"
+  frameborder="0"
+  height="300"
+  style="
+    margin-top: 40px;
+    margin-left: 40px;
+    width: 100%;
+    max-width: 300px;
+    overflow: hidden;
+    border-radius: 10px;
+  "
+  sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"
+  src="https://embed.music.apple.com/us/playlist/chillhop-radio/pl.0b8321c00f68421f8081e5913de51118"
+></iframe>
     <div class="affiliate">
       <affiliate />
     </div>
     <div class="web-footer">
-      <ul class="icon-list">
-        <a href="https://wa.me/message/GHW2OS2PURG4G1">
-          <img
-            class="wa"
-            :src="whatsApp"
-            alt="Whats App Logo"
-            oncontextmenu="return false;"
-          />
-        </a>
-
-        <a href="https://wa.me/message/GHW2OS2PURG4G1">
-          <img
-            class="qr-code"
-            :src="whatsAppQRCode"
-            alt="Whats App QR Code"
-            oncontextmenu="return false;"
-          />
-        </a>
-      </ul>
+      <ul class="icon-list" />
 
       <h3>
-        <router-link to="/privacy"> {{ $t("privacy") }} | </router-link>
-        <a href="https://www.cartisim.io"
-          >Cartisim&copy;{{ new Date().getFullYear() }}</a
+        <router-link to="/privacy"> {{ $t('privacy') }} | </router-link>
+        <a href="https://www.needletails.com"
+          >NeedleTails&copy;{{ new Date().getFullYear() }}</a
         >
-        <router-link to="/terms"> | {{ $t("terms") }}</router-link>
+        <router-link to="/terms"> | {{ $t('termsConditions') }} </router-link>
       </h3>
 
-      <ul class="icon-list">
-        <a href="https://www.instagram.com/cartisimdevelopment/">
-          <img :src="instagram" alt="instagram" oncontextmenu="return false;" />
-        </a>
-
-        <a href="https://twitter.com/cole97309135">
-          <img :src="twitter" alt="twitter" oncontextmenu="return false;" />
-        </a>
-
-        <a href="https://www.linkedin.com/in/cole-m-2b4878169">
-          <img :src="linkedin" alt="linkedin" oncontextmenu="return false;" />
-        </a>
-      </ul>
+      <ul class="icon-list" />
     </div>
 
     <div class="mobile-footer">
-      <ul class="icon-list">
-        <a href="https://wa.me/message/GHW2OS2PURG4G1">
-          <img
-            class="wa"
-            :src="whatsApp"
-            alt="Whats App Logo"
-            oncontextmenu="return false;"
-          />
-        </a>
+      <ul class="icon-list" />
 
-        <a href="https://wa.me/message/GHW2OS2PURG4G1">
-          <img
-            class="qr-code"
-            :src="whatsAppQRCode"
-            alt="Whats App QR Code"
-            oncontextmenu="return false;"
-          />
-        </a>
-      </ul>
-
-      <ul class="icon-list">
-        <a href="https://www.instagram.com/cartisimdevelopment/">
-          <img :src="instagram" alt="instagram" oncontextmenu="return false;" />
-        </a>
-
-        <a href="https://twitter.com/cole97309135">
-          <img :src="twitter" alt="twitter" oncontextmenu="return false;" />
-        </a>
-
-        <a href="https://www.linkedin.com/in/cole-m-2b4878169">
-          <img :src="linkedin" alt="linkedin" oncontextmenu="return false;" />
-        </a>
-      </ul>
+      <ul class="icon-list" />
 
       <h3>
-        <router-link to="/privacy"> {{ $t("privacy") }} | </router-link>
-        <a href="https://www.cartisim.io"
-          >Cartisim&copy;{{ new Date().getFullYear() }}</a
+        <router-link to="/privacy"> {{ $t('privacy') }} | </router-link>
+        <a href="https://www.needletails.com"
+          >NeedleTails&copy;{{ new Date().getFullYear() }}</a
         >
-        <router-link to="/terms"> | {{ $t("terms") }}</router-link>
+        <router-link to="/terms"> | {{ $t('termsConditions') }} </router-link>
       </h3>
     </div>
   </footer>
 </template>
 
 <script>
-import { computed } from "vue";
-import { useStore } from "vuex";
-import Affiliate from "../controls/Affiliate.vue";
+import { computed } from 'vue';
+import { useStore } from 'vuex';
+import Affiliate from '../controls/Affiliate.vue';
 export default {
   components: { Affiliate },
   setup() {
     const store = useStore();
 
-    const facebook = computed(() => store.getters["S3/facebook"]);
-    const instagram = computed(() => store.getters["S3/instagram"]);
-    const twitter = computed(() => store.getters["S3/twitter"]);
-    const linkedin = computed(() => store.getters["S3/linkedin"]);
-    const whatsApp = computed(() => store.getters["S3/whatsApp"]);
-    const whatsAppQRCode = computed(() => store.getters["S3/whatsAppQRCode"]);
-
     function appStoreClicked() {
-      window.location.replace("https://cartisim.io");
+      window.location.replace('https://needletails.com');
     }
     return {
       appStoreClicked,
-      facebook,
-      instagram,
-      twitter,
-      linkedin,
-      whatsApp,
-      whatsAppQRCode,
     };
   },
 };
@@ -140,10 +82,13 @@ export default {
   display: flex;
   overflow-x: auto;
   align-content: flex-start;
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
   justify-content: center;
 }
+
 .affiliate::-webkit-scrollbar {
   display: none;
 }
@@ -212,10 +157,12 @@ a {
     justify-content: space-around;
     flex-direction: column;
   }
+
   .icon-list > a > img {
     width: 25%;
     margin: 30px;
   }
+
   .qr-code {
     width: 70% !important;
   }
@@ -235,6 +182,7 @@ a {
   .web-footer > h3 {
     width: 40%;
   }
+
   .affiliate {
     justify-content: flex-start;
   }

@@ -3,9 +3,9 @@
     <div id="burger" :class="{ active: openMenu }" @click="setMenuOpenState()">
       <slot>
         <button type="button" class="burger-button" title="Menu">
-          <span class="burger-bar burger-bar--1"></span>
-          <span class="burger-bar burger-bar--2"></span>
-          <span class="burger-bar burger-bar--3"></span>
+          <span class="burger-bar burger-bar--1" />
+          <span class="burger-bar burger-bar--2" />
+          <span class="burger-bar burger-bar--3" />
         </button>
       </slot>
     </div>
@@ -13,8 +13,8 @@
 </template>
 
 <script>
-import { useStore } from "vuex";
-import { ref, computed } from "vue";
+import { useStore } from 'vuex';
+import { ref, computed } from 'vue';
 export default {
   setup() {
     const store = useStore();
@@ -81,7 +81,8 @@ button:focus {
   height: 2px;
   width: auto;
   margin-top: -1px;
-  transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1),
+  transition:
+    transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1),
     opacity 0.3s cubic-bezier(0.165, 0.84, 0.44, 1),
     background-color 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
 }

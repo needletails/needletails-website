@@ -1,75 +1,70 @@
-import axios from './auth-axios'
+import axios from './auth-axios';
 
 export default {
-  async get (url, request, responseType) {
+  async get(url, request, responseType) {
     try {
-      const response = await axios.instance
-        .get(url, {
-          params: request
+      const response = await axios.instance.get(
+        url,
+        {
+          params: request,
         },
         responseType
-        )
-      return await Promise.resolve(response)
+      );
+      return await Promise.resolve(response);
     } catch (error) {
-      return await Promise.reject(error)
+      return await Promise.reject(error);
     }
   },
-  async post (url, request, header) {
+  async post(url, request, header) {
     try {
-      const response = await axios.instance
-        .post(url, request, header)
-      return await Promise.resolve(response)
+      const response = await axios.instance.post(url, request, header);
+      return await Promise.resolve(response);
     } catch (error) {
-      return await Promise.reject(error)
+      return await Promise.reject(error);
     }
   },
-  async authGet (url, request) {
+  async authGet(url, request) {
     try {
-      const response = await axios.authInstance
-        .get(url, {
-          params: request
-        })
-      return await Promise.resolve(response)
+      const response = await axios.authInstance.get(url, {
+        params: request,
+      });
+      return await Promise.resolve(response);
     } catch (error) {
-      return await Promise.reject(error)
+      return await Promise.reject(error);
     }
   },
-  async authPost (url, request) {
+  async authPost(url, request) {
     try {
-      const response = await axios.authInstance
-        .post(url, request)
-      return await Promise.resolve(response)
+      const response = await axios.authInstance.post(url, request);
+      return await Promise.resolve(response);
     } catch (error) {
-      return await Promise.reject(error)
+      return await Promise.reject(error);
     }
   },
-  async put (url, request) {
+  async put(url, request) {
     try {
-      const response = await axios.authInstance
-        .put(url, request)
-      return await Promise.resolve(response)
+      const response = await axios.authInstance.put(url, request);
+      return await Promise.resolve(response);
     } catch (error) {
-      return await Promise.reject(error)
+      return await Promise.reject(error);
     }
   },
-  async patch (url, request) {
+  async patch(url, request) {
     try {
-      const response = await axios.authInstance
-        .patch(url, request)
-      return await Promise.resolve(response)
+      const response = await axios.authInstance.patch(url, request);
+      return await Promise.resolve(response);
     } catch (error) {
-      return await Promise.reject(error)
+      return await Promise.reject(error);
     }
   },
-  async delete (url, request) {
+  async delete(url, request) {
     try {
-      const response = await axios.authInstance
-        .delete(url, {
-          body: request
-        })
-      return await Promise.resolve(response)
+      const response = await axios.authInstance.delete(url, {
+        body: request,
+      });
+      return await Promise.resolve(response);
     } catch (error) {
-      return await Promise.reject(error)
+      return await Promise.reject(error);
     }
-  }
-}
+  },
+};

@@ -5,14 +5,14 @@
 </template>
 
 <script>
-import { defineComponent, computed, reactive } from "vue";
-import { useHead } from "@vueuse/head";
-import ProjectsComponent from "../components/ProjectsComponent.vue";
+import { defineComponent, computed, reactive } from 'vue';
+import { useHead } from '@vueuse/head';
+import ProjectsComponent from '../components/ProjectsComponent.vue';
 export default defineComponent({
   components: { ProjectsComponent },
   setup() {
     const siteData = reactive({
-      title: `Cartisim Development | Projects`,
+      title: `NeedleTails | Projects`,
       description: `Our Projects`,
       keywords: `Swift, Application Development, Web Development, Javascript, Cocoa, iOS, macOS, tvOS, vueJS, Vapor, SwiftNIO`,
     });
@@ -35,5 +35,4 @@ export default defineComponent({
 });
 </script>
 
-<style>
-</style>
+<style></style>

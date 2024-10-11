@@ -6,26 +6,26 @@
   for example. And we need in this case the IntersectionObserver.
 */
 const animatedScrollObserver = new IntersectionObserver(
-    (entries, animatedScrollObserver) => {
-      /*
+  (entries, animatedScrollObserver) => {
+    /*
         Looping through all entries, which are observed.
       */
-      entries.forEach((entry) => {
-        /*
+    entries.forEach((entry) => {
+      /*
           With this condition, we check whether the element is in the current viewport, 
           respectively if the entry intersects with the viewport.
           If true, then we add the enter class and call the unobserve function.
           Because we don’t have to observe it anymore.
         */
-        if(entry.isIntersecting) {
-          entry.target.classList.add('enter');
-          animatedScrollObserver.unobserve(entry.target);
-        }
-      });
-    }
-  );
-  
-  /*
+      if (entry.isIntersecting) {
+        entry.target.classList.add('enter');
+        animatedScrollObserver.unobserve(entry.target);
+      }
+    });
+  }
+);
+
+/*
     The object for our vue directive.
     Vue.js provides several hook functions you can use for a directive.
     We need only one of them, the bind function, 
@@ -33,9 +33,9 @@ const animatedScrollObserver = new IntersectionObserver(
     This is where you can do some setup work, for example.
     In this case we add a new CSS class to the element and observe it.
   */
-  export default {
-    beforeMount(el) {
-      el.classList.add('before-enter');
-      animatedScrollObserver.observe(el);
-    }
-  }
+export default {
+  beforeMount(el) {
+    el.classList.add('before-enter');
+    animatedScrollObserver.observe(el);
+  },
+};

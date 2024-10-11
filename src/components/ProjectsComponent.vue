@@ -1,211 +1,209 @@
 <template>
-  <div class="page-layout-2">
-    <div class="page-layout-2-top">
-      <h1 v-scrollanimation>{{ $t("projectTitle") }}</h1>
-      <h3 v-scrollanimation>{{ $t("projectText") }}</h3>
-    </div>
-    <div class="page-layout-2-flex-box">
-      <div v-scrollanimation>
-        <h2>{{ $t("project1Title") }}</h2>
-        <h3>{{ $t("project1") }}</h3>
-          <h4 class="visitButton" @click="caritisimApp()">Visit Website</h4>
-      </div>
-      <div v-scrollanimation>
-        <h2>{{ $t("project2Title") }}</h2>
-        <h3>{{ $t("project2") }}</h3>
-          <h4 class="visitButton" @click="cba()">Visit Website</h4>
-      </div>
-      <div v-scrollanimation>
-        <h2>{{ $t("project3Title") }}</h2>
-        <h3>{{ $t("project3") }}</h3>
-         <h4 class="visitButton" @click="cba()">Visit Website</h4>
-      </div>
-    </div>
+  <div class="projects">
+    <header class="header">
+      <h1>{{ projectsHeader }}</h1>
+      <p class="description">
+        {{ projectsDescription }}
+      </p>
+    </header>
+
+    <section class="overview">
+      <h2>Overview</h2>
+      <p>{{ projectsOverview }}</p>
+    </section>
+
+    <section class="project-items">
+      <GridView :items="gridItems" :columns="3" />
+      <!-- <GridView
+       :items="gridItems" 
+       :columns="3" 
+       :subtitle-color="'#0F52BA'" 
+       :subtitle-bg-color="'#00000000'" 
+       :externalUrl="externalUrl"/> -->
+    </section>
   </div>
 </template>
 
 <script>
+import GridView from './GridView.vue'; // Import the GridView component
+import { useI18n } from 'vue-i18n';
+import { computed } from 'vue';
+
 export default {
-  components: {},
+  components: {
+    GridView,
+  },
 
   setup() {
-    function goPro() {
-      window.location.replace("");
-    }
+    const { t } = useI18n(); // Destructure the t function from useI18n
 
-    function caritisimApp() {
-        window.location.replace("https://cartisimapp.io")
-    }
+    // Use t function to translate the keys
+    const projectsHeader = t('projectsHeader');
+    const projectsDescription = t('projectsDescription');
+    const projectsOverview = t('projectsOverview');
+    const getInTouch = t('getInTouch'); // Assuming you have this key in your translations
 
-    function cba() {
-        window.location.replace("https://github.com/cbajapan")
-    }
+    const createGridItem = (
+      applicationTitle,
+      headerKey,
+      descriptionKey,
+      imagePosition,
+      imagePath,
+      externalUrl
+    ) => ({
+      subtitle: t(applicationTitle),
+      header: t(headerKey),
+      image: imagePath ? require(`@/assets/${imagePath}`) : null, // Only require the image if imagePath is not empty
+      text: t(descriptionKey),
+      alt: t(`${applicationTitle} image`),
+      color: '#000000',
+      fontColor: '#FFFFFF',
+      imagePosition,
+      externalUrl,
+    });
+
+    const gridItems = computed(() => [
+      createGridItem(
+        'projectTitle_1',
+        'spinetailedKitProjectTitle',
+        'spinetailedKitProject',
+        'betweenText',
+        'SpineTailedKit.png',
+        'https://github.com/needle-tail'
+      ),
+      createGridItem(
+        'projectTitle_2',
+        'needletailKitProjectTitle',
+        'needletailKitProject',
+        'betweenText',
+        'NeedleTailKit.png',
+        'https://github.com/needle-tail'
+      ),
+      createGridItem(
+        'projectTitle_3',
+        'whiteTippedSocketsProjectTitle',
+        'whiteTippedSocketsProject',
+        'betweenText',
+        'WhiteTipped.png',
+        'https://github.com/needle-tail/white-tipped-sockets'
+      ),
+      createGridItem(
+        'projectTitle_4',
+        'projectHeader_4',
+        'swiftStompProject',
+        'top',
+        '',
+        'https://github.com/needle-tail'
+      ),
+      createGridItem(
+        'projectTitle_5',
+        'projectHeader_5',
+        'swiftHlsProject',
+        'top',
+        '',
+        'https://github.com/needle-tail'
+      ),
+      createGridItem(
+        'projectTitle_6',
+        'projectHeader_6',
+        'iapEntitlementEngineProject',
+        'top',
+        '',
+        'https://github.com/Cartisim/iap-entitlement-engine'
+      ),
+    ]);
 
     return {
-      goPro,
-      caritisimApp,
-      cba
+      projectsHeader,
+      projectsDescription,
+      projectsOverview,
+      gridItems,
     };
   },
 };
 </script>
 
-<style lang="css" scoped>
-.visitButton {
-   color: steelblue;
-   float: right;
-   padding: 20px;
-   transition: all .2s ease-in-out; 
-}
-
-.visitButton:hover {
-    cursor: pointer;
-transform: scale(1.1); 
-}
-
-.page-layout-2-flex-box > div > h2 {
-    text-align: left;
-    padding: 20px;
-}
-
-.page-layout-2-flex-box > div > h3 {
-    margin-left: 40px;
-}
-
-.page-layout-2 {
-  padding: 100px 100px 250px 100px;
-  top: 0;
-}
-.page-layout-2,
-.page-layout-2-flex-box,
-.page-layout-2-info,
-.page-layout-2-top,
-p {
-  background-color: rgb(26, 26, 26);
-  color: white;
-}
-
-.page-layout-2-flex-box > div > h3 {
-  margin-bottom: 60px;
-}
-
-.page-layout-2-flex-box > div {
-    margin: 40px auto;
-    width: 100%;
-    max-width: 90%;
-  background-color: rgb(18, 18, 18);
-  box-shadow: 0px 9px 9px 0 rgba(0, 0, 0, 0.25);
-  -moz-box-shadow: 0px 9px 9px 0 rgba(0, 0, 0, 0.25);
-  -webkit-box-shadow: 0px 9px 9px 0 rgba(0, 0, 0, 0.25);
-}
-
-.page-layout-2-flex-box > div:nth-child(1) {
-  transition-delay: 0.1s;
-}
-
-.page-layout-2-flex-box > div:nth-child(2) {
-  transition-delay: 0.2s;
-}
-
-.page-layout-2-flex-box > div:nth-child(3) {
-  transition-delay: 0.3s;
-}
-
-  .page-layout-2-flex-box {
-    flex-direction: column;
-  }
-
-.pro {
+<style scoped>
+.projects {
+  max-width: 1200px;
   margin: 0 auto;
-  padding-left: 100px;
-  transition-delay: 0.3s;
-  position: relative;
-  overflow: hidden;
-  background: linear-gradient(to right, red, red 50%, rgb(26, 26, 26) 50%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-size: 200% 100%;
-  background-position: 100%;
-  transition: background-position 275ms ease;
-  text-decoration: none;
-  text-align: right;
+  padding: 20px;
+  color: #e0e0e0;
+  /* Light text color for dark mode */
+  background-color: rgb(8, 8, 8);
+  /* Dark background color */
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+  /* Reduced margin to avoid overlap */
+}
+
+.header h1 {
+  font-size: 2.5em;
+  margin: 0;
+  color: #F5F3B5;
+}
+
+.header .description {
+  font-size: 1.2em;
+}
+
+.overview {
+  margin-bottom: 20px;
+  /* Space below the overview section */
+}
+
+.overview h2 {
+  font-size: 1.8em;
+  color: #33BCE5;
+  margin-bottom: 10px;
+}
+
+.project-items {
+  margin-bottom: 20px;
+  /* Space below the project items section */
+}
+
+.contact-button {
+  display: block;
+  margin: 20px auto;
+  background-color: #33BCE5;
+  color: white;
+  font-weight: 600;
+  /* Slightly lighter font weight */
+  padding: 12px 24px;
+  /* Increased padding for a more substantial feel */
+  border: none;
+  border-radius: 12px;
+  /* More rounded corners */
+  font-size: 16px;
+  /* Increased font size for better readability */
+  text-align: center;
+  /* Center text */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  /* Subtle shadow for depth */
   cursor: pointer;
+  transition:
+    background-color 0.3s,
+    transform 0.2s;
+  /* Added transform transition */
 }
 
-.pro:hover {
-  transition: 1s;
-  animation: linear infinite;
-  background-position: 0 100%;
-  cursor: pointer;
+.contact-button:hover {
+  background-color: #0051a8;
+  /* Darker blue on hover */
+  transform: translateY(-2px);
+  /* Slight lift effect on hover */
 }
 
-.before-enter {
-  opacity: 0;
-  transform: translateX(-100px);
-  transition: all 1s cubic-bezier(0.41, 0.01, 0.57, 1.61);
-}
-
-.enter {
-  opacity: 1;
-  transform: translateX(0px);
-}
-
-@media screen and (max-width: 855px) {
-  .page-layout-2 {
-    padding: 0 0 20px 0;
-  }
-
-  .page-layout-2-info {
-    padding: 0;
-    width: 90%;
-    margin: 40px auto;
-  }
-
-  h3 {
-    margin: 20px;
-  }
-}
-
-@media screen and (max-width: 1024px) {
-  .page-layout-2 {
-    padding: 0 0 0 0;
-  }
-  .page-layout-2-flex-box > div {
-    margin: 0x;
-  }
-}
-
-@media screen and (max-width: 1250px) {
-    .page-layout-2-top {
-       padding-top: 250px;
-  }
-  .page-layout-2 {
-    padding: 0 0 0 0;
-  }
-  .page-layout-2-flex-box > div {
-    margin: 0x;
-  }
-}
-
-
-
-@media screen and (min-width: 3840px) and (min-height: 2160px) {
-  h1 {
-    font-size: 6rem;
-  }
-
-  h2 {
-    font-size: 5rem;
-  }
-
-  h3 {
-    font-size: 4rem;
-    line-height: 5.7rem;
-  }
-
-  .page-layout-2-flex-box > div {
-    padding: 100px;
-  }
+.contact-button:active {
+  transform: translateY(0);
+  /* Reset lift effect on click */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  /* Reduce shadow on click */
 }
 </style>

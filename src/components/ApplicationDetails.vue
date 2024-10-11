@@ -1,46 +1,24 @@
 <template>
   <div class="application-details">
-    <div>
-      <video-player :videoURL="whatWeDoURL" :videoWebmURL="whatWeDoWebmURL" :videoOggURL="whatWeDoOggURL" />
-    </div>
     <div class="info-wrapper">
-      <h1 v-scrollanimation>{{ $t("applicationTitle") }}</h1>
+      <h1 v-scrollanimation>
+        {{ $t('applicationTitle') }}
+      </h1>
       <div v-scrollanimation>
-        <li>{{ $t("applicationListItemOne") }}</li>
-        <li>{{ $t("applicationListItemTwo") }}</li>
-        <li>{{ $t("applicationListItemThree") }}</li>
-        <li>{{ $t("applicationListItemFour") }}</li>
-        <li>{{ $t("applicationListItemFive") }}</li>
+        <li>{{ $t('applicationListItemOne') }}</li>
+        <li>{{ $t('applicationListItemTwo') }}</li>
+        <li>{{ $t('applicationListItemThree') }}</li>
+        <li>{{ $t('applicationListItemFour') }}</li>
+        <li>{{ $t('applicationListItemFive') }}</li>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import { useStore } from "vuex";
-import { computed } from "vue";
-import VideoPlayer from "./controls/VideoPlayer.vue";
 export default {
-  components: {
-    VideoPlayer,
-  },
-  setup() {
-    const store = useStore();
-    const whatWeDoURL = computed(
-      () => store.getters["S3/whatWeDoURL"]
-    );
-    const whatWeDoWebmURL = computed(
-      () => store.getters["S3/whatWeDoURL"]
-    );
-    const whatWeDoOggURL = computed(
-      () => store.getters["S3/whatWeDoURL"]
-    );
-    return {
-      whatWeDoURL,
-      whatWeDoWebmURL,
-      whatWeDoOggURL
-    };
-  },
+  components: {},
+  setup() {},
 };
 </script>
 
@@ -112,14 +90,14 @@ li {
 
 @media screen and (min-width: 3840px) and (min-height: 2160px) {
   .application-details {
-  padding-top: 500px;
+    padding-top: 500px;
   }
   h1 {
     font-size: 6rem;
-    
   }
-  h4, li {
-font-size: 4rem;
+  h4,
+  li {
+    font-size: 4rem;
   }
 }
 </style>

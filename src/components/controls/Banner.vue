@@ -1,7 +1,9 @@
 <template>
   <div class="banner">
-    <p><i>{{ $t("bannerMessage")}}</i></p>
-    <b><a href="https://cartisimapp.io">Cartisimapp.io</a></b>
+    <p>
+      <i>{{ $t('bannerMessage') }}</i>
+    </p>
+    <b><a href="https://needletails.com"></a>NeedleTails.com</b>
   </div>
 </template>
 
@@ -35,7 +37,7 @@ a {
 
 a:hover {
   color: black;
-  transition: .3s;
+  transition: 0.3s;
 }
 
 @media screen and (max-width: 768px) {
@@ -56,12 +58,13 @@ a:hover {
 }
 
 @media screen and (min-width: 3840px) and (min-height: 2160px) {
-.banner {
-  top: 270px;
-  height: 85px;
-}
-.banner > p, a {
-font-size: 2.2rem;
-}
+  .banner {
+    top: 270px;
+    height: 85px;
+  }
+  .banner > p,
+  a {
+    font-size: 2.2rem;
+  }
 }
 </style>

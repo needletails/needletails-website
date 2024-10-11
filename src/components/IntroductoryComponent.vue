@@ -1,47 +1,14 @@
 <template>
   <div class="intro">
     <div v-scrollanimation>
-      <h1>{{ $t("introHeaderOne") }}</h1>
-      <h3>{{ $t("introHeaderTwo") }}</h3>
-    </div>
-    <div>
-      <video-player
-        :videoURL="securityDrivenURL"
-        :videoWebmURL="securityDrivenWebmURL"
-        :videoOggURL="securityDrivenWebmURL"
-      />
+      <h1>{{ $t('introHeaderOne') }}</h1>
+      <h3>{{ $t('introHeaderTwo') }}</h3>
     </div>
   </div>
 </template>
 
 <script>
-import { computed } from "vue";
-import { useStore } from "vuex";
-import VideoPlayer from "./controls/VideoPlayer.vue";
-export default {
-  components: { VideoPlayer },
-  setup() {
-    const store = useStore();
-
-    const securityDrivenURL = computed(
-      () => store.getters["S3/securityDrivenURL"]
-    );
-
-    const securityDrivenWebmURL = computed(
-      () => store.getters["S3/securityDrivenWebmURL"]
-    );
-
-    const securityDrivenOggURL = computed(
-      () => store.getters["S3/securityDrivenOggURL"]
-    );
-
-    return {
-      securityDrivenURL,
-      securityDrivenWebmURL,
-      securityDrivenOggURL,
-    };
-  },
-};
+export default {};
 </script>
 
 <style lang="css" scoped>
@@ -54,7 +21,7 @@ h1 {
   position: relative;
   width: 90%;
   top: 250px;
-  background-color: rgb(27, 27, 27);
+  background-color: rgb(8, 8, 8);
   display: flex;
   justify-content: space-between;
   margin-left: auto;
@@ -135,4 +102,5 @@ svg {
     top: 500px;
   }
 }
-</style>>
+</style>
+>

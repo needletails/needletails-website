@@ -1,30 +1,28 @@
 <template>
   <div class="loader">
-<icon :height="logo.height" :width="logo.width" :name="logo.name" />
+    <icon :height="logo.height" :width="logo.width" :name="logo.name" />
   </div>
 </template>
 
 <script>
-import { ref } from "vue"
+import { ref } from 'vue';
 export default {
   setup() {
-    const logo = ref(
-      {
-        name: "logo",
-        height: 100,
-        width: 100
-      },
-    );
-      return {
-    logo
-  }
-  }
-}
+    const logo = ref({
+      name: 'logo',
+      height: 100,
+      width: 100,
+    });
+    return {
+      logo,
+    };
+  },
+};
 </script>
 
 <style lang="css" scoped>
 .loader {
-      display: flex;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -34,7 +32,9 @@ export default {
 }
 
 @keyframes animateHeart {
-     from { -moz-transform: rotate(0deg); }
+  from {
+    -moz-transform: rotate(0deg);
+  }
   0% {
     transform: rotate(0deg) scale(0.8);
   }
@@ -53,11 +53,15 @@ export default {
   100% {
     transform: rotate(45deg) scale(0.8);
   }
-    to { -moz-transform: rotate(360deg); }
+  to {
+    -moz-transform: rotate(360deg);
+  }
 }
 
 @-webkit-keyframes animateHeart {
-     from { -moz-transform: rotate(0deg); }
+  from {
+    -moz-transform: rotate(0deg);
+  }
   0% {
     transform: rotate(0deg) scale(0.8);
   }
@@ -76,11 +80,15 @@ export default {
   100% {
     transform: rotate(45deg) scale(0.8);
   }
-    to { -moz-transform: rotate(360deg); }
+  to {
+    -moz-transform: rotate(360deg);
+  }
 }
 
 @-moz-keyframes animateHeart {
-     from { -moz-transform: rotate(0deg); }
+  from {
+    -moz-transform: rotate(0deg);
+  }
   0% {
     transform: rotate(0deg) scale(0.8);
   }
@@ -99,6 +107,8 @@ export default {
   100% {
     transform: rotate(45deg) scale(0.8);
   }
-    to { -moz-transform: rotate(360deg); }
+  to {
+    -moz-transform: rotate(360deg);
+  }
 }
 </style>

@@ -1,107 +1,136 @@
 <template>
-  <div class="page-layout-2">
-    <div class="page-layout-2-top">
-      <h1 v-scrollanimation>{{ $t("termsTitle") }}</h1>
-    </div>
-    <div class="stretch-height">
-      <article
-        id="bodyWrapper"
-        class="outer-custom-box-color custom-box-shadow privacy"
-      >
-        <article>
-          <ul>
-            <h2 class="all_subheading">{{ $t("termsSubtitleOne") }}</h2>
-            <li class="all_paragraph">
-              {{ $t("termsParagraphOne") }}
-            </li>
+  <div class="terms-conditions">
+    <header class="header">
+      <h1>{{ termsTitle }}</h1>
+    </header>
 
-            <h2 class="all_subheading">{{ $t("termsSubtitleTwo") }}</h2>
-            <li class="all_paragraph">
-              {{ $t("termsParagraphTwo") }}
-            </li>
+    <section class="overview">
+      <h2>Effective Date</h2>
+      <p>{{ effectiveDate }}</p>
+    </section>
 
-            <h2 class="all_subheading">{{ $t("termsSubtitleThree") }}</h2>
-            <li class="all_paragraph">
-              {{ $t("termsParagraphThree") }}
-            </li>
+    <section class="introduction">
+      <h2>Introduction</h2>
+      <p>{{ welcomeMessage }}</p>
+      <p>{{ purpose }}</p>
+    </section>
 
-            <h2 class="all_subheading">{{ $t("termsSubtitleFour") }}</h2>
-            <li class="all_paragraph">
-              {{ $t("termsParagraphFour") }}
-            </li>
+    <section class="user-agreement">
+      <h2>User Agreement</h2>
+      <p>{{ userAgreement }}</p>
+    </section>
 
-            <h2 class="all_subheading">{{ $t("termsSubtitleFive") }}</h2>
-            <li class="all_paragraph">
-              {{ $t("termsParagraphFive") }}
-            </li>
+    <section class="prohibited-activities">
+      <h2>Prohibited Activities</h2>
+      <p>{{ prohibitedActivitiesOverview }}</p>
+      <ul>
+        <li v-for="(activity, index) in prohibitedActivities" :key="index">
+          {{ activity }}
+        </li>
+      </ul>
+    </section>
 
-            <h2 class="all_subheading">{{ $t("termsSubtitleSix") }}</h2>
-            <li class="all_paragraph">
-              {{ $t("termsParagraphSix") }}
-            </li>
+    <section class="limitation-of-liability">
+      <h2>Limitation of Liability</h2>
+      <p>{{ limitationOverview }}</p>
+      <p>{{ userAcknowledgment }}</p>
+    </section>
 
-            <h2 class="all_subheading">{{ $t("termsSubtitleSeven") }}</h2>
-            <li class="all_paragraph">
-              {{ $t("termsParagraphSeven") }}
-            </li>
-
-            <h2 class="all_subheading">{{ $t("termsSubtitleEight") }}</h2>
-            <li class="all_paragraph">
-              {{ $t("termsParagraphEight") }}
-            </li>
-            <h2 class="all_subheading">{{ $t("termsSubtitleNine") }}</h2>
-            <li class="all_paragraph">
-              {{ $t("termsParagraphNine") }}
-            </li>
-            <h2 class="all_subheading">{{ $t("termsParagraphOne") }}</h2>
-            <li class="all_paragraph">
-              {{ $t("termsParagraphOne") }}
-            </li>
-            <h2 class="all_subheading">{{ $t("termsSubtitleTen") }}</h2>
-            <li class="all_paragraph">
-              {{ $t("termsParagraphTen") }}
-            </li>
-            <h2 class="all_subheading">{{ $t("termsSubtitleEleven") }}</h2>
-            <li class="all_paragraph">
-              {{ $t("termsParagraphEleven") }}
-            </li>
-            <p class="all_paragraph">{{ $t("termsSubtitleTweleve") }}</p>
-          </ul>
-        </article>
-        <div id="swiftWrapper">
-          <h1 class="all_heading">{{ $t("termsParagraphThirteen") }}</h1>
-          <h4 class="all_paragraph">
-            {{ $t("termsSubtitleThirteen") }}
-          </h4>
-        </div>
-      </article>
-    </div>
+    <section class="changes-to-terms">
+      <h2>Changes to These Terms</h2>
+      <p>{{ changesToTerms }}</p>
+    </section>
   </div>
 </template>
 
 <script>
-export default {};
+import { computed } from 'vue';
+import { useI18n } from 'vue-i18n';
+
+export default {
+  setup() {
+    const { t } = useI18n();
+
+    // Translations
+    const termsTitle = t('terms.title');
+    const effectiveDate = t('terms.effectiveDate');
+    const welcomeMessage = t('terms.introduction.welcomeMessage');
+    const purpose = t('terms.introduction.purpose');
+    const userAgreement = t('terms.userAgreement');
+    const prohibitedActivitiesOverview = t(
+      'terms.prohibitedActivities.overview'
+    );
+
+    // Prohibited Activities
+    const prohibitedActivities = computed(() => {
+      return [
+        t('terms.prohibitedActivities.activity1'),
+        t('terms.prohibitedActivities.activity2'),
+        t('terms.prohibitedActivities.activity3'),
+        t('terms.prohibitedActivities.activity4'),
+      ];
+    });
+
+    const limitationOverview = t('terms.limitationOfLiability.overview');
+    const userAcknowledgment = t(
+      'terms.limitationOfLiability.userAcknowledgment'
+    );
+    const changesToTerms = t('terms.changesToTerms');
+
+    return {
+      termsTitle,
+      effectiveDate,
+      welcomeMessage,
+      purpose,
+      userAgreement,
+      prohibitedActivitiesOverview,
+      prohibitedActivities,
+      limitationOverview,
+      userAcknowledgment,
+      changesToTerms,
+    };
+  },
+};
 </script>
 
-<style lang="css" scoped>
-@media screen and (max-width: 768px) {
-  .page-layout-2-top > h1 {
-    text-align: center;
-    margin: 0 auto;
-  }
+<style scoped>
+.terms-conditions {
+  max-width: 800px;
+  margin: 0 auto;
+  padding-top: 200px;
+  color: #e0e0e0; /* Light text color for dark mode */
+  background-color: #000000; /* Dark background color */
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
 }
 
-@media screen and (min-width: 3840px) and (min-height: 2160px) {
- h1 {
-    font-size: 6rem;
-  }
-  p,
-  article {
-    font-size: 4rem;
-    line-height: 4.5rem;
-  }
-    h2 {
-    line-height: 5.5rem;
-  }
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.header h1 {
+  font-size: 2.5em;
+  margin: 0;
+  color: #F5F3B5; /* Adjusted color */
+}
+
+.overview,
+.introduction,
+.user-agreement,
+.prohibited-activities,
+.limitation-of-liability,
+.changes-to-terms {
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 1.8em;
+  color: #33BCE5;
+  margin-bottom: 10px;
+}
+
+ul {
+  margin: 10px 0 20px 20px;
 }
 </style>

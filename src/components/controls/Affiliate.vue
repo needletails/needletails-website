@@ -1,24 +1,25 @@
 <template>
   <div v-for="(affiliate, i) in contactInfo()" :key="i">
     <div
+      class="contact-img"
       @mouseover="showMessage()"
       @mouseleave="hideMessage()"
       @click="routeToPath(affiliate.path)"
-      class="contact-img"
     >
       <icon
         :height="affiliate.height"
         :width="affiliate.width"
         :name="affiliate.name"
       />
-      <!-- <p class="mouseoverMessage" v-if="isVisible"> {{ affiliate.message }}</p> -->
-      <p class="message">{{ affiliate.message }}</p>
+      <p class="message">
+        {{ affiliate.message }}
+      </p>
     </div>
   </div>
 </template>
 
 <script>
-import { ref } from "vue";
+import { ref } from 'vue';
 export default {
   setup() {
     let isVisible = ref(false);
@@ -26,21 +27,19 @@ export default {
     function contactInfo() {
       return [
         {
-          name: "doLogo",
+          name: 'doLogo',
           height: 160,
           width: 160,
-          path: "https://m.do.co/c/9186a24b57b1",
+          path: 'https://m.do.co/c/9186a24b57b1',
           message:
-            "Get Started on Digital Ocean with a $100, 60-day credit for new users",
+            'Get Started on Digital Ocean with a $100, 60-day credit for new users',
         },
         {
-          name: "nord",
+          name: 'github',
           height: 130,
           width: 130,
-          path:
-            "https://go.nordvpn.net/aff_c?offer_id=15&aff_id=53870&url_id=902",
-          message:
-            "NordVPN unblocks all major streaming services, with Military-grade AES-256-GCM encryption",
+          path: 'https://github.com/sponsors/needle-tail',
+          message: 'Become a Sponsor',
         },
       ];
     }

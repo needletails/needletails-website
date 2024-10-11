@@ -1,19 +1,19 @@
 <template>
-    <div>
-<terms-component />
+  <div>
+    <terms-component />
   </div>
 </template>
 
 <script>
-import TermsComponent from '../components/TermsComponent.vue'
-import { defineComponent, computed, reactive } from "vue";
-import { useHead } from "@vueuse/head";
+import TermsComponent from '../components/TermsComponent.vue';
+import { defineComponent, computed, reactive } from 'vue';
+import { useHead } from '@vueuse/head';
 export default defineComponent({
   components: { TermsComponent },
   setup() {
     const siteData = reactive({
-      title: `Cartisim Development | Terms`,
-      description: `Terms of Service for Cartisim`,
+      title: `NeedleTails | Terms`,
+      description: `Terms of Service for NeedleTails`,
       keywords: `Terms of Service Tutorials, Swift, Application Development, Web Development, Javascript, Cocoa, iOS, macOS, tvOS, vueJS, Vapor, SwiftNIO`,
     });
 
@@ -32,8 +32,7 @@ export default defineComponent({
       ],
     });
   },
-})
+});
 </script>
 
-<style lang="css" scoped>
-</style>
+<style lang="css" scoped></style>

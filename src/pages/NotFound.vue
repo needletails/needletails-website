@@ -1,18 +1,20 @@
 <template>
   <div class="nf">
-<div class="nf-top">
-      <h1 v-scrollanimation>{{ $t("nf") }}</h1>
-  </div>
+    <div class="nf-top">
+      <h1 v-scrollanimation>
+        {{ $t('nf') }}
+      </h1>
+    </div>
   </div>
 </template>
 
 <script>
-import { defineComponent, computed, reactive } from 'vue'
-import { useHead } from '@vueuse/head'
+import { defineComponent, computed, reactive } from 'vue';
+import { useHead } from '@vueuse/head';
 export default defineComponent({
   setup() {
     const siteData = reactive({
-      title: `Cartisim Development| 404`,
+      title: `NeedleTails| 404`,
       description: `Not Found`,
       keywords: `Tutorials, Swift, Application Development, Web Development, Javascript, Cocoa, iOS, macOS, tvOS, vueJS, Vapor, SwiftNIO`,
     });
@@ -45,8 +47,8 @@ export default defineComponent({
   min-height: calc(100vh - 0px);
 }
 .nf-top {
-    padding-top: 100px;
-  background-color: rgb(26, 26, 26)
+  padding-top: 100px;
+  background-color: rgb(26, 26, 26);
 }
 h1 {
   font-weight: bolder;

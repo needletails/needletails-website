@@ -1,42 +1,30 @@
 <template>
-  <div v-if="loaded">
-    <cartisim-header />
-    <banner />
-    <cartisim-sidebar />
-    <router-view
-      class="router-view"
-      :class="{ active: openMenu }"
-      v-slot="slotProps"
-    >
-      <transition name="fade-button" mode="out-in">
-        <component :is="slotProps.Component"></component>
-      </transition>
-    </router-view>
-    <cartisim-footer />
-    <snack-bar />
-  </div>
-  <div v-else>
+  <needletails-header />
+  <needletails-sidebar />
+  <router-view v-slot="slotProps" class="router-view" :class="{ active: openMenu }">
     <transition name="fade-button" mode="out-in">
-      <loader-component />
+      <component :is="slotProps.Component" />
     </transition>
-  </div>
+  </router-view>
+  <needletails-footer />
+  <snack-bar />
 </template>
 
 <script>
-import CartisimSidebar from "./components/base/Sidebar.vue";
-import CartisimHeader from "./components/base/Header.vue";
-import CartisimFooter from "./components/base/Footer.vue";
-import Banner from "./components/controls/Banner.vue";
-import SnackBar from "./components/controls/SnackBar.vue";
-import LoaderComponent from "./components/LoaderComponent.vue";
-import { ref, computed } from "vue";
-import { useStore } from "vuex";
+import NeedletailsSidebar from './components/base/Sidebar.vue';
+import NeedletailsHeader from './components/base/Header.vue';
+import NeedletailsFooter from './components/base/Footer.vue';
+import Banner from './components/controls/Banner.vue';
+import SnackBar from './components/controls/SnackBar.vue';
+import LoaderComponent from './components/LoaderComponent.vue';
+import { ref, computed } from 'vue';
+import { useStore } from 'vuex';
 export default {
-  name: "Cartisim",
+  name: 'NeedleTails',
   components: {
-    CartisimSidebar,
-    CartisimHeader,
-    CartisimFooter,
+    NeedletailsSidebar,
+    NeedletailsHeader,
+    NeedletailsFooter,
     Banner,
     SnackBar,
     LoaderComponent,
@@ -51,7 +39,7 @@ export default {
     const miniVariant = ref(false);
     const right = ref(true);
     const rightDrawer = ref(false);
-    const title = ref("Cartisim");
+    const title = ref('Needletails');
     const toggleCat = ref(false);
     const profileOpen = ref(false);
     const snackbar = ref(false);
@@ -62,17 +50,17 @@ export default {
     const fetchData = async () => {
       try {
         loaded.value = false;
-        await store.dispatch("S3/fetchS3Media").then(
-          await store.dispatch("S3/fetchFooterS3Media")
-        )
+        //Load data on appear
+        // await store.dispatch("").then(
+        //   await store.dispatch("")
+        // )
         loaded.value = true;
       } catch (e) {
         loaded.value = false;
-        console.log(e, "Error Fetching Data");
+        console.log(e, 'Error Fetching Data');
       }
     };
     fetchData();
-    // store.dispatch("TechArticles/fetchEagerArticles");
 
     return {
       clipped,
@@ -99,7 +87,7 @@ export default {
 <style>
 body,
 html {
-  background-color: rgb(18, 18, 18);
+  background-color: #000000;
   padding: 0;
   margin: 0;
 }
@@ -107,6 +95,7 @@ html {
 a:hover {
   color: #fff;
 }
+
 ul {
   padding: 0;
 }
@@ -122,7 +111,8 @@ img {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    'Helvetica Neue', Arial, sans-serif;
   -webkit-font-smoothing: antialiased !important;
   -moz-osx-font-smoothing: grayscale !important;
 }
@@ -134,6 +124,7 @@ h1 {
 h2 {
   font-weight: 400;
 }
+
 h3 {
   margin-left: 10px;
   line-height: 2rem;
@@ -159,6 +150,7 @@ h3 {
 .fade-button-leave-from {
   opacity: 1;
 }
+
 /*End Animations*/
 
 a {
@@ -197,13 +189,14 @@ li {
   padding-bottom: 40px;
   margin-left: 40px;
 }
-.page-layout-2-flex-box > div > h2 {
+
+.page-layout-2-flex-box>div>h2 {
   font-weight: bold;
   font-style: italic;
   text-align: center;
 }
 
-.page-layout-2-info > p {
+.page-layout-2-info>p {
   font-size: 1.4rem;
   font-weight: 400;
   line-height: 2rem;
@@ -220,12 +213,14 @@ li {
 .stretch-height {
   margin: 100px;
 }
+
 @media screen and (max-width: 768px) {
   .page-layout-2-info {
     padding: 20px !important;
     width: auto;
     margin: 0 auto;
   }
+
   .stretch-height {
     margin: 20px;
   }
@@ -234,32 +229,32 @@ li {
 @media screen and (min-width: 3840px) and (min-height: 2160px) {
   h1 {
     font-size: 6rem;
-    
   }
 
   h2 {
-font-size: 5rem;
+    font-size: 5rem;
   }
 
   h3 {
-font-size: 4rem;
-line-height: 5.7rem;
+    font-size: 4rem;
+    line-height: 5.7rem;
   }
 
   h4 {
-font-size: 3rem;
+    font-size: 3rem;
   }
 
-  p, article {
-font-size: 2rem;
+  p,
+  article {
+    font-size: 2rem;
   }
 
   .page-layout-2-top {
-padding-top: 300px;
+    padding-top: 300px;
   }
-.stretch-height {
-padding: 300px;
-}
 
+  .stretch-height {
+    padding: 300px;
+  }
 }
 </style>

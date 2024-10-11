@@ -4,13 +4,14 @@
 
 <script>
 export default {
- props: {
+  props: {
     title: {
       type: String,
+      default: '',
       required: false,
     },
   },
-}
+};
 </script>
 
 <style lang="css" scoped>

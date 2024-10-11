@@ -1,56 +1,52 @@
 <template>
   <div>
-    <div
-      class="sidebar-backdrop"
-      @click="setMenuOpenState()"
-      v-if="openMenu"
-    ></div>
+    <div v-if="openMenu" class="sidebar-backdrop" @click="setMenuOpenState()" />
     <transition name="slide">
       <div v-if="openMenu" class="side-bar">
         <div class="side-bar-header">
-          <li v-for="(item, i) in logoItem" :key="i">
-            <icon-button
-              :isCustomSVG="item.isCustomSVG"
-              :icon="item.icon"
-              :title="item.title"
-              :to="item.to"
-              :height="item.height"
-              :width="item.width"
-               :isClickable="item.isClickable"
-            />
-          </li>
-        </div>
-
-        <div class="list-items">
-          <div>
-            <li v-for="(item, i) in items" :key="i">
+          <ul>
+            <li v-for="(item, i) in logoItem" :key="i">
               <icon-button
-                :isCustomSVG="item.isCustomSVG"
+                :is-custom-s-v-g="item.isCustomSVG"
                 :icon="item.icon"
                 :title="item.title"
                 :to="item.to"
-                :externalPath="item.externalPath"
-                 :isClickable="item.isClickable"
+                :height="item.height"
+                :width="item.width"
+                :is-clickable="item.isClickable"
+              />
+            </li>
+          </ul>
+        </div>
+
+        <div class="list-items">
+          <ul>
+            <li v-for="(item, i) in items" :key="i">
+              <icon-button
+                :is-custom-s-v-g="item.isCustomSVG"
+                :icon="item.icon"
+                :title="item.title"
+                :to="item.to"
+                :external-path="item.externalPath"
+                :is-clickable="item.isClickable"
                 size="small"
-                style="height: 64px"
-                hover="hover"
+                class="menu-item"
               />
             </li>
             <li v-for="(item, i) in externalItems" :key="i">
               <icon-button
-                :isCustomSVG="item.isCustomSVG"
+                :is-custom-s-v-g="item.isCustomSVG"
                 :icon="item.icon"
                 :title="item.title"
-                :externalPath="item.externalPath"
-                 :isClickable="item.isClickable"
-                  :hasEmailClickHandler="item.hasEmailClickHandler"
+                :external-path="item.externalPath"
+                :is-clickable="item.isClickable"
+                :has-email-click-handler="item.hasEmailClickHandler"
                 :to="item.to"
                 size="small"
-                style="height: 64px"
-                hover="hover"
+                class="menu-item"
               />
             </li>
-          </div>
+          </ul>
         </div>
       </div>
     </transition>
@@ -58,43 +54,40 @@
 </template>
 
 <script>
-import { useStore } from "vuex";
-import { ref, computed } from "vue";
-import { useI18n } from "vue-i18n";
+import { useStore } from 'vuex';
+import { ref, computed } from 'vue';
+import { useI18n } from 'vue-i18n';
+
 export default {
   setup() {
     const store = useStore();
-    const { t } = useI18n({ useScope: "global" });
-    const isOpen = ref(false);
-    const menuItemOne = computed(() => t("menuItemOne"));
-    const menuItemTwo = computed(() => t("menuItemTwo"));
-    const menuItemThree = computed(() => t("menuItemThree"));
-    const menuItemFour = computed(() => t("menuItemFour"));
+    const { t } = useI18n({ useScope: 'global' });
 
     const logoItem = ref([
       {
-        title: "Cartisim",
-        icon: "logo",
-        to: "/",
+        title: 'NeedleTails',
+        icon: 'needleTailLeft',
+        to: '/',
         isCustomSVG: true,
-        height: 25,
-        width: 25,
+        height: 75,
+        width: 75,
         isClickable: true,
       },
     ]);
+
     const items = ref([
       {
-        icon: "mdiProgressQuestion",
-        title: menuItemOne.value,
-        to: "/why-cartisim",
+        icon: '',
+        title: t('menuItemOne'),
+        to: '/training',
         isCustomSVG: false,
         externalPath: false,
         isClickable: true,
       },
       {
-        icon: "mdiAccountCashOutline",
-        title: menuItemTwo.value,
-        to: "/solutions",
+        icon: '',
+        title: t('menuItemTwo'),
+        to: '/consultation',
         isCustomSVG: false,
         externalPath: false,
         isClickable: true,
@@ -103,37 +96,34 @@ export default {
 
     const externalItems = ref([
       {
-        icon: "mdiRoomServiceOutline",
-        title: menuItemThree.value,
+        icon: '',
+        title: t('menuItemThree'),
+        to: '/management',
         isCustomSVG: false,
+        externalPath: false,
         isClickable: true,
-        hasEmailClickHandler: true
       },
       {
-        icon: "mdiDownload",
-        title: menuItemFour.value,
+        icon: "",
+        title: t('menuItemFour'),
         isCustomSVG: false,
-        externalPath: true,
         isClickable: true,
-        to: "https://cartisimapp.io",
+        hasEmailClickHandler: true,
       },
     ]);
 
-    const openMenu = computed(() => {
-      return store.getters.openMenu;
-    });
+    const openMenu = computed(() => store.getters.openMenu);
 
     function setMenuOpenState() {
-      store.dispatch("setMenuOpenState");
+      store.dispatch('setMenuOpenState');
     }
 
     return {
-      isOpen,
       logoItem,
       items,
       externalItems,
       openMenu,
-      setMenuOpenState
+      setMenuOpenState,
     };
   },
 };
@@ -181,10 +171,10 @@ export default {
   width: 100vw;
   height: 100vh;
   position: fixed;
-  top: 64px;
+  top: 0;
   left: 0;
   cursor: pointer;
-  z-index: 999999998;
+  z-index: 999998; /* Adjusted z-index for backdrop */
 }
 
 .side-bar {
@@ -192,29 +182,33 @@ export default {
   width: 250px;
   height: 100%;
   top: 0;
-  background-color: #363636;
-  z-index: 999999999;
+  background-color: #2c2c2c; /* Darker background for better contrast */
+  color: #ffffff; /* White text for better readability */
+  z-index: 999999; /* Adjusted z-index for sidebar */
+  padding: 20px; /* Added padding for better spacing */
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5); /* Added shadow for depth */
 }
 
-.logoTitle > h2 {
-  color: white;
-}
 .side-bar-header {
   border-bottom: 1px solid hsla(0, 0%, 100%, 0.3);
-}
-
-.side-bar-header > li > ul {
-  margin-top: 20px;
-  margin-bottom: 5px;
-}
-
-.side-bar > div > li > div > ul > li.highlight {
-  color: lightsteelblue;
+  margin-bottom: 20px; /* Added margin for spacing */
+  text-align: center; /* Centered logo */
 }
 
 .list-items {
-  position: relative;
-  top: 30px;
+  margin-top: 20px; /* Added margin for spacing */
+}
+
+.menu-item {
+  display: flex; /* Flexbox for alignment */
+  align-items: center; /* Center items vertically */
+  padding: 10px; /* Added padding for clickable area */
+  border-radius: 5px; /* Rounded corners */
+  transition: background-color 0.3s; /* Smooth background transition */
+}
+
+.menu-item:hover {
+  background-color: rgba(255, 255, 255, 0.1); /* Light hover effect */
 }
 
 li {
@@ -224,7 +218,7 @@ li {
 
 @media screen and (max-width: 820px) {
   .side-bar {
-    overflow: scroll;
+    overflow-y: auto; /* Enable vertical scrolling on smaller screens */
   }
 }
 </style>

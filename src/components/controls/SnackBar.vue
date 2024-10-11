@@ -1,18 +1,24 @@
 <template>
   <transition name="fade">
-    <div class="snack" v-if="checkPolicies === false">
+    <div v-if="checkPolicies === false" class="snack">
       <div>
         <p>
-          {{ $t("policiesStatement") }}
+          {{ $t('privacyPolicy.introduction.welcomeMessage') }}
+          <br />
+          {{ $t('privacyPolicy.introduction.purpose') }}
         </p>
       </div>
       <div>
         <div>
-          <base-button @click="clicked()" :title="accept"></base-button>
+          <base-button :title="accept" @click="clicked()" />
         </div>
         <div class="policies">
-          <router-link to="/terms"> {{ $t("termsTitle") }}</router-link>
-          <router-link to="/privacy"> {{ $t("privacyTitle") }}</router-link>
+          <router-link to="/privacy">
+            {{ $t('privacyPolicy.title') }}
+          </router-link>
+          <router-link to="/terms">
+            {{ $t('termsConditions') }}
+          </router-link>
         </div>
       </div>
     </div>
@@ -20,24 +26,24 @@
 </template>
 
 <script>
-import { ref, computed } from "vue";
-import BaseButton from "../controls/BaseButton.vue";
-import { useI18n } from "vue-i18n";
+import { ref, computed } from 'vue';
+import BaseButton from '../controls/BaseButton.vue';
+import { useI18n } from 'vue-i18n';
 export default {
   components: { BaseButton },
   setup() {
-    const { t } = useI18n({ useScope: "global" });
-    const accept = computed(() => t("accept"));
-    let checkPolicies = ref(localStorage.getItem("policiesAccepted"));
+    const { t } = useI18n({ useScope: 'global' });
+    const accept = computed(() => t('accept'));
+    let checkPolicies = ref(localStorage.getItem('policiesAccepted'));
 
     if (checkPolicies.value === null) {
       checkPolicies.value = false;
     } else {
-      checkPolicies.value = localStorage.getItem("policiesAccepted");
+      checkPolicies.value = localStorage.getItem('policiesAccepted');
     }
     function clicked() {
-      localStorage.setItem("policiesAccepted", true);
-      checkPolicies.value = localStorage.getItem("policiesAccepted");
+      localStorage.setItem('policiesAccepted', true);
+      checkPolicies.value = localStorage.getItem('policiesAccepted');
     }
     return {
       clicked,

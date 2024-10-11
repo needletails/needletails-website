@@ -1,37 +1,76 @@
 <template>
   <div v-if="isClickable">
-    <ul @click="clicked()" class="icon-label" :class="getStyleClasses()">
-      <div class="flash ripple" :class="{ active: clickedStatus }"></div>
+    <ul
+      class="icon-label"
+      :class="getStyleClasses()"
+      @click="clicked()"
+    >
+      <div
+        class="flash ripple"
+        :class="{ active: clickedStatus }"
+      />
       <div v-if="isCustomSVG">
-        <icon :width="width" :height="height" :name="icon" />
+        <icon
+          :width="width"
+          :height="height"
+          :name="icon"
+        />
       </div>
       <div v-else>
-        <vue-icon color="white" size="large" :name="icon"></vue-icon>
+        <vue-icon
+          color="white"
+          size="large"
+          :name="icon"
+        />
       </div>
       <div class="logoTitle">
-        <h2 class="font" :class="getTextStyleClasses()">{{ title }}</h2>
+        <h2
+          class="font"
+          :class="getTextStyleClasses()"
+        >
+          {{ title }}
+        </h2>
       </div>
     </ul>
   </div>
   <div v-else>
-    <ul class="icon-label" :class="getStyleClasses()">
-      <div class="flash ripple" :class="{ active: clickedStatus }"></div>
+    <ul
+      class="icon-label"
+      :class="getStyleClasses()"
+    >
+      <div
+        class="flash ripple"
+        :class="{ active: clickedStatus }"
+      />
       <div v-if="isCustomSVG">
-        <icon :width="width" :height="height" :name="icon" />
+        <icon
+          :width="width"
+          :height="height"
+          :name="icon"
+        />
       </div>
       <div v-else>
-        <vue-icon color="white" size="large" :name="icon"></vue-icon>
+        <vue-icon
+          color="white"
+          size="large"
+          :name="icon"
+        />
       </div>
       <div class="logoTitle">
-        <h2 class="font" :class="getTextStyleClasses()">{{ title }}</h2>
+        <h2
+          class="font"
+          :class="getTextStyleClasses()"
+        >
+          {{ title }}
+        </h2>
       </div>
     </ul>
   </div>
 </template>
 
 <script scoped>
-import { ref, computed } from "vue";
-import { useRouter } from "vue-router";
+import { ref, computed } from 'vue';
+import { useRouter } from 'vue-router';
 export default {
   props: {
     title: {
@@ -97,9 +136,9 @@ export default {
 
     function toggle() {
       if (isClicked.value === false) {
-        isClicked = true;
+        isClicked.value = true;
       } else {
-        isClicked = false;
+        isClicked.value = false;
       }
     }
 
@@ -114,11 +153,16 @@ export default {
       } else if (props.externalPath === true) {
         window.location.replace(props.to);
       } else if (props.hasEmailClickHandler === true) {
-        var mailto_link = "mailto:" + "" + "?subject=" + "" + "&body=" + "";
-        const win = window.open(mailto_link, "emailWindow");
-        if (win && win.open && !win.closed) win.close();
+        var mailto_link =
+        'mailto:' +
+        'inquiry@cartisim.io' +
+        '?subject=' +
+        'Project Inquiry' +
+        '&body=' +
+        '';
+      window.location.href = mailto_link;
       } else {
-        console.log("No Handler");
+        console.log('No Handler');
       }
     }
 
@@ -292,7 +336,7 @@ img {
 
 @media screen and (min-width: 3840px) and (min-height: 2160px) {
   h2 {
-font-size: 3.2rem !important;
+    font-size: 3.2rem !important;
   }
 }
 </style>

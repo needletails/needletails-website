@@ -1,22 +1,30 @@
 <template>
   <header class="header">
     <div class="audio-lang-wrapper">
-      <div></div>
+      <alert-modal v-if="!showMusic" v-scrollanimation class="alert" />
       <div class="lang">
         <a @click="englishClicked()">En</a>
       </div>
     </div>
     <div class="header-wrapper">
       <div>
-        <div @click="routeHome()" class="logo-title">
+        <div class="logo-title" @click="routeHome()">
           <icon :width="width" :height="height" name="devLogo" />
         </div>
       </div>
       <div class="trailing-wrapper">
-        <li @click="routeWhyCartisim()">{{ $t("menuItemOne") }}</li>
-        <li @click="routeSolutions()">{{ $t("menuItemTwo") }}</li>
-        <li @click="contactClicked()">{{ $t("menuItemThree") }}</li>
-        <li @click="appClicked()">{{ $t("menuItemFour") }}</li>
+        <li @click="routeManagement()">
+          {{ $t('menuItemThree') }}
+        </li>
+        <li @click="routeConsultation()">
+          {{ $t('menuItemTwo') }}
+        </li>
+        <li @click="routeTraining()">
+          {{ $t('menuItemOne') }}
+        </li>
+        <li @click="contactClicked()">
+          {{ $t('menuItemFour') }}
+        </li>
       </div>
       <burger-menu class="mobile-burger" />
     </div>
@@ -24,70 +32,77 @@
 </template>
 
 <script>
-import { useRouter } from "vue-router";
-import BurgerMenu from "../controls/BurgerMenu";
-import { ref } from "vue";
+import { useRouter } from 'vue-router';
+import { useStore } from 'vuex';
+import { ref, computed } from 'vue';
+import BurgerMenu from '../controls/BurgerMenu';
+
 export default {
   components: {
     BurgerMenu,
   },
   setup() {
+    const store = useStore();
     const router = useRouter();
-    const lang = ref(localStorage.getItem("lang") || "en");
-    const width = ref(0)
-    const height = ref(0)
+    const lang = ref(localStorage.getItem('lang') || 'en');
+    const width = ref(0);
+    const height = ref(0);
 
-if (window.innerWidth <= 3839) {
-width.value = 220
-height.value = 90
-} else if (window.innerWidth === 3840) {
-width.value = 220
-height.value = 90
-} else if (window.innerWidth === 5120) {
-width.value = 220
-height.value = 90
-} else if (window.innerWidth === 6016) {
-width.value = 500
-height.value = 150
-}
-
+    if (window.innerWidth <= 3839) {
+      width.value = 220;
+      height.value = 90;
+    } else if (window.innerWidth === 3840) {
+      width.value = 220;
+      height.value = 90;
+    } else if (window.innerWidth === 5120) {
+      width.value = 220;
+      height.value = 90;
+    } else if (window.innerWidth === 6016) {
+      width.value = 500;
+      height.value = 150;
+    }
 
     function englishClicked() {
-      localStorage.setItem("lang", "en");
+      localStorage.setItem('lang', 'en');
       router.go();
     }
 
     function routeHome() {
-      router.push("/");
+      router.push('/');
     }
 
-    function routeWhyCartisim() {
-      router.push("/why-cartisim");
+    function routeConsultation() {
+      router.push('/consultation');
     }
 
-    function routeSolutions() {
-      router.push("/solutions");
+    function routeManagement() {
+      router.push('/management');
+    }
+
+    function routeTraining() {
+      router.push('/training');
     }
 
     function contactClicked() {
-      var mailto_link = "mailto:" + "inquiry@cartisim.io" + "?subject=" + "Project Inquiry" + "&body=" + "";
-      const win = window.open(mailto_link, "emailWindow");
-      if (win && win.open && !win.closed) win.close();
-    }
-
-    function appClicked() {
-      window.location.replace("https://cartisimapp.io");
+      var mailto_link =
+        'mailto:' +
+        'inquiry@cartisim.io' +
+        '?subject=' +
+        'Project Inquiry' +
+        '&body=' +
+        '';
+      window.location.href = mailto_link;
     }
     return {
       lang,
       englishClicked,
       routeHome,
-      routeWhyCartisim,
-      routeSolutions,
+      routeTraining,
+      routeConsultation,
+      routeManagement,
       contactClicked,
-      appClicked,
       width,
-      height
+      height,
     };
   },
 };
@@ -98,6 +113,7 @@ height.value = 150
   height: 50px;
   width: 270px;
 }
+
 .logo-title {
   display: flex;
   justify-content: space-around;
@@ -122,6 +138,7 @@ a:active {
   font-weight: 300;
   text-align: center;
 }
+
 .header {
   position: fixed;
   width: 100%;
@@ -131,6 +148,7 @@ a:active {
   padding-bottom: 20px;
   z-index: 999;
 }
+
 .header-wrapper {
   position: relative;
   display: flex;
@@ -161,6 +179,7 @@ a:active {
 
 .trailing-wrapper {
   display: flex;
+  padding-bottom: 20px;
 }
 
 li,
@@ -175,19 +194,12 @@ li:hover {
   color: white;
   font-weight: 340;
 }
+
 .trailing-wrapper > li,
 .trailing-wrapper > a {
   margin: auto 10px 0 10px;
 }
 
-.trailing-wrapper > li:last-child {
-  position: relative;
-  background-color: black;
-  border: solid 1px white;
-  border-radius: 5px;
-  padding: 5px;
-  top: 5px;
-}
 @media screen and (max-width: 767px) {
   .header {
     height: 95px;
@@ -201,17 +213,20 @@ li:hover {
     display: none;
   }
 }
+
 @media screen and (min-width: 3840px) and (min-height: 2160px) {
-    .header {
+  .header {
     height: 250px;
   }
-  li, a {
-font-size: 3.2rem !important;
+
+  li,
+  a {
+    font-size: 3.2rem !important;
   }
 
   .trailing-wrapper > li:last-child {
-padding: 10px;
-  border-radius: 10px;
+    padding: 10px;
+    border-radius: 10px;
   }
 }
 </style>
