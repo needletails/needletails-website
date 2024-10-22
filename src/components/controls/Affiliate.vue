@@ -38,7 +38,7 @@ export default {
           name: 'github',
           height: 130,
           width: 130,
-          path: 'https://github.com/sponsors/needle-tail',
+          path: 'https://github.com/sponsors/needletails',
           message: 'Become a Sponsor',
         },
       ];

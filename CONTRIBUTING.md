@@ -6,7 +6,7 @@ Thank you for your interest in contributing to NeedleTail! We welcome contributi
 
 ### 1. Reporting Issues
 
-If you encounter any bugs or have suggestions for improvements, please open an issue in our [issue tracker](https://github.com/needle-tail/needletails-website/issues). When reporting an issue, please provide the following information:
+If you encounter any bugs or have suggestions for improvements, please open an issue in our [issue tracker](https://github.com/needletails/needletails-website/issues). When reporting an issue, please provide the following information:
 
 - A clear and descriptive title
 - A detailed description of the issue

@@ -113,7 +113,7 @@ export default {
         'supportOpenSourceMessage',
         'betweenText',
         'github-mark-white.svg',
-        'https://github.com/sponsors/needle-tail'
+        'https://github.com/sponsors/needletails'
       ),
     ]);
 

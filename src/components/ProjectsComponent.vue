@@ -65,7 +65,7 @@ export default {
         'spinetailedKitProject',
         'betweenText',
         'SpineTailedKit.png',
-        'https://github.com/needle-tail',
+        'https://github.com/needletails',
         ''
       ),
       createGridItem(
@@ -74,7 +74,7 @@ export default {
         'needletailKitProject',
         'betweenText',
         'NeedleTailKit.png',
-        'https://github.com/needle-tail',
+        'https://github.com/needletails',
         ''
       ),
       createGridItem(
@@ -83,7 +83,7 @@ export default {
         'whiteTippedSocketsProject',
         'betweenText',
         'WhiteTipped.png',
-        'https://github.com/needle-tail/white-tipped-sockets',
+        'https://github.com/needletails/white-tipped-sockets',
         ''
       ),
       createGridItem(
@@ -92,7 +92,7 @@ export default {
         'swiftHlsProject',
         'betweenText',
         'HLSLogo.png',
-        'https://github.com/needle-tail/swift-hls',
+        'https://github.com/needletails/swift-hls',
         '80%'
       ),
       createGridItem(
@@ -101,7 +101,7 @@ export default {
         'swiftStompProject',
         'betweenText',
         'Stomp.png',
-        'https://github.com/needle-tail/swift-stomp',
+        'https://github.com/needletails/swift-stomp',
         '80%'
       ),
       createGridItem(
@@ -110,7 +110,7 @@ export default {
         'iapEntitlementEngineProject',
         'betweenText',
         'IAPLogo.png',
-        'https://github.com/needle-tail/iap-entitlement-engine',
+        'https://github.com/needletails/iap-entitlement-engine',
         '80%'
       ),
     ]);
