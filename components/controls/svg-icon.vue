@@ -2269,12 +2269,15 @@ export default {
   props: {
     name: {
       type: String,
+      required: true,
     },
     width: {
       type: Number,
+      default: 100,
     },
     height: {
       type: Number,
+      default: 100,
     },
   },
 };
