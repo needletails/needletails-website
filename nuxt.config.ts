@@ -2,6 +2,15 @@
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
+  // Static site generation for GitHub Pages
+  ssr: true,
+  nitro: {
+    prerender: {
+      routes: ['/sitemap.xml']
+    },
+    compressPublicAssets: true,
+    minify: true
+  },
   css: ['~/assets/css/main.css'],
   modules: [
     '@nuxtjs/tailwindcss',
@@ -85,13 +94,6 @@ export default defineNuxtConfig({
       name: 'page',
       mode: 'out-in'
     }
-  },
-  nitro: {
-    prerender: {
-      routes: ['/sitemap.xml']
-    },
-    compressPublicAssets: true,
-    minify: true
   },
   experimental: {
     payloadExtraction: false

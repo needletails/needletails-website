@@ -1,0 +1,6 @@
+# Configuration for issue templates
+blank_issues_enabled: false
+contact_links:
+  - name: NeedleTails Support
+    url: mailto:support@needletails.com
+    about: Contact us directly for urgent issues or questions 
