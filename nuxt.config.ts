@@ -51,7 +51,7 @@ export default defineNuxtConfig({
   },
   // Ensure CSS is properly loaded in static generation
   app: {
-    baseURL: '/needletails-website/',
+    baseURL: '/',
     buildAssetsDir: '/_nuxt/',
     head: {
       htmlAttrs: {
