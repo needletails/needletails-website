@@ -3,7 +3,6 @@ export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
   // Static site generation for GitHub Pages
-  ssr: true,
   nitro: {
     prerender: {
       routes: ['/sitemap.xml']
