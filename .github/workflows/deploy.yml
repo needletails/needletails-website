@@ -36,6 +36,15 @@ jobs:
       - name: Build with Nuxt
         run: npm run generate
         
+      - name: Debug build output
+        run: |
+          echo "=== Build Output Structure ==="
+          ls -la .output/public/
+          echo "=== CSS Files ==="
+          find .output/public -name "*.css" -type f
+          echo "=== HTML Files ==="
+          find .output/public -name "*.html" -type f | head -5
+        
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
@@ -57,22 +66,10 @@ jobs:
           name: pages-artifact
           path: dist
           
-      - name: Push to gh-pages branch
-        run: |
-          # Configure git
-          git config --global user.name "GitHub Actions"
-          git config --global user.email "actions@github.com"
-          
-          # Create or update gh-pages branch
-          git checkout --orphan gh-pages || git checkout gh-pages
-          git rm -rf . || true
-          
-          # Copy built files
-          cp -r dist/* .
-          
-          # Add and commit
-          git add .
-          git commit -m "Deploy to GitHub Pages - $(date)"
-          
-          # Push to gh-pages branch
-          git push origin gh-pages --force 
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        if: github.ref == 'refs/heads/main'
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
+          force_orphan: true 
