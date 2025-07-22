@@ -1,7 +1,7 @@
 <template>
   <div class="min-h-screen bg-black">
     <Header />
-    <main class="pt-20 lg:pt-24 pb-12">
+    <main class="pt-40 lg:pt-48 pb-12">
       <div class="px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         <project-management />
       </div>
