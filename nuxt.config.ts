@@ -10,6 +10,12 @@ export default defineNuxtConfig({
     compressPublicAssets: true,
     minify: true
   },
+  // Ensure proper static generation
+  ssr: true,
+  // Optimize for static generation
+  experimental: {
+    payloadExtraction: false
+  },
   css: ['~/assets/css/main.css'],
   modules: [
     '@nuxtjs/tailwindcss',
@@ -43,6 +49,7 @@ export default defineNuxtConfig({
       fallbackLocale: 'en'
     }
   },
+  // Ensure CSS is properly loaded in static generation
   app: {
     head: {
       htmlAttrs: {
@@ -94,10 +101,11 @@ export default defineNuxtConfig({
       mode: 'out-in'
     }
   },
-  experimental: {
-    payloadExtraction: false
-  },
+  // Optimize CSS loading for static generation
   vite: {
+    css: {
+      devSourcemap: true
+    },
     build: {
       rollupOptions: {
         output: {
@@ -110,6 +118,13 @@ export default defineNuxtConfig({
     },
     optimizeDeps: {
       include: ['vue', 'vue-router', '@vueuse/core']
+    }
+  },
+  // Ensure CSS is properly processed
+  postcss: {
+    plugins: {
+      tailwindcss: {},
+      autoprefixer: {}
     }
   }
 })

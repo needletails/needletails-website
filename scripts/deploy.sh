@@ -5,13 +5,13 @@ set -e
 
 echo "🚀 Starting deployment process..."
 
-# Build the project
-echo "📦 Building the project..."
-npm run build
+# Generate static site
+echo "📦 Generating static site..."
+npm run generate
 
-# Check if build was successful
+# Check if generation was successful
 if [ ! -d ".output/public" ]; then
-    echo "❌ Build failed: .output/public directory not found"
+    echo "❌ Static generation failed: .output/public directory not found"
     exit 1
 fi
 
