@@ -17,21 +17,17 @@
             <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
             </svg>
-            Why Choose Swift?
+            {{ t('whyChooseSwift') }}
           </div>
 
           <h2 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight">
             <span class="bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
-              Swift Software
-            </span>
-            <br>
-            <span class="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
-              Specialists
+              {{ t('businessOverviewTitle') }}
             </span>
           </h2>
 
           <p class="text-lg sm:text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-            We leverage Swift's power to deliver type-safe, high-performance applications that scale with your business needs.
+            {{ t('businessOverviewDescription') }}
           </p>
         </div>
       </div>
@@ -47,9 +43,9 @@
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
             </svg>
           </div>
-          <h3 class="text-xl font-semibold text-white mb-3">Type Safety</h3>
+          <h3 class="text-xl font-semibold text-white mb-3">{{ t('typeSafety') }}</h3>
           <p class="text-gray-400 leading-relaxed">
-            Swift's type system prevents errors at compile time, ensuring your applications are robust and reliable from day one.
+            {{ t('typeSafetyDescription') }}
           </p>
         </div>
 
@@ -59,9 +55,9 @@
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
             </svg>
           </div>
-          <h3 class="text-xl font-semibold text-white mb-3">Performance</h3>
+          <h3 class="text-xl font-semibold text-white mb-3">{{ t('performance') }}</h3>
           <p class="text-gray-400 leading-relaxed">
-            Low memory footprint and high performance make Swift ideal for resource-constrained environments and demanding applications.
+            {{ t('performanceDescription') }}
           </p>
         </div>
 
@@ -71,9 +67,9 @@
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
             </svg>
           </div>
-          <h3 class="text-xl font-semibold text-white mb-3">Thread Safety</h3>
+          <h3 class="text-xl font-semibold text-white mb-3">{{ t('threadSafety') }}</h3>
           <p class="text-gray-400 leading-relaxed">
-            Built-in concurrency support ensures your applications handle multiple tasks efficiently without race conditions.
+            {{ t('threadSafetyDescription') }}
           </p>
         </div>
       </div>
@@ -85,10 +81,10 @@
       >
         <div class="text-center">
           <h3 class="text-3xl sm:text-4xl font-bold text-white mb-8">
-            Our <span class="text-blue-400">Services</span>
+            {{ t('ourServices') }} <span class="text-blue-400">{{ t('ourServices') }}</span>
           </h3>
           <p class="text-lg text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            We believe that meticulous planning is essential for success. Our comprehensive blueprints, insightful inquiries, and guidance will support you throughout your journey.
+            {{ t('servicesDescription') }}
           </p>
         </div>
 
@@ -102,7 +98,7 @@
             class="group relative px-8 py-4 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl hover:-translate-y-1 active:translate-y-0 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-black"
           >
             <span class="flex items-center justify-center">
-              Start Your Project
+              {{ t('startYourProject') }}
               <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
               </svg>
@@ -126,6 +122,8 @@
 
 <script setup lang="ts">
 import { computed } from 'vue'
+
+const { t } = useI18n()
 
 interface BusinessGridItem {
   subtitle: string
@@ -166,43 +164,43 @@ const handleGetInTouch = (): void => {
 const gridItems = computed((): BusinessGridItem[] => [
   createGridItem(
     '',
-    'Server-Side Solutions',
-    'We specialize in server-side Swift, frameworks, and open-source solutions, ensuring robust and scalable backend development that powers your applications.',
+    t('serviceHeaderBackendDevelopment'),
+    t('serviceDescriptionBackendDevelopment'),
     'betweenText',
-    'server-side-swift.svg',
+    'server-solutions.svg',
     ''
   ),
   createGridItem(
-    'Mobile Development',
-    'Native Applications',
-    'We create visually appealing and user-friendly mobile applications for both Apple platforms and Android, ensuring optimal performance and user satisfaction.',
+    '',
+    t('serviceHeaderMobileAppDevelopment'),
+    t('serviceDescriptionMobileAppDevelopment'),
     'betweenText',
-    'NeedleTailLeftColor.png',
+    'needletail_right.svg',
     ''
   ),
   createGridItem(
-    'Training & Education',
-    'Skill Development',
-    'We can enhance your team\'s efficiency and skill set across various areas, including management, development, design, and testing.',
+    '',
+    t('serviceHeaderTraining'),
+    t('serviceDescriptionTraining'),
     'betweenText',
-    'StreamStack.png',
+    'stream_stack.svg',
     ''
   ),
   createGridItem(
-    'Web Development',
-    'Modern Web Solutions',
-    'We offer comprehensive web development using Nuxt, Vue.js with TypeScript, and server-side Swift with Vapor, ensuring your online presence accurately represents your business with modern, scalable technologies.',
+    '',
+    t('serviceHeaderWebDevelopment'),
+    t('serviceDescriptionWebDevelopment'),
     'betweenText',
-    'VaporLogo.png',
+    'modern_web_development.svg',
     ''
   ),
 ])
 
 const openSourceItems = computed((): BusinessGridItem[] => [
   createGridItem(
-    'Open Source Community',
-    'Supporting Innovation',
-    'Wherever possible, we support the open source community. Let\'s connect with your audience across all devices through our native applications and backend services, powered by our exceptional open-source frameworks and libraries.',
+    '',
+    t('openSourceHeader'),
+    t('openSourceDescription'),
     'betweenText',
     'github-mark-white.svg',
     'https://github.com/sponsors/needletails'

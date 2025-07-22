@@ -1,26 +1,44 @@
 <template>
-  <div class="consulting-solutions">
-    <header class="header">
-      <h1>{{ consultingTitle }}</h1>
-      <p class="description">
-        {{ consultingOverview }}
-      </p>
-    </header>
-    <section class="overview">
-      <h2>Consult with Us</h2>
-      <p>
-        {{ consultingWithUsMessage }}
-      </p>
-    </section>
+  <div class="max-w-4xl mx-auto">
+    <div class="bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl shadow-2xl border border-gray-700/50 overflow-hidden">
+      <header class="text-center py-12 px-6 sm:px-8 border-b border-gray-700/50">
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-white via-gray-100 to-gray-300 bg-clip-text text-transparent mb-4">
+          {{ consultingTitle }}
+        </h1>
+        <p class="text-lg sm:text-xl text-gray-300 leading-relaxed max-w-3xl mx-auto">
+          {{ consultingOverview }}
+        </p>
+      </header>
 
-    <section class="key-competencies">
-      <h2>What to Consult About</h2>
-      <GridView :items="consultingData" :columns="2" />
-    </section>
+      <div class="p-6 sm:p-8 space-y-8">
+        <section class="bg-gray-800/30 rounded-xl p-6 border-l-4 border-blue-500">
+          <h2 class="text-xl sm:text-2xl font-semibold text-blue-400 mb-4">{{ t('consultWithUs') }}</h2>
+          <p class="text-gray-300 leading-relaxed">
+            {{ consultingWithUsMessage }}
+          </p>
+        </section>
 
-    <button class="contact-button" @click="handleGetInTouch">
-      {{ getInTouch }}
-    </button>
+        <section class="space-y-6">
+          <h2 class="text-xl sm:text-2xl font-semibold text-blue-400 mb-6">{{ t('whatToConsultAbout') }}</h2>
+          <GridView :items="consultingData" :columns="2" />
+        </section>
+      </div>
+    </div>
+
+    <!-- Contact Button -->
+    <div class="text-center pt-8">
+      <button 
+        @click="handleGetInTouch"
+        class="group px-8 py-4 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl hover:-translate-y-1 active:translate-y-0 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-black"
+      >
+        <span class="flex items-center justify-center">
+          {{ getInTouch }}
+          <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+          </svg>
+        </span>
+      </button>
+    </div>
   </div>
 </template>
 
@@ -28,11 +46,13 @@
 import { computed } from 'vue';
 import GridView from '../grid-view.vue';
 
-// Static text instead of i18n
-const consultingTitle = 'Consulting Solutions';
-const consultingOverview = 'Expert guidance for your software development projects';
-const consultingWithUsMessage = 'Get professional advice on your development needs';
-const getInTouch = 'Get In Touch';
+const { t } = useI18n()
+
+// Use i18n translations
+const consultingTitle = t('consultingTitle');
+const consultingOverview = t('consultingOverview');
+const consultingWithUsMessage = t('consultingWithUsMessage');
+const getInTouch = t('getInTouch');
 
 const createGridItem = (
   applicationTitle: string,
@@ -56,96 +76,48 @@ const createGridItem = (
 const consultingData = computed(() => [
   createGridItem(
     '',
-    'Architecture Design',
-    'Design scalable and maintainable software architectures',
+    t('architectureDesign'),
+    t('architectureDesignDescription'),
     'center',
     '',
     ''
   ),
   createGridItem(
     '',
-    'Technology Selection',
-    'Choose the right technologies for your project needs',
+    t('technologySelection'),
+    t('technologySelectionDescription'),
     'center',
     '',
     ''
   ),
   createGridItem(
     '',
-    'Performance Optimization',
-    'Optimize your applications for better performance',
+    t('performanceOptimization'),
+    t('performanceOptimizationDescription'),
     'center',
     '',
     ''
   ),
   createGridItem(
     '',
-    'Security Review',
-    'Ensure your applications are secure and compliant',
+    t('securityReview'),
+    t('securityReviewDescription'),
     'center',
     '',
     ''
   ),
   createGridItem(
     '',
-    'Code Review',
-    'Get expert feedback on your code quality',
+    t('codeReview'),
+    t('codeReviewDescription'),
     'center',
     '',
     ''
   ),
   createGridItem(
     '',
-    'Best Practices',
-    'Implement industry best practices in your development',
-    'center',
-    '',
-    ''
-  ),
-  createGridItem(
-    '',
-    'Team Training',
-    'Train your team on modern development practices',
-    'center',
-    '',
-    ''
-  ),
-  createGridItem(
-    '',
-    'Project Planning',
-    'Plan and structure your development projects',
-    'center',
-    '',
-    ''
-  ),
-  createGridItem(
-    '',
-    'Database Design',
-    'Design efficient and scalable database structures',
-    'center',
-    '',
-    ''
-  ),
-  createGridItem(
-    '',
-    'API Design',
-    'Design robust and user-friendly APIs',
-    'center',
-    '',
-    ''
-  ),
-  createGridItem(
-    '',
-    'Testing Strategy',
-    'Implement comprehensive testing strategies',
-    'center',
-    '',
-    ''
-  ),
-  createGridItem(
-    '',
-    'Deployment Strategy',
-    'Plan and execute deployment strategies',
+    t('bestPractices'),
+    t('bestPracticesDescription'),
     'center',
     '',
     ''
@@ -163,97 +135,3 @@ const handleGetInTouch = () => {
   window.location.href = mailto_link;
 };
 </script>
-
-<style scoped>
-.consulting-solutions {
-  max-width: 800px;
-  margin: 0 auto;
-  padding-top: 200px;
-  color: #e0e0e0;
-  /* Light text color for dark mode */
-  background-color: #000000;
-  /* Dark background color */
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
-}
-
-.header {
-  text-align: center;
-  margin-bottom: 20px;
-  /* Reduced margin to avoid overlap */
-}
-
-.header h1 {
-  font-size: 2.5em;
-  margin: 0;
-  color: #F5F3B5;
-}
-
-.header .description {
-  font-size: 1.2em;
-}
-
-.overview {
-  margin-bottom: 20px;
-  /* Space below the overview section */
-}
-
-.overview h2,
-.key-competencies h2 {
-  display: inline-block;
-  font-size: 1.8em;
-  color: #33BCE5;
-  margin-bottom: 10px;
-  border-bottom: 2px solid #33BCE5;
-  padding-bottom: 10px;
-  margin-bottom: 20px;
-}
-
-.contact-button {
-  display: block;
-  margin: 20px auto;
-  background-color: #33BCE5;
-  color: white;
-  font-weight: 600;
-  /* Slightly lighter font weight */
-  padding: 12px 24px;
-  /* Increased padding for a more substantial feel */
-  border: none;
-  border-radius: 12px;
-  /* More rounded corners */
-  font-size: 16px;
-  /* Increased font size for better readability */
-  text-align: center;
-  /* Center text */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  /* Subtle shadow for depth */
-  cursor: pointer;
-  transition:
-    background-color 0.3s,
-    transform 0.2s;
-  /* Added transform transition */
-}
-
-.contact-button:hover {
-  background-color: #0051a8;
-  /* Darker blue on hover */
-  transform: translateY(-2px);
-  /* Slight lift effect on hover */
-}
-
-.contact-button:active {
-  transform: translateY(0);
-  /* Reset lift effect on click */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  /* Reduce shadow on click */
-}
-
-@media screen and (max-width: 767px) {
-  .consulting-solutions {
-    padding-top: 200px;
-    padding-bottom: 20px;
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-}
-</style>

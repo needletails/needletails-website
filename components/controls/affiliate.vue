@@ -24,6 +24,8 @@ import SvgIcon from './svg-icon.vue'
 
 const isVisible = ref(false)
 
+const { t } = useI18n()
+
 const contactInfo = () => {
   return [
     {
@@ -31,15 +33,14 @@ const contactInfo = () => {
       height: 160,
       width: 160,
       path: 'https://m.do.co/c/9186a24b57b1',
-      message:
-        'Get Started on Digital Ocean with a $100, 60-day credit for new users',
+      message: t('getStartedOnDigitalOcean'),
     },
     {
       name: 'github',
       height: 130,
       width: 130,
       path: 'https://github.com/sponsors/needletails',
-      message: 'Become a Sponsor',
+      message: t('becomeASponsor'),
     },
   ]
 }

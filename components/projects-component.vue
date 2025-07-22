@@ -1,17 +1,17 @@
 <template>
-  <section class="bg-black py-20 px-6 lg:px-20">
-    <div class="max-w-6xl mx-auto">
-      <div class="bg-[rgb(8,8,8)] rounded-xl shadow-2xl p-8 lg:p-12">
-        <header class="text-center mb-12">
-          <h2 class="text-4xl lg:text-5xl font-bold text-[#F5F3B5] mb-4">{{ projectsHeader }}</h2>
-          <p class="text-lg lg:text-xl text-gray-300 leading-relaxed max-w-4xl mx-auto">
+  <section class="bg-black py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto">
+      <div class="bg-[rgb(8,8,8)] rounded-xl shadow-2xl p-6 sm:p-8 lg:p-12">
+        <header class="text-center mb-8 sm:mb-12">
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#F5F3B5] mb-4">{{ projectsHeader }}</h2>
+          <p class="text-base sm:text-lg lg:text-xl text-gray-300 leading-relaxed max-w-4xl mx-auto">
             {{ projectsDescription }}
           </p>
         </header>
 
-        <section class="mb-12">
-          <h3 class="text-2xl lg:text-3xl font-semibold text-[#33BCE5] mb-4">Overview</h3>
-          <p class="text-lg text-gray-300 leading-relaxed">{{ projectsOverview }}</p>
+        <section class="mb-8 sm:mb-12">
+          <h3 class="text-xl sm:text-2xl lg:text-3xl font-semibold text-[#33BCE5] mb-4">{{ t('overview') }}</h3>
+          <p class="text-base sm:text-lg text-gray-300 leading-relaxed">{{ projectsOverview }}</p>
         </section>
 
         <section class="project-items">
@@ -38,10 +38,12 @@ interface ProjectGridItem {
   size?: string
 }
 
-// Static text content
-const projectsHeader = 'Our Software'
-const projectsDescription = 'We are dedicated to providing you with a wide range of open-source software. To support this mission, we also offer some closed-source software. We invite you to explore our projects, which include both open-source and closed-source options. If you\'re interested in contributing or obtaining a license for our closed-source software, please don\'t hesitate to get in touch with us.'
-const projectsOverview = 'Here is a list of what we do and what we\'ve done'
+const { t } = useI18n()
+
+// Use i18n translations
+const projectsHeader = t('projectsHeader')
+const projectsDescription = t('projectsDescription')
+const projectsOverview = t('projectsOverview')
 
 const createGridItem = (
   applicationTitle: string,
@@ -67,57 +69,84 @@ const createGridItem = (
 const gridItems = computed((): ProjectGridItem[] => [
   createGridItem(
     '',
-    'SpineTailedKit',
-    'SpineTailedKit aims to deliver a streamlined RTC protocol in Swift. Unlike other RTC libraries that are bloated with unnecessary C and C++ code, we focus on providing a modern, safe, and high-performance solution for voice and video applications.',
+    t('spineTailedKitTitle'),
+    t('spineTailedKitDescription'),
     'betweenText',
-    'SpineTailedKit.png',
+    'spinetailed_kit.svg',
     'https://github.com/needletails',
     ''
   ),
   createGridItem(
-    'Projects',
-    'NeedleTailKit',
-    'What is NeedleTailKit? NTK is the core SDK for NeedleTail Client and Server Applications, enabling the creation of beautiful end-to-end encrypted applications. It can be used for various applications beyond messaging. Interested? Contact us to learn more!',
+    t('projectTitle_1'),
+    t('needleTailKitTitle'),
+    t('needleTailKitDescription'),
     'betweenText',
-    'NeedleTailKit.png',
+    'needletail_kit.svg',
     'https://github.com/needletails',
     ''
   ),
   createGridItem(
-    'Projects',
-    'White Tipped Sockets',
-    'WhiteTippedSockets is a native WebSocket library for iOS and macOS, built on the Network.framework API using Swift Concurrency. Our goal is to provide a modern, efficient solution for WebSocket communication, and we also plan to develop a fully functional, scalable server in the future.',
+    '',
+    t('needleTailIRCTitle'),
+    t('needleTailIRCDescription'),
     'betweenText',
-    'WhiteTipped.png',
+    'needletail_irc.svg',
+    'https://github.com/needletails/needletail-irc',
+    ''
+  ),
+  createGridItem(
+    '',
+    t('connectionManagerKitTitle'),
+    t('connectionManagerKitDescription'),
+    'betweenText',
+    'connection_manager_kit.svg',
+    'https://github.com/needletails/connection-manager-kit',
+    ''
+  ),
+  createGridItem(
+    '',
+    t('postQuantumSolaceTitle'),
+    t('postQuantumSolaceDescription'),
+    'betweenText',
+    'post_quantum_solace.svg',
+    'https://github.com/needletails/post-quantum-solace',
+    ''
+  ),
+  createGridItem(
+    t('projectTitle_3'),
+    t('whiteTippedSocketsTitle'),
+    t('whiteTippedSocketsDescription'),
+    'betweenText',
+    'whitetipped_sockets.svg',
     'https://github.com/needletails/white-tipped-sockets',
     ''
   ),
   createGridItem(
-    'Projects',
-    'Swift HLS',
-    'HTTP Live Streaming (HLS) is a key technology for efficient media streaming, and SwiftHLS is designed to facilitate this. Utilizing the same protocol that powers the web, HLS allows content delivery via REST APIs and CDNs. Its purpose is to provide reliability and dynamically adapts to network conditions.',
+    t('projectTitle_5'),
+    t('swiftHlsTitle'),
+    t('swiftHlsDescription'),
     'betweenText',
-    'HLSLogo.png',
-    'https://github.com/needletails/swift-hls',
-    '80%'
+    'swift_hls.svg',
+    'https://github.com/needletails',
+    ''
   ),
   createGridItem(
-    'Projects',
-    'Swift Stomp',
-    'SwiftSTOMP (Simple Text Oriented Messaging) is a transport protocol designed for networking technologies, built with Swift Concurrency. Unlike typical transport protocols that require customization, our goal is to provide a flexible and easy-to-use STOMP protocol that leverages the power of Swift Concurrency.',
+    t('projectTitle_2'),
+    t('swiftIapTitle'),
+    t('swiftIapDescription'),
     'betweenText',
-    'Stomp.png',
-    'https://github.com/needletails/swift-stomp',
-    '80%'
+    'iap_engine.svg',
+    'https://github.com/needletails',
+    ''
   ),
   createGridItem(
-    'Projects',
-    'IAP Entitlement Engine',
-    'Everyone deserves to get paid for their hard work. With a top-tier app, IAP Entitlement Engine helps you to achieve that. Designed for deployment on a Vapor server or any SwiftNIO based server, it addresses needed aspects of the in-app purchase flow.',
+    t('projectTitle_4'),
+    t('stompTitle'),
+    t('stompDescription'),
     'betweenText',
-    'IAPLogo.png',
-    'https://github.com/needletails/iap-entitlement-engine',
-    '80%'
-  ),
+    'swift_stomp.svg',
+    'https://github.com/needletails',
+    ''
+  )
 ])
 </script>

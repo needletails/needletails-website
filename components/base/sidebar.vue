@@ -57,6 +57,8 @@
 import { ref } from 'vue'
 import IconButton from '../controls/icon-button.vue'
 
+const { t } = useI18n()
+
 const openMenu = ref(false)
 
 const logoItem = ref([
@@ -101,7 +103,7 @@ const externalItems = ref([
   },
   {
     icon: "",
-    title: 'Contact',
+    title: t('contact'),
     isCustomSVG: false,
     isClickable: true,
     hasEmailClickHandler: true,

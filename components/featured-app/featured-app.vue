@@ -17,21 +17,21 @@
             <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path>
             </svg>
-            Featured Applications
+            {{ t('featuredApplications') }}
           </div>
 
           <h2 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight">
             <span class="bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
-              Our
+              {{ t('our') }}
             </span>
             <br>
             <span class="bg-gradient-to-r from-yellow-400 to-yellow-300 bg-clip-text text-transparent">
-              Featured Apps
+              {{ t('featuredApps') }}
             </span>
           </h2>
 
           <p class="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            Discover our innovative applications that showcase the power of Swift development and modern software architecture.
+            {{ t('featuredAppsDescription') }}
           </p>
         </div>
       </div>
@@ -117,6 +117,9 @@
 
 <script setup lang="ts">
 import { ref, computed, onMounted, onBeforeUnmount } from 'vue'
+import { useI18n } from 'vue-i18n'
+
+const { t } = useI18n()
 
 interface FeaturedAppItem {
   subtitle: string
@@ -157,7 +160,7 @@ const featuredAppData = computed((): FeaturedAppItem[] => [
     'Your Self Monitored Data End-to-End Encrypted Messaging Application',
     'Are you worried about security in today\'s digital landscape? Do you want a secure communication channel but feel uncertain about who has access to your data? Even with end-to-end encryption, concerns about data storage can linger. Nudge is here to provide the solution you need. With Nudge, you have complete control over your data, allowing you to manage it securely or expand your reach globally without the risk of data persistence. Contact us today to learn more about how you can set up your own instance and enjoy peace of mind with secure communication!',
     'aboveHeader',
-    'Nudge.png',
+    'nudge.svg',
     ''
   ),
   createGridItem(
@@ -165,15 +168,15 @@ const featuredAppData = computed((): FeaturedAppItem[] => [
     'Island Hoppers: Your Ultimate Tour App for Seamless Adventures!',
     'Island Hoppers is the all-in-one app designed to enhance your travel experience, whether you\'re a company organizing unforgettable tours or a customer seeking the perfect getaway. For companies, our app streamlines the entire tour management process. Organize and customize your tours effortlessly, communicate directly with tour guides, and keep your customers informed with real-time updates. With Island Hoppers, you can manage bookings, track customer preferences, and ensure every detail is taken care of, allowing you to focus on delivering exceptional experiences. For customers, Island Hoppers offers a diverse range of tour packages tailored to suit various group types, including families, backpackers, and party enthusiasts. Browse through our curated selection of adventures, choose the perfect package that fits your style, and connect with like-minded travelers. Enjoy seamless communication with your tour guides, access essential information, and receive personalized recommendations to make the most of your journey. With Island Hoppers, embark on unforgettable adventures with ease and confidence, knowing that every aspect of your tour is just a tap away!',
     'betweenText',
-    'IslandHoppersLogo.png',
+    'island_hoppers.svg',
     ''
   ),
   createGridItem(
     'StreamStack',
     'An Educational Platform for your Software Solutions',
-    'Stream, Read, Discuss. Whether you are new to programming or want to read up on some different software solutions, we make it easy for you to do so with our native Mac app. Stay tuned in for the latest coding edges.',
+    'Stream, Read, Discuss. Whether you are new to programming or want to read up on some different software solutions, we make it easy for you to do so with our native Mac app. Stay tuned for the latest coding trends.',
     'aboveHeader',
-    'StreamStack.png',
+    'stream_stack.svg',
     ''
   ),
 ])

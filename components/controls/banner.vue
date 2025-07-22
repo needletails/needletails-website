@@ -1,14 +1,14 @@
 <template>
   <div class="banner">
     <p>
-      <i>Welcome to NeedleTails - Your Software Development Ally</i>
+      <i>{{ t('welcomeToNeedleTails') }}</i>
     </p>
     <b><a href="https://needletails.com"></a>NeedleTails.com</b>
   </div>
 </template>
 
 <script setup lang="ts">
-// Component logic here if needed
+const { t } = useI18n()
 </script>
 
 <style lang="css" scoped>

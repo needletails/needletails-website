@@ -23,24 +23,23 @@
             <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
             </svg>
-            Swift Software Specialists
+            {{ t('swiftSoftwareSpecialists') }}
           </div>
 
           <!-- Main Heading -->
           <h1 class="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight">
             <span class="bg-gradient-to-r from-white via-gray-100 to-gray-300 bg-clip-text text-transparent">
-              Making Your
+              {{ t('makingYour') }}
             </span>
             <br>
             <span class="bg-gradient-to-r from-blue-400 via-blue-500 to-cyan-400 bg-clip-text text-transparent">
-              Ideas Reality
+              {{ t('ideasReality') }}
             </span>
           </h1>
 
           <!-- Description -->
           <p class="text-lg sm:text-xl lg:text-2xl text-gray-300 leading-relaxed font-light max-w-2xl">
-            With enterprise application experience, we transform complex ideas into elegant, scalable solutions. 
-            <span class="text-blue-400 font-medium">Swift-powered development</span> ensures safety, performance, and quality you can trust.
+            {{ t('introHeaderTwo') }}
           </p>
 
           <!-- CTA Buttons -->
@@ -50,7 +49,7 @@
               class="group relative px-8 py-4 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl hover:-translate-y-1 active:translate-y-0 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-black"
             >
               <span class="flex items-center justify-center">
-                Explore Our Services
+                {{ t('solutionsTitle') }}
                 <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
                 </svg>
@@ -62,7 +61,7 @@
               class="group px-8 py-4 border-2 border-gray-600 hover:border-blue-500 text-gray-300 hover:text-white font-semibold rounded-xl transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-black"
             >
               <span class="flex items-center justify-center">
-                Get Started
+                {{ t('getInTouch') }}
                 <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
                 </svg>
@@ -74,15 +73,15 @@
           <div class="grid grid-cols-3 gap-8 pt-8 border-t border-gray-800">
             <div class="text-center">
               <div class="text-2xl sm:text-3xl font-bold text-blue-400">100%</div>
-              <div class="text-sm text-gray-400">Swift Native</div>
+              <div class="text-sm text-gray-400">{{ t('swiftNative') }}</div>
             </div>
             <div class="text-center">
               <div class="text-2xl sm:text-3xl font-bold text-blue-400">24/7</div>
-              <div class="text-sm text-gray-400">Support</div>
+              <div class="text-sm text-gray-400">{{ t('support') }}</div>
             </div>
             <div class="text-center">
               <div class="text-2xl sm:text-3xl font-bold text-blue-400">∞</div>
-              <div class="text-sm text-gray-400">Possibilities</div>
+              <div class="text-sm text-gray-400">{{ t('possibilities') }}</div>
             </div>
           </div>
         </div>
@@ -116,11 +115,11 @@
 
             <!-- Floating Elements -->
             <div class="absolute -bottom-6 -left-6 bg-gradient-to-r from-purple-600 to-blue-600 rounded-xl p-4 shadow-xl">
-              <div class="text-white text-sm font-medium">Swift</div>
-            </div>
-            
-            <div class="absolute -top-6 -right-6 bg-gradient-to-r from-green-600 to-emerald-600 rounded-xl p-4 shadow-xl">
-              <div class="text-white text-sm font-medium">Swift-Server</div>
+                          <div class="text-white text-sm font-medium">{{ $t('swift') }}</div>
+          </div>
+          
+          <div class="absolute -top-6 -right-6 bg-gradient-to-r from-green-600 to-emerald-600 rounded-xl p-4 shadow-xl">
+            <div class="text-white text-sm font-medium">{{ $t('swiftServer') }}</div>
             </div>
           </div>
         </div>
@@ -137,6 +136,8 @@
 </template>
 
 <script setup lang="ts">
+const { t } = useI18n()
+
 const scrollToServices = (): void => {
   const servicesSection = document.querySelector('.business-overview') || document.querySelector('[data-section="services"]')
   if (servicesSection) {

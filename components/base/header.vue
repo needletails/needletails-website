@@ -13,29 +13,38 @@
             @keydown.enter="routeHome()"
             @keydown.space="routeHome()"
           >
-            <svg-icon :width="200" :height="80" name="devLogo" />
+            <img 
+              src="/images/needletails_logo.svg" 
+              alt="NeedleTails Logo" 
+              width="200" 
+              height="80" 
+              style="mix-blend-mode: difference;"
+            />
           </div>
         </div>
         
         <!-- Navigation and Contact - Right side -->
         <div class="hidden lg:flex items-center space-x-6 mt-4 lg:mt-6">
+          <!-- Language Switcher - Positioned first for better UX -->
+          <LanguageSwitcher />
+          
           <button 
             @click="routeManagement()" 
             class="text-base font-medium text-gray-300 hover:text-white transition-all duration-300 hover:scale-105 px-4 py-2 rounded-lg hover:bg-gray-800/50 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-gray-800/50"
           >
-            Management
+            {{ t('menuItemThree') }}
           </button>
           <button 
             @click="routeConsultation()" 
             class="text-base font-medium text-gray-300 hover:text-white transition-all duration-300 hover:scale-105 px-4 py-2 rounded-lg hover:bg-gray-800/50 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-gray-800/50"
           >
-            Consultation
+            {{ t('menuItemTwo') }}
           </button>
           <button 
             @click="routeTraining()" 
             class="text-base font-medium text-gray-300 hover:text-white transition-all duration-300 hover:scale-105 px-4 py-2 rounded-lg hover:bg-gray-800/50 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-gray-800/50"
           >
-            Training
+            {{ t('menuItemOne') }}
           </button>
           
           <!-- Contact Button -->
@@ -43,12 +52,13 @@
             @click="contactClicked()" 
             class="text-base font-semibold bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white transition-all duration-300 hover:scale-105 px-6 py-2 rounded-xl shadow-lg hover:shadow-xl hover:-translate-y-0.5 active:translate-y-0 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-[rgb(18,18,18)]"
           >
-            Contact
+            {{ t('contact') }}
           </button>
         </div>
         
         <!-- Mobile menu -->
-        <div class="lg:hidden">
+        <div class="lg:hidden flex items-center space-x-4">
+          <LanguageSwitcher />
           <burger-menu />
         </div>
       </div>
@@ -60,7 +70,9 @@
 import { useRouter } from 'vue-router'
 import SvgIcon from '../controls/svg-icon.vue'
 import BurgerMenu from '../controls/burger-menu.vue'
+import LanguageSwitcher from '../controls/language-switcher.vue'
 
+const { t } = useI18n()
 const router = useRouter()
 
 const routeHome = (): void => {

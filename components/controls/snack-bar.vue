@@ -28,11 +28,10 @@
 <script>
 import { ref, computed } from 'vue';
 import BaseButton from '../controls/BaseButton.vue';
-import { useI18n } from 'vue-i18n';
 export default {
   components: { BaseButton },
   setup() {
-    const { t } = useI18n({ useScope: 'global' });
+    const { t } = useI18n();
     const accept = computed(() => t('accept'));
     let checkPolicies = ref(localStorage.getItem('policiesAccepted'));
 

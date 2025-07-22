@@ -3,7 +3,7 @@
     <!-- Burger Button -->
     <button 
       @click="toggleMenu" 
-      class="relative z-50 p-2 rounded-lg hover:bg-white/10 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+      class="relative z-[60] p-2 rounded-lg bg-gray-800/50 hover:bg-gray-700/70 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
       :aria-expanded="isOpen"
       aria-label="Toggle navigation menu"
     >
@@ -26,13 +26,13 @@
     <!-- Mobile Menu Overlay -->
     <div 
       v-if="isOpen"
-      class="fixed inset-0 bg-black/80 backdrop-blur-sm z-40"
+      class="fixed inset-0 bg-black/80 backdrop-blur-sm z-[55]"
       @click="closeMenu"
     ></div>
 
     <!-- Mobile Menu Content -->
     <div 
-      class="fixed top-0 right-0 h-full w-80 bg-[rgb(18,18,18)] border-l border-gray-700/50 z-50 transform transition-transform duration-300 ease-in-out"
+      class="mobile-menu fixed top-0 right-0 h-full w-80 border-l border-gray-700/50 z-[60] transform transition-transform duration-300 ease-in-out shadow-2xl"
       :class="{ 'translate-x-0': isOpen, 'translate-x-full': !isOpen }"
     >
       <div class="flex flex-col h-full">
@@ -51,6 +51,12 @@
 
         <!-- Navigation Links -->
         <nav class="flex-1 p-6">
+          <!-- Language Switcher for Mobile -->
+          <div class="mb-6 p-4 bg-gray-800/30 rounded-lg">
+            <h3 class="text-sm font-medium text-gray-400 mb-3">Language</h3>
+            <LanguageSwitcher />
+          </div>
+          
           <div class="space-y-4">
             <button 
               @click="navigateTo('/management')"
@@ -92,7 +98,7 @@
               <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
               </svg>
-              Contact Us
+              {{ t('contactUs') }}
             </button>
           </div>
         </nav>
@@ -100,7 +106,7 @@
         <!-- Footer -->
         <div class="p-6 border-t border-gray-700/50">
           <div class="text-center text-gray-400 text-sm">
-            <p>NeedleTails©{{ new Date().getFullYear() }}</p>
+            <p>{{ t('needleTailsCopyright') }}{{ new Date().getFullYear() }}</p>
           </div>
         </div>
       </div>
@@ -111,7 +117,9 @@
 <script setup lang="ts">
 import { ref, onMounted, onBeforeUnmount } from 'vue'
 import { useRouter } from 'vue-router'
+import LanguageSwitcher from './language-switcher.vue'
 
+const { t } = useI18n()
 const router = useRouter()
 const isOpen = ref(false)
 
@@ -157,3 +165,21 @@ onBeforeUnmount(() => {
   document.body.style.overflow = 'unset'
 })
 </script>
+
+<style scoped>
+.mobile-menu {
+  background-color: #000000 !important;
+}
+
+.mobile-menu > div {
+  background-color: #000000 !important;
+}
+
+.mobile-menu nav {
+  background-color: #000000 !important;
+}
+
+.mobile-menu .flex {
+  background-color: #000000 !important;
+}
+</style>
