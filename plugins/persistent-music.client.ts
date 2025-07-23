@@ -40,8 +40,7 @@ export default defineNuxtPlugin(() => {
               width="600"
               style="overflow: hidden; width: 600px;"
               sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"
-              src="https://embed.music.apple.com/us/playlist/chillhop-radio/pl.0b8321c00f68421f8081e5913de51118"
-              data-robustness="SW_SECURE_CRYPTO"
+              src="https://embed.music.apple.com/us/playlist/chillhop-radio/pl.0b8321c00f68421f8081e5913de51118?app=music&at=1000lQel&ct=web_player"
             ></iframe>
           </div>
         </div>
@@ -81,8 +80,7 @@ export default defineNuxtPlugin(() => {
               width="500"
               style="overflow: hidden; width: 500px;"
               sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"
-              src="https://embed.music.apple.com/us/playlist/chillhop-radio/pl.0b8321c00f68421f8081e5913de51118"
-              data-robustness="SW_SECURE_CRYPTO"
+              src="https://embed.music.apple.com/us/playlist/chillhop-radio/pl.0b8321c00f68421f8081e5913de51118?app=music&at=1000lQel&ct=web_player"
             ></iframe>
           </div>
         </div>
@@ -104,23 +102,7 @@ export default defineNuxtPlugin(() => {
         })
       })
 
-      // Configure MusicKit.js robustness level for iframes
-      const iframes = document.querySelectorAll('iframe[src*="music.apple.com"]')
-      iframes.forEach(iframe => {
-        iframe.addEventListener('load', () => {
-          try {
-            // Try to configure MusicKit.js if it's available
-            const musicKit = (window as any).MusicKit
-            if (musicKit) {
-              musicKit.configure({
-                robustness: 'SW_SECURE_CRYPTO'
-              })
-            }
-          } catch (error) {
-            console.log('MusicKit configuration not available:', error)
-          }
-        })
-      })
+
     }, 100)
 
     // Append directly to body - this ensures they persist across all route changes
