@@ -252,6 +252,22 @@
   "our": "我们的",
   "featuredApps": "精选应用",
   "featuredAppsDescription": "发现我们展示Swift开发和现代软件架构力量的创新应用程序。",
+  "nudgeTitle": "您的自监控数据端到端加密消息应用程序",
+  "nudgeDescription": "您是否担心当今数字环境中的安全性？您想要一个安全的通信渠道，但对谁可以访问您的数据感到不确定吗？即使有端到端加密，对数据存储的担忧也可能持续存在。Nudge在这里为您提供所需的解决方案。使用Nudge，您可以完全控制您的数据，允许您安全地管理它们或在全球范围内扩展您的覆盖范围，而不会有数据持久化的风险。今天就联系我们，了解如何设置您自己的实例并享受安全通信带来的安心！",
+  "islandHoppersTitle": "Island Hoppers：您无缝冒险的终极旅游应用！",
+  "islandHoppersDescription": "Island Hoppers是专为提升您的旅行体验而设计的全能应用，无论您是组织难忘旅游的公司还是寻求完美度假的客户。对于公司，我们的应用简化了整个旅游管理流程。轻松组织和定制您的旅游，直接与导游沟通，并通过实时更新让您的客户保持信息畅通。使用Island Hoppers，您可以管理预订，跟踪客户偏好，并确保每个细节都得到照顾，让您专注于提供卓越的体验。对于客户，Island Hoppers提供适合各种团体类型的多样化旅游套餐，包括家庭、背包客和派对爱好者。浏览我们精心策划的冒险选择，选择适合您风格的完美套餐，并与志同道合的旅行者联系。享受与导游的无缝沟通，获取重要信息，并接收个性化推荐以充分利用您的旅程。使用Island Hoppers，轻松自信地踏上难忘的冒险之旅，知道您旅游的每个方面都只需一键之遥！",
+  "streamStackTitle": "您软件解决方案的教育平台",
+  "streamStackDescription": "流媒体、阅读、讨论。无论您是编程新手还是想了解不同的软件解决方案，我们通过我们的原生Mac应用让您轻松做到。关注最新的编码趋势。",
   "welcomeToNeedleTails": "欢迎来到NeedleTails - 您的软件开发盟友",
-  "accept": "我同意并接受"
+  "accept": "我同意并接受",
+  "cookieConsentTitle": "我们使用浏览器存储",
+  "cookieConsentMessage": "我们使用浏览器存储来记住您的语言偏好并增强您的浏览体验。点击\"接受全部\"即表示您同意我们使用浏览器存储。",
+  "cookieConsentAcceptAll": "接受全部",
+  "cookieConsentAcceptNecessary": "仅接受必要",
+  "cookieConsentReject": "拒绝全部",
+  "cookieConsentLearnMore": "了解更多",
+  "cookieConsentNecessary": "必要的存储包括语言检测，以您偏好的语言提供内容。",
+  "cookieConsentAnalytics": "我们目前在此网站上不使用分析跟踪。",
+  "cookieConsentPreferences": "偏好存储记住您的设置，如主题和用户偏好，以个性化您的体验。",
+  "cookieConsentMarketing": "我们目前在此网站上不使用营销跟踪或广告。"
 }

@@ -1,5 +1,5 @@
 <template>
-  <section class="relative bg-black min-h-screen flex items-center overflow-hidden">
+  <section class="padding-top relative bg-black min-h-screen flex items-center overflow-hidden">
     <!-- Background Pattern -->
     <div class="absolute inset-0 opacity-5">
       <div class="absolute inset-0 bg-gradient-to-br from-blue-600/20 via-transparent to-purple-600/20"></div>
@@ -150,3 +150,9 @@ const contactClicked = (): void => {
   window.location.href = mailto_link
 }
 </script>
+
+<style scoped>
+.padding-top {
+  padding-top: 180px;
+}
+</style>

@@ -1,7 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
-  devtools: { enabled: true },
+  devtools: { enabled: false },
   // Static site generation for GitHub Pages
   nitro: {
     prerender: {
@@ -59,16 +59,13 @@ export default defineNuxtConfig({
       },
       title: 'NeedleTails - Professional Software Development Services',
       meta: [
-        { charset: 'utf-8' },
+                { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-        { name: 'format-detection', content: 'telephone=no' },
         { name: 'description', content: 'Expert software development services specializing in web applications, mobile apps, and backend solutions. Custom development, consulting, and project management.' },
         { name: 'keywords', content: 'software development, web development, mobile apps, backend development, consulting, project management, custom software' },
         { name: 'author', content: 'NeedleTails' },
-        { name: 'theme-color', content: '#000000' },
-        { name: 'msapplication-TileColor', content: '#000000' },
-        { name: 'apple-mobile-web-app-capable', content: 'yes' },
-        { name: 'apple-mobile-web-app-status-bar-style', content: 'black' },
+                { name: 'theme-color', content: '#000000' },
+                { name: 'mobile-web-app-capable', content: 'yes' },
         { name: 'apple-mobile-web-app-title', content: 'NeedleTails' },
         { name: 'robots', content: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' },
         { name: 'googlebot', content: 'index, follow' },
@@ -94,7 +91,7 @@ export default defineNuxtConfig({
         { rel: 'canonical', href: 'https://needletails.com' },
         { rel: 'manifest', href: '/manifest.json' },
         { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
-        { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' },
+        { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: 'anonymous' },
         { rel: 'dns-prefetch', href: 'https://www.google-analytics.com' }
       ]
     },

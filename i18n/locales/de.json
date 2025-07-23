@@ -252,6 +252,22 @@
   "our": "Unsere",
   "featuredApps": "Hervorgehobene Apps",
   "featuredAppsDescription": "Entdecken Sie unsere innovativen Anwendungen, die die Kraft der Swift-Entwicklung und moderner Softwarearchitektur zeigen.",
+  "nudgeTitle": "Ihre selbst überwachte End-to-End-verschlüsselte Messaging-Anwendung",
+  "nudgeDescription": "Sind Sie besorgt über die Sicherheit in der heutigen digitalen Landschaft? Möchten Sie einen sicheren Kommunikationskanal, fühlen sich aber unsicher darüber, wer Zugang zu Ihren Daten hat? Auch bei End-to-End-Verschlüsselung können Bedenken hinsichtlich der Datenspeicherung bestehen bleiben. Nudge ist hier, um die Lösung zu bieten, die Sie benötigen. Mit Nudge haben Sie die vollständige Kontrolle über Ihre Daten und können sie sicher verwalten oder Ihre Reichweite global erweitern, ohne das Risiko der Datenpersistenz. Kontaktieren Sie uns noch heute, um mehr darüber zu erfahren, wie Sie Ihre eigene Instanz einrichten und mit sicherer Kommunikation Seelenfrieden genießen können!",
+  "islandHoppersTitle": "Island Hoppers: Ihre ultimative Tour-App für nahtlose Abenteuer!",
+  "islandHoppersDescription": "Island Hoppers ist die All-in-One-App, die entwickelt wurde, um Ihr Reiseerlebnis zu verbessern, egal ob Sie ein Unternehmen sind, das unvergessliche Touren organisiert, oder ein Kunde, der das perfekte Urlaubserlebnis sucht. Für Unternehmen optimiert unsere App den gesamten Tour-Management-Prozess. Organisieren und passen Sie Ihre Touren mühelos an, kommunizieren Sie direkt mit Reiseführern und halten Sie Ihre Kunden mit Echtzeit-Updates auf dem Laufenden. Mit Island Hoppers können Sie Buchungen verwalten, Kundenpräferenzen verfolgen und sicherstellen, dass jedes Detail berücksichtigt wird, sodass Sie sich auf die Bereitstellung außergewöhnlicher Erlebnisse konzentrieren können. Für Kunden bietet Island Hoppers eine vielfältige Auswahl an Tour-Paketen, die auf verschiedene Gruppentypen zugeschnitten sind, einschließlich Familien, Rucksacktouristen und Party-Enthusiasten. Durchsuchen Sie unsere kuratierte Auswahl an Abenteuern, wählen Sie das perfekte Paket, das zu Ihrem Stil passt, und vernetzen Sie sich mit Gleichgesinnten. Genießen Sie nahtlose Kommunikation mit Ihren Reiseführern, greifen Sie auf wichtige Informationen zu und erhalten Sie personalisierte Empfehlungen, um das Beste aus Ihrer Reise herauszuholen. Mit Island Hoppers begeben Sie sich mit Leichtigkeit und Vertrauen auf unvergessliche Abenteuer, wissend, dass jeder Aspekt Ihrer Tour nur einen Klick entfernt ist!",
+  "streamStackTitle": "Eine Bildungsplattform für Ihre Software-Lösungen",
+  "streamStackDescription": "Streamen, Lesen, Diskutieren. Ob Sie neu im Programmieren sind oder sich über verschiedene Software-Lösungen informieren möchten, wir machen es Ihnen mit unserer nativen Mac-App leicht. Bleiben Sie auf dem Laufenden über die neuesten Coding-Trends.",
   "welcomeToNeedleTails": "Willkommen bei NeedleTails - Ihr Verbündeter in der Softwareentwicklung",
-  "accept": "Ich stimme zu und akzeptiere"
+  "accept": "Ich stimme zu und akzeptiere",
+  "cookieConsentTitle": "Wir verwenden Browser-Speicher",
+  "cookieConsentMessage": "Wir verwenden Browser-Speicher, um Ihre Sprachpräferenz zu merken und Ihr Browsing-Erlebnis zu verbessern. Durch Klicken auf 'Alle akzeptieren' stimmen Sie unserer Verwendung des Browser-Speichers zu.",
+  "cookieConsentAcceptAll": "Alle akzeptieren",
+  "cookieConsentAcceptNecessary": "Nur Notwendige",
+  "cookieConsentReject": "Alle ablehnen",
+  "cookieConsentLearnMore": "Mehr erfahren",
+  "cookieConsentNecessary": "Notwendiger Speicher umfasst die Spracherkennung, um Inhalte in Ihrer bevorzugten Sprache bereitzustellen.",
+  "cookieConsentAnalytics": "Wir verwenden derzeit kein Analyse-Tracking auf dieser Website.",
+  "cookieConsentPreferences": "Präferenz-Speicher merkt sich Ihre Einstellungen wie Theme und Benutzereinstellungen, um Ihre Erfahrung zu personalisieren.",
+  "cookieConsentMarketing": "Wir verwenden derzeit kein Marketing-Tracking oder Werbung auf dieser Website."
 }

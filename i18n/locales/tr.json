@@ -252,6 +252,22 @@
   "our": "Bizim",
   "featuredApps": "Öne Çıkan Uygulamalar",
   "featuredAppsDescription": "Swift geliştirme ve modern yazılım mimarisinin gücünü gösteren yenilikçi uygulamalarımızı keşfedin.",
+  "nudgeTitle": "Kendi Kendini İzleyen Verilerinizle Uçtan Uca Şifreli Mesajlaşma Uygulamanız",
+  "nudgeDescription": "Günümüzün dijital ortamında güvenlik konusunda endişeli misiniz? Güvenli bir iletişim kanalı istiyor musunuz ama verilerinize kimin erişebileceği konusunda belirsiz mi hissediyorsunuz? Uçtan uca şifreleme olsa bile, veri depolama konusundaki endişeler devam edebilir. Nudge, ihtiyacınız olan çözümü sağlamak için burada. Nudge ile verileriniz üzerinde tam kontrolünüz var, güvenli bir şekilde yönetmenize veya veri kalıcılığı riski olmadan küresel olarak erişiminizi genişletmenize olanak tanır. Kendi örneğinizi nasıl kurabileceğinizi ve güvenli iletişimle huzur içinde nasıl keyif alabileceğinizi öğrenmek için bugün bizimle iletişime geçin!",
+  "islandHoppersTitle": "Island Hoppers: Sorunsuz Maceralar için Nihai Tur Uygulamanız!",
+  "islandHoppersDescription": "Island Hoppers, unutulmaz turlar düzenleyen bir şirket olsun veya mükemmel kaçamak arayan bir müşteri olsun, seyahat deneyiminizi geliştirmek için tasarlanmış all-in-one uygulamadır. Şirketler için uygulamamız tüm tur yönetim sürecini optimize eder. Turlarınızı zahmetsizce organize edin ve özelleştirin, tur rehberleriyle doğrudan iletişim kurun ve müşterilerinizi gerçek zamanlı güncellemelerle bilgilendirin. Island Hoppers ile rezervasyonları yönetebilir, müşteri tercihlerini takip edebilir ve her detayın halledildiğinden emin olabilirsiniz, böylece olağanüstü deneyimler sunmaya odaklanabilirsiniz. Müşteriler için Island Hoppers, aileler, sırt çantalı gezginler ve parti meraklıları dahil olmak üzere çeşitli grup türlerine uyarlanmış çeşitli tur paketleri sunar. Küratörlü macera seçimimizi gözden geçirin, tarzınıza uygun mükemmel paketi seçin ve benzer düşünen gezginlerle bağlantı kurun. Tur rehberlerinizle sorunsuz iletişimin keyfini çıkarın, temel bilgilere erişin ve yolculuğunuzdan en iyi şekilde yararlanmak için kişiselleştirilmiş öneriler alın. Island Hoppers ile, turunuzun her yönünün sadece bir dokunuş uzaklıkta olduğunu bilerek kolaylık ve güvenle unutulmaz maceralara çıkın!",
+  "streamStackTitle": "Yazılım Çözümleriniz için Eğitim Platformu",
+  "streamStackDescription": "Akış, Oku, Tartış. İster programlamaya yeni olun ister farklı yazılım çözümleri hakkında okumak isteyin, native Mac uygulamamızla sizin için kolaylaştırıyoruz. En son kodlama trendlerini takip edin.",
   "welcomeToNeedleTails": "NeedleTails'e Hoş Geldiniz - Yazılım Geliştirme Müttefikiniz",
-  "accept": "Kabul ediyorum ve kabul ediyorum"
+  "accept": "Kabul ediyorum ve kabul ediyorum",
+  "cookieConsentTitle": "Tarayıcı depolaması kullanıyoruz",
+  "cookieConsentMessage": "Dil tercihinizi hatırlamak ve gezinme deneyiminizi geliştirmek için tarayıcı depolaması kullanıyoruz. 'Tümünü Kabul Et'e tıklayarak tarayıcı depolaması kullanımımızı kabul etmiş olursunuz.",
+  "cookieConsentAcceptAll": "Tümünü Kabul Et",
+  "cookieConsentAcceptNecessary": "Sadece Gerekli",
+  "cookieConsentReject": "Tümünü Reddet",
+  "cookieConsentLearnMore": "Daha Fazla Bilgi",
+  "cookieConsentNecessary": "Gerekli depolama, tercih ettiğiniz dilde içerik sağlamak için dil algılamasını içerir.",
+  "cookieConsentAnalytics": "Şu anda bu web sitesinde analitik takibi kullanmıyoruz.",
+  "cookieConsentPreferences": "Tercih depolaması, deneyiminizi kişiselleştirmek için tema ve kullanıcı tercihleri gibi ayarlarınızı hatırlar.",
+  "cookieConsentMarketing": "Şu anda bu web sitesinde pazarlama takibi veya reklam kullanmıyoruz."
 }

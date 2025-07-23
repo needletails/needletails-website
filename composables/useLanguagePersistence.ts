@@ -2,17 +2,15 @@ export const useLanguagePersistence = () => {
   const { locale, locales } = useI18n()
   const switchLocalePath = useSwitchLocalePath()
   const route = useRoute()
-
-  // Storage key for language preference
-  const LANGUAGE_STORAGE_KEY = 'needletails_language_preference'
+  const { getLanguagePreference, setLanguagePreference } = useStorage()
 
   // Get stored language preference
   const getStoredLanguage = (): string | null => {
-    if (process.client) {
+    if (import.meta.client) {
       try {
-        return localStorage.getItem(LANGUAGE_STORAGE_KEY)
+        return getLanguagePreference()
       } catch (error) {
-        console.warn('Failed to get language from localStorage:', error)
+        console.warn('Failed to get language from secure storage:', error)
         return null
       }
     }
@@ -21,11 +19,11 @@ export const useLanguagePersistence = () => {
 
   // Store language preference
   const storeLanguage = (languageCode: string): void => {
-    if (process.client) {
+    if (import.meta.client) {
       try {
-        localStorage.setItem(LANGUAGE_STORAGE_KEY, languageCode)
+        setLanguagePreference(languageCode)
       } catch (error) {
-        console.warn('Failed to store language in localStorage:', error)
+        console.warn('Failed to store language in secure storage:', error)
       }
     }
   }

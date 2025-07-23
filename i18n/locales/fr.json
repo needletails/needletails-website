@@ -252,6 +252,22 @@
   "our": "Nos",
   "featuredApps": "Apps en Vedette",
   "featuredAppsDescription": "Découvrez nos applications innovantes qui montrent la puissance du développement Swift et de l'architecture logicielle moderne.",
+  "nudgeTitle": "Votre Application de Messagerie avec Données Autosurveillées Chiffrées de Bout en Bout",
+  "nudgeDescription": "Êtes-vous inquiet de la sécurité dans le paysage numérique actuel ? Voulez-vous un canal de communication sécurisé mais vous sentez-vous incertain de qui a accès à vos données ? Même avec le chiffrement de bout en bout, les préoccupations concernant le stockage des données peuvent persister. Nudge est là pour fournir la solution dont vous avez besoin. Avec Nudge, vous avez un contrôle complet sur vos données, vous permettant de les gérer en toute sécurité ou d'étendre votre portée mondialement sans le risque de persistance des données. Contactez-nous aujourd'hui pour en savoir plus sur la façon dont vous pouvez configurer votre propre instance et profiter de la tranquillité d'esprit avec une communication sécurisée !",
+  "islandHoppersTitle": "Island Hoppers : Votre App de Tours Ultime pour des Aventures Sans Problème !",
+  "islandHoppersDescription": "Island Hoppers est l'app tout-en-un conçue pour améliorer votre expérience de voyage, que vous soyez une entreprise organisant des tours inoubliables ou un client cherchant l'évasion parfaite. Pour les entreprises, notre app rationalise tout le processus de gestion des tours. Organisez et personnalisez vos tours sans effort, communiquez directement avec les guides touristiques et gardez vos clients informés avec des mises à jour en temps réel. Avec Island Hoppers, vous pouvez gérer les réservations, suivre les préférences des clients et vous assurer que chaque détail est pris en charge, vous permettant de vous concentrer sur la livraison d'expériences exceptionnelles. Pour les clients, Island Hoppers offre une gamme diversifiée de forfaits de tours adaptés à divers types de groupes, y compris les familles, les routards et les passionnés de fêtes. Parcourez notre sélection d'aventures organisée, choisissez le forfait parfait qui correspond à votre style et connectez-vous avec des voyageurs partageant les mêmes idées. Profitez d'une communication fluide avec vos guides touristiques, accédez aux informations essentielles et recevez des recommandations personnalisées pour tirer le meilleur parti de votre voyage. Avec Island Hoppers, embarquez pour des aventures inoubliables avec facilité et confiance, sachant que chaque aspect de votre tour n'est qu'à un clic !",
+  "streamStackTitle": "Une Plateforme Éducative pour vos Solutions Logicielles",
+  "streamStackDescription": "Diffusez, Lisez, Discutez. Que vous soyez nouveau en programmation ou que vous vouliez lire sur différentes solutions logicielles, nous vous facilitons la tâche avec notre app Mac native. Restez à jour avec les dernières tendances de codage.",
   "welcomeToNeedleTails": "Bienvenue chez NeedleTails - Votre Allié en Développement Logiciel",
-  "accept": "J'accepte et j'accepte"
+  "accept": "J'accepte et j'accepte",
+  "cookieConsentTitle": "Nous utilisons le stockage du navigateur",
+  "cookieConsentMessage": "Nous utilisons le stockage du navigateur pour mémoriser votre préférence de langue et améliorer votre expérience de navigation. En cliquant sur 'Accepter Tout', vous consentez à notre utilisation du stockage du navigateur.",
+  "cookieConsentAcceptAll": "Accepter Tout",
+  "cookieConsentAcceptNecessary": "Nécessaires Seulement",
+  "cookieConsentReject": "Rejeter Tout",
+  "cookieConsentLearnMore": "En Savoir Plus",
+  "cookieConsentNecessary": "Le stockage nécessaire inclut la détection de langue pour fournir du contenu dans votre langue préférée.",
+  "cookieConsentAnalytics": "Nous n'utilisons actuellement pas de suivi d'analyse sur ce site web.",
+  "cookieConsentPreferences": "Le stockage des préférences mémorise vos paramètres comme le thème et les préférences utilisateur pour personnaliser votre expérience.",
+  "cookieConsentMarketing": "Nous n'utilisons actuellement pas de suivi marketing ou de publicité sur ce site web."
 }

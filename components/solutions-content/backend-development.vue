@@ -4,7 +4,7 @@
       <div class="bg-black rounded-xl shadow-2xl p-6 sm:p-8 lg:p-12">
         <header class="text-center mb-8 sm:mb-12">
           <div class="flex justify-center mb-4 sm:mb-6">
-            <svg-icon :width="60" :height="60" class="sm:w-[75px] sm:h-[75px]" name="robustServer" />
+            <robust-server-icon :width="60" :height="60" class="sm:w-[75px] sm:h-[75px]" />
           </div>
           <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#F5F3B5] mb-4">{{ t('backendSolutionsHeader') }}</h2>
           <p class="text-base sm:text-lg lg:text-xl text-gray-300 leading-relaxed max-w-4xl mx-auto">
@@ -28,7 +28,7 @@
 
 <script setup lang="ts">
 import { computed } from 'vue'
-import SvgIcon from '../controls/svg-icon.vue'
+import RobustServerIcon from '../icons/robust-server-icon.vue'
 
 const { t } = useI18n()
 

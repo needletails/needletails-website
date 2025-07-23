@@ -28,14 +28,6 @@ export default defineEventHandler(async (event) => {
     // 2. Send email notification
     // 3. Log the contact request
     
-    console.log('Contact form submission:', {
-      name,
-      email,
-      subject,
-      message,
-      timestamp: new Date().toISOString()
-    })
-    
     return createSuccessResponse(
       { id: Date.now() },
       'Contact form submitted successfully'

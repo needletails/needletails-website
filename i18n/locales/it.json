@@ -246,6 +246,22 @@
   "our": "Le Nostre",
   "featuredApps": "App in Evidenza",
   "featuredAppsDescription": "Scopri le nostre applicazioni innovative che mostrano la potenza dello sviluppo Swift e dell'architettura software moderna.",
+  "nudgeTitle": "La Tua Applicazione di Messaggistica con Dati Automonitorati Crittografati End-to-End",
+  "nudgeDescription": "Sei preoccupato per la sicurezza nel panorama digitale di oggi? Vuoi un canale di comunicazione sicuro ma ti senti incerto su chi ha accesso ai tuoi dati? Anche con la crittografia end-to-end, le preoccupazioni sull'archiviazione dei dati possono persistere. Nudge è qui per fornire la soluzione di cui hai bisogno. Con Nudge, hai il controllo completo sui tuoi dati, permettendoti di gestirli in modo sicuro o espandere la tua portata globalmente senza il rischio di persistenza dei dati. Contattaci oggi per saperne di più su come puoi configurare la tua istanza e godere della tranquillità con la comunicazione sicura!",
+  "islandHoppersTitle": "Island Hoppers: La Tua App di Tour Definitiva per Avventure Senza Problemi!",
+  "islandHoppersDescription": "Island Hoppers è l'app tutto-in-uno progettata per migliorare la tua esperienza di viaggio, che tu sia un'azienda che organizza tour indimenticabili o un cliente che cerca la fuga perfetta. Per le aziende, la nostra app semplifica l'intero processo di gestione dei tour. Organizza e personalizza i tuoi tour senza sforzo, comunica direttamente con le guide turistiche e mantieni i tuoi clienti informati con aggiornamenti in tempo reale. Con Island Hoppers, puoi gestire prenotazioni, tracciare le preferenze dei clienti e assicurarti che ogni dettaglio sia curato, permettendoti di concentrarti sulla consegna di esperienze eccezionali. Per i clienti, Island Hoppers offre una gamma diversificata di pacchetti tour adattati a vari tipi di gruppi, incluse famiglie, backpacker ed entusiasti delle feste. Sfoglia la nostra selezione curata di avventure, scegli il pacchetto perfetto che si adatta al tuo stile e connettiti con viaggiatori affini. Goditi una comunicazione fluida con le tue guide turistiche, accedi a informazioni essenziali e ricevi raccomandazioni personalizzate per ottenere il massimo dal tuo viaggio. Con Island Hoppers, imbarcati in avventure indimenticabili con facilità e fiducia, sapendo che ogni aspetto del tuo tour è a portata di clic!",
+  "streamStackTitle": "Una Piattaforma Educativa per le Tue Soluzioni Software",
+  "streamStackDescription": "Stream, Leggi, Discuti. Che tu sia nuovo alla programmazione o voglia leggere su diverse soluzioni software, ti rendiamo facile farlo con la nostra app nativa Mac. Rimani aggiornato con le ultime tendenze di codifica.",
   "welcomeToNeedleTails": "Benvenuto a NeedleTails - Il Tuo Alleato nello Sviluppo Software",
-  "accept": "Accetto e sono d'accordo"
+  "accept": "Accetto e sono d'accordo",
+  "cookieConsentTitle": "Utilizziamo l'archiviazione del browser",
+  "cookieConsentMessage": "Utilizziamo l'archiviazione del browser per ricordare la tua preferenza di lingua e migliorare la tua esperienza di navigazione. Cliccando su 'Accetta Tutto', acconsenti al nostro utilizzo dell'archiviazione del browser.",
+  "cookieConsentAcceptAll": "Accetta Tutto",
+  "cookieConsentAcceptNecessary": "Solo Necessari",
+  "cookieConsentReject": "Rifiuta Tutto",
+  "cookieConsentLearnMore": "Scopri di Più",
+  "cookieConsentNecessary": "L'archiviazione necessaria include il rilevamento della lingua per fornire contenuti nella tua lingua preferita.",
+  "cookieConsentAnalytics": "Attualmente non utilizziamo il tracciamento analitico su questo sito web.",
+  "cookieConsentPreferences": "L'archiviazione delle preferenze ricorda le tue impostazioni come tema e preferenze utente per personalizzare la tua esperienza.",
+  "cookieConsentMarketing": "Attualmente non utilizziamo il tracciamento marketing o la pubblicità su questo sito web."
 }

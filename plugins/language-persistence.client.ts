@@ -1,22 +1,21 @@
 export default defineNuxtPlugin(() => {
   // Only run on client side
-  if (process.client) {
-    // Simple initialization without navigation
-    onMounted(() => {
-      const { getStoredLanguage } = useLanguagePersistence()
-      const { locale, locales } = useI18n()
+  if (import.meta.client) {
+    // Use nextTick to ensure the app is ready
+    nextTick(() => {
+      const { getLanguagePreference } = useStorage()
       
-      // Check if there's a stored language preference
-      const storedLanguage = getStoredLanguage()
-      
-      if (storedLanguage) {
-        // Validate the stored language
-        const isValidLanguage = locales.value.some((l: any) => l.code === storedLanguage)
+      try {
+        const storedLanguage = getLanguagePreference()
         
-        // Only update locale if valid and different
-        if (isValidLanguage && storedLanguage !== locale.value) {
-          locale.value = storedLanguage as any
+        if (storedLanguage) {
+          // Store the language preference in the app context
+          // The composable will handle the actual restoration when used
+          const nuxtApp = useNuxtApp()
+          nuxtApp.$languagePreference = storedLanguage
         }
+      } catch (error) {
+        console.warn('Failed to restore language preference:', error)
       }
     })
   }

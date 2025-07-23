@@ -92,14 +92,14 @@
         <div class="flex flex-col sm:flex-row items-center justify-between text-gray-400 text-sm">
           <div class="flex items-center space-x-4 mb-4 sm:mb-0">
             <NuxtLink 
-              to="/privacy" 
+              :to="localePath('/privacy')" 
               class="hover:text-white transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 rounded px-2 py-1"
             >
               {{ t('privacy') }}
             </NuxtLink>
             <span class="hidden sm:inline">|</span>
             <NuxtLink 
-              to="/terms" 
+              :to="localePath('/terms')" 
               class="hover:text-white transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 rounded px-2 py-1"
             >
               {{ t('termsConditions') }}
@@ -118,6 +118,7 @@
 
 <script setup lang="ts">
 const { t } = useI18n()
+const localePath = useLocalePath()
 
 const contactClicked = (): void => {
   const mailto_link = 'mailto:support@needletails.com?subject=Project Inquiry&body='

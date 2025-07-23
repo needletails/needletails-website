@@ -1,19 +1,12 @@
 <template>
-  <div class="min-h-screen bg-black">
-    <Header />
-    <main class="pt-20 lg:pt-24 pb-12">
-      <div class="px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-        <ProjectsComponent />
-      </div>
-    </main>
-    <Footer />
-  </div>
+  <main class="pt-20 lg:pt-24 pb-12">
+    <div class="px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+      <ProjectsComponent />
+    </div>
+  </main>
 </template>
 
 <script setup lang="ts">
-import Header from '../components/base/header.vue';
-import Footer from '../components/base/footer.vue';
-
 // SEO Meta Tags
 useHead({
   title: 'Software Development Solutions - NeedleTails',

@@ -68,27 +68,27 @@
 
 <script setup lang="ts">
 import { useRouter } from 'vue-router'
-import SvgIcon from '../controls/svg-icon.vue'
 import BurgerMenu from '../controls/burger-menu.vue'
 import LanguageSwitcher from '../controls/language-switcher.vue'
 
 const { t } = useI18n()
 const router = useRouter()
+const localePath = useLocalePath()
 
 const routeHome = (): void => {
-  router.push('/')
+  router.push(localePath('/'))
 }
 
 const routeConsultation = (): void => {
-  router.push('/consultation')
+  router.push(localePath('/consultation'))
 }
 
 const routeManagement = (): void => {
-  router.push('/management')
+  router.push(localePath('/management'))
 }
 
 const routeTraining = (): void => {
-  router.push('/training')
+  router.push(localePath('/training'))
 }
 
 const contactClicked = (): void => {

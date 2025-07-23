@@ -10,7 +10,7 @@
         :class="{ active: clickedStatus }"
       />
       <div v-if="isCustomSVG">
-        <svg-icon
+        <dynamic-icon
           :width="width"
           :height="height"
           :name="icon"
@@ -40,7 +40,7 @@
         :class="{ active: clickedStatus }"
       />
       <div v-if="isCustomSVG">
-        <svg-icon
+        <dynamic-icon
           :width="width"
           :height="height"
           :name="icon"
@@ -65,7 +65,7 @@
 <script setup lang="ts">
 import { ref, computed } from 'vue'
 import { useRouter } from 'vue-router'
-import SvgIcon from './svg-icon.vue'
+import DynamicIcon from '../icons/dynamic-icon.vue'
 
 interface Props {
   title?: string
@@ -133,8 +133,6 @@ const clicked = () => {
       '&body=' +
       ''
     window.location.href = mailto_link
-  } else {
-    console.log('No Handler')
   }
 }
 

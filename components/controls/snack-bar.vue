@@ -25,32 +25,20 @@
   </transition>
 </template>
 
-<script>
+<script setup lang="ts">
 import { ref, computed } from 'vue';
-import BaseButton from '../controls/BaseButton.vue';
-export default {
-  components: { BaseButton },
-  setup() {
-    const { t } = useI18n();
-    const accept = computed(() => t('accept'));
-    let checkPolicies = ref(localStorage.getItem('policiesAccepted'));
+import BaseButton from './base-button.vue';
 
-    if (checkPolicies.value === null) {
-      checkPolicies.value = false;
-    } else {
-      checkPolicies.value = localStorage.getItem('policiesAccepted');
-    }
-    function clicked() {
-      localStorage.setItem('policiesAccepted', true);
-      checkPolicies.value = localStorage.getItem('policiesAccepted');
-    }
-    return {
-      clicked,
-      checkPolicies,
-      accept,
-    };
-  },
-};
+const { t } = useI18n();
+const { getPoliciesAccepted, setPoliciesAccepted } = useStorage();
+const accept = computed(() => t('accept'));
+
+let checkPolicies = ref(getPoliciesAccepted());
+
+function clicked() {
+  setPoliciesAccepted(true);
+  checkPolicies.value = getPoliciesAccepted();
+}
 </script>
 
 <style lang="css" scoped>

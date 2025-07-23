@@ -9,7 +9,7 @@
     <div class="relative text-center">
       <!-- Logo -->
       <div class="mb-8">
-        <svg-icon :width="120" :height="60" name="devLogo" />
+        <logo-icon :width="120" :height="60" class="sm:w-[75px] sm:h-[75px]" />
       </div>
 
       <!-- Loading Animation -->
@@ -48,7 +48,8 @@
 
 <script setup lang="ts">
 import { ref, onMounted } from 'vue'
-import SvgIcon from './controls/svg-icon.vue'
+import LogoIcon from './icons/logo-icon.vue'
+
 
 const progress = ref(0)
 const statusText = ref('Initializing...')
@@ -69,7 +70,7 @@ onMounted(() => {
     
     if (currentStep < statusMessages.length - 1) {
       currentStep++
-      statusText.value = statusMessages[currentStep]
+      statusText.value = statusMessages[currentStep] || 'Loading...'
     }
     
     if (progress.value >= 100) {
@@ -79,7 +80,6 @@ onMounted(() => {
       // Emit completion event after a short delay
       setTimeout(() => {
         // You can emit an event here if needed
-        console.log('Loading complete')
       }, 500)
     }
   }, 300)

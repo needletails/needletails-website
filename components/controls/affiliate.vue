@@ -6,11 +6,8 @@
       @mouseleave="hideMessage()"
       @click="routeToPath(affiliate.path)"
     >
-      <svg-icon
-        :height="affiliate.height"
-        :width="affiliate.width"
-        :name="affiliate.name"
-      />
+      <do-logo-icon v-if="affiliate.name === 'doLogo'" :height="affiliate.height" :width="affiliate.width" />
+      <github-icon v-else-if="affiliate.name === 'github'" :height="affiliate.height" :width="affiliate.width" />
       <p class="message">
         {{ affiliate.message }}
       </p>
@@ -20,7 +17,8 @@
 
 <script setup lang="ts">
 import { ref } from 'vue'
-import SvgIcon from './svg-icon.vue'
+import DoLogoIcon from '../icons/do-logo-icon.vue'
+import GithubIcon from '../icons/github-icon.vue'
 
 const isVisible = ref(false)
 

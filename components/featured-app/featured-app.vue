@@ -144,9 +144,9 @@ const createGridItem = (
   externalUrl: string
 ): FeaturedAppItem => ({
   subtitle: applicationTitle,
-  header: headerKey,
+  header: t(headerKey),
   image: imagePath ? `/images/${imagePath}` : undefined,
-  text: descriptionKey,
+  text: t(descriptionKey),
   alt: `${applicationTitle} image`,
   color: '#000000',
   fontColor: '#FFFFFF',
@@ -157,24 +157,24 @@ const createGridItem = (
 const featuredAppData = computed((): FeaturedAppItem[] => [
   createGridItem(
     'Nudge',
-    'Your Self Monitored Data End-to-End Encrypted Messaging Application',
-    'Are you worried about security in today\'s digital landscape? Do you want a secure communication channel but feel uncertain about who has access to your data? Even with end-to-end encryption, concerns about data storage can linger. Nudge is here to provide the solution you need. With Nudge, you have complete control over your data, allowing you to manage it securely or expand your reach globally without the risk of data persistence. Contact us today to learn more about how you can set up your own instance and enjoy peace of mind with secure communication!',
+    'nudgeTitle',
+    'nudgeDescription',
     'aboveHeader',
     'nudge.svg',
     ''
   ),
   createGridItem(
     'Island Hoppers',
-    'Island Hoppers: Your Ultimate Tour App for Seamless Adventures!',
-    'Island Hoppers is the all-in-one app designed to enhance your travel experience, whether you\'re a company organizing unforgettable tours or a customer seeking the perfect getaway. For companies, our app streamlines the entire tour management process. Organize and customize your tours effortlessly, communicate directly with tour guides, and keep your customers informed with real-time updates. With Island Hoppers, you can manage bookings, track customer preferences, and ensure every detail is taken care of, allowing you to focus on delivering exceptional experiences. For customers, Island Hoppers offers a diverse range of tour packages tailored to suit various group types, including families, backpackers, and party enthusiasts. Browse through our curated selection of adventures, choose the perfect package that fits your style, and connect with like-minded travelers. Enjoy seamless communication with your tour guides, access essential information, and receive personalized recommendations to make the most of your journey. With Island Hoppers, embark on unforgettable adventures with ease and confidence, knowing that every aspect of your tour is just a tap away!',
+    'islandHoppersTitle',
+    'islandHoppersDescription',
     'betweenText',
     'island_hoppers.svg',
     ''
   ),
   createGridItem(
     'StreamStack',
-    'An Educational Platform for your Software Solutions',
-    'Stream, Read, Discuss. Whether you are new to programming or want to read up on some different software solutions, we make it easy for you to do so with our native Mac app. Stay tuned for the latest coding trends.',
+    'streamStackTitle',
+    'streamStackDescription',
     'aboveHeader',
     'stream_stack.svg',
     ''
@@ -200,7 +200,7 @@ const goToSlide = (index: number): void => {
 const itemClicked = (index: number): void => {
   const item = featuredAppData.value[index]
   if (item) {
-    console.log(`Item clicked: ${item.header}`)
+    // Handle item click - can be extended for analytics or navigation
   }
 }
 

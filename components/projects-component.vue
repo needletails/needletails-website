@@ -127,7 +127,7 @@ const gridItems = computed((): ProjectGridItem[] => [
     t('swiftHlsDescription'),
     'betweenText',
     'swift_hls.svg',
-    'https://github.com/needletails',
+    'https://github.com/needletails/swift-hls',
     ''
   ),
   createGridItem(
@@ -136,7 +136,7 @@ const gridItems = computed((): ProjectGridItem[] => [
     t('swiftIapDescription'),
     'betweenText',
     'iap_engine.svg',
-    'https://github.com/needletails',
+    'https://github.com/needletails/iap-entitlement-engine',
     ''
   ),
   createGridItem(
@@ -145,7 +145,7 @@ const gridItems = computed((): ProjectGridItem[] => [
     t('stompDescription'),
     'betweenText',
     'swift_stomp.svg',
-    'https://github.com/needletails',
+    'https://github.com/needletails/swift-stomp',
     ''
   )
 ])

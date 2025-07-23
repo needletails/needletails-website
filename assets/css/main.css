@@ -50,6 +50,27 @@ img {
   max-width: 100%;
   height: auto;
   display: block;
+  /* Prevent image copying and dragging */
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  user-drag: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  pointer-events: none;
+}
+
+/* Make alt-text transparent when images fail to load */
+img {
+  color: transparent;
+}
+
+/* Ensure alt-text is not visible when images fail to load */
+img[alt] {
+  color: transparent;
 }
 
 /* Lazy loading for images */
@@ -193,6 +214,30 @@ img {
   box-sizing: border-box;
 }
 
+/* Prevent text selection */
+* {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Allow text selection for specific elements if needed */
+.allow-select {
+  -webkit-user-select: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
+  user-select: text;
+}
+
+/* Allow text selection for input fields and textareas */
+input, textarea, [contenteditable="true"] {
+  -webkit-user-select: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
+  user-select: text;
+}
+
 /* Optimize animations for GPU */
 .transform,
 .transition-transform,
@@ -208,4 +253,27 @@ img {
 /* Optimize background transitions */
 .transition-colors {
   will-change: background-color, color, border-color;
+}
+
+/* Page Transitions */
+.page-enter-active,
+.page-leave-active {
+  transition: all 0.4s ease-in-out;
+}
+
+.page-enter-from {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.page-leave-to {
+  opacity: 0;
+  transform: translateY(-20px);
+}
+
+/* Ensure smooth page transitions */
+.page-enter-to,
+.page-leave-from {
+  opacity: 1;
+  transform: translateY(0);
 } 

@@ -252,6 +252,22 @@
   "our": "Onze",
   "featuredApps": "Uitgelichte Apps",
   "featuredAppsDescription": "Ontdek onze innovatieve applicaties die de kracht van Swift-ontwikkeling en moderne software-architectuur tonen.",
+  "nudgeTitle": "Je Zelf-Gemonitorde End-to-End Versleutelde Berichtenapplicatie",
+  "nudgeDescription": "Maak je je zorgen over beveiliging in het huidige digitale landschap? Wil je een veilig communicatiekanaal maar voel je je onzeker over wie toegang heeft tot je gegevens? Zelfs met end-to-end versleuteling kunnen zorgen over gegevensopslag blijven bestaan. Nudge is hier om de oplossing te bieden die je nodig hebt. Met Nudge heb je volledige controle over je gegevens, waardoor je ze veilig kunt beheren of je bereik wereldwijd kunt uitbreiden zonder het risico van gegevenspersistentie. Neem vandaag nog contact met ons op om meer te weten te komen over hoe je je eigen instantie kunt opzetten en kunt genieten van gemoedsrust met veilige communicatie!",
+  "islandHoppersTitle": "Island Hoppers: Je Ultieme Tour App voor Naadloze Avonturen!",
+  "islandHoppersDescription": "Island Hoppers is de all-in-one app die is ontworpen om je reiservaring te verbeteren, of je nu een bedrijf bent dat onvergetelijke tours organiseert of een klant die de perfecte vakantie zoekt. Voor bedrijven stroomlijnt onze app het hele tourmanagementproces. Organiseer en pas je tours moeiteloos aan, communiceer rechtstreeks met tourgidsen en houd je klanten op de hoogte met real-time updates. Met Island Hoppers kun je boekingen beheren, klantvoorkeuren bijhouden en ervoor zorgen dat elk detail wordt verzorgd, zodat je je kunt concentreren op het leveren van buitengewone ervaringen. Voor klanten biedt Island Hoppers een diverse reeks tourpakketten die zijn afgestemd op verschillende groepssoorten, inclusief gezinnen, rugzakreizigers en feestliefhebbers. Blader door onze gecureerde selectie van avonturen, kies het perfecte pakket dat bij je stijl past en maak contact met gelijkgestemde reizigers. Geniet van naadloze communicatie met je tourgidsen, krijg toegang tot essentiële informatie en ontvang gepersonaliseerde aanbevelingen om het meeste uit je reis te halen. Met Island Hoppers ga je met gemak en vertrouwen op onvergetelijke avonturen, wetende dat elk aspect van je tour slechts een tik verwijderd is!",
+  "streamStackTitle": "Een Educatief Platform voor je Software Oplossingen",
+  "streamStackDescription": "Stream, Lees, Bespreek. Of je nu nieuw bent in programmeren of wilt lezen over verschillende software-oplossingen, we maken het je gemakkelijk met onze native Mac-app. Blijf op de hoogte van de nieuwste coding trends.",
   "welcomeToNeedleTails": "Welkom bij NeedleTails - Uw Bondgenoot in Softwareontwikkeling",
-  "accept": "Ik ga akkoord en accepteer"
+  "accept": "Ik ga akkoord en accepteer",
+  "cookieConsentTitle": "We gebruiken browseropslag",
+  "cookieConsentMessage": "We gebruiken browseropslag om uw taalvoorkeur te onthouden en uw browse-ervaring te verbeteren. Door op 'Alles accepteren' te klikken, stemt u in met ons gebruik van browseropslag.",
+  "cookieConsentAcceptAll": "Alles accepteren",
+  "cookieConsentAcceptNecessary": "Alleen noodzakelijke",
+  "cookieConsentReject": "Alles weigeren",
+  "cookieConsentLearnMore": "Meer informatie",
+  "cookieConsentNecessary": "Noodzakelijke opslag omvat taalherkenning om inhoud in uw voorkeurstaal te leveren.",
+  "cookieConsentAnalytics": "We gebruiken momenteel geen analytische tracking op deze website.",
+  "cookieConsentPreferences": "Voorkeursopslag onthoudt uw instellingen zoals thema en gebruikersvoorkeuren om uw ervaring te personaliseren.",
+  "cookieConsentMarketing": "We gebruiken momenteel geen marketing tracking of advertenties op deze website."
 }
