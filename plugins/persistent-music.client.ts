@@ -38,7 +38,7 @@ export default defineNuxtPlugin(() => {
               width="600"
               style="overflow: hidden; width: 600px;"
               sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"
-              src="https://embed.music.apple.com/us/playlist/chillhop-radio/pl.0b8321c00f68421f8081e5913de51118"
+              src="https://embed.music.apple.com/us/playlist/chillhop-radio/pl.0b8321c00f68421f8081e5913de51118?robustness=SW_SECURE_CRYPTO"
             ></iframe>
           </div>
         </div>
@@ -78,7 +78,7 @@ export default defineNuxtPlugin(() => {
               width="500"
               style="overflow: hidden; width: 500px;"
               sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"
-              src="https://embed.music.apple.com/us/playlist/chillhop-radio/pl.0b8321c00f68421f8081e5913de51118"
+              src="https://embed.music.apple.com/us/playlist/chillhop-radio/pl.0b8321c00f68421f8081e5913de51118?robustness=SW_SECURE_CRYPTO"
             ></iframe>
           </div>
         </div>
