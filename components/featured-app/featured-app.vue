@@ -68,7 +68,7 @@
           </button>
 
           <!-- Featured App Content Container -->
-          <div class="w-full mx-16 lg:mx-20 relative">
+          <div class="w-full mx-4 sm:mx-8 md:mx-12 lg:mx-20 relative">
             <!-- Content Wrapper with Smooth Transitions -->
             <div class="relative overflow-hidden rounded-2xl">
               <div class="relative">
