@@ -164,19 +164,11 @@ const featuredAppData = computed((): FeaturedAppItem[] => [
     ''
   ),
   createGridItem(
-    'Island Hoppers',
-    'islandHoppersTitle',
-    'islandHoppersDescription',
-    'betweenText',
-    'island_hoppers.svg',
-    ''
-  ),
-  createGridItem(
-    'StreamStack',
+    'BrewHub',
     'streamStackTitle',
     'streamStackDescription',
     'aboveHeader',
-    'stream_stack.svg',
+    'brew-hub-logo.svg',
     ''
   ),
 ])

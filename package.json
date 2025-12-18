@@ -13,6 +13,7 @@
   "dependencies": {
     "@nuxtjs/i18n": "^10.0.0-rc.3",
     "@pinia/nuxt": "^0.11.2",
+    "@tailwindcss/postcss": "^4.1.17",
     "@vueuse/nuxt": "^13.5.0",
     "nuxt": "^4.0.0",
     "secure-ls": "^2.0.0",

@@ -21,12 +21,6 @@ export default defineEventHandler(async (event) => {
       priority: 0.8
     },
     {
-      url: '/training',
-      lastmod: new Date().toISOString(),
-      changefreq: 'monthly',
-      priority: 0.8
-    },
-    {
       url: '/management',
       lastmod: new Date().toISOString(),
       changefreq: 'monthly',

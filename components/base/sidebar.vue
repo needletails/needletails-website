@@ -76,10 +76,10 @@ const logoItem = ref([
 const items = ref([
   {
     icon: '',
-    title: 'Training',
-    to: '/training',
+    title: 'Courses',
+    to: 'https://brewhub.needletails.com/browse',
     isCustomSVG: false,
-    externalPath: false,
+    externalPath: true,
     isClickable: true,
   },
   {

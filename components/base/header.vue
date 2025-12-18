@@ -88,7 +88,7 @@ const routeManagement = (): void => {
 }
 
 const routeTraining = (): void => {
-  router.push(localePath('/training'))
+  window.location.href = 'https://brewhub.needletails.com/browse'
 }
 
 const contactClicked = (): void => {
