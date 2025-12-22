@@ -272,5 +272,16 @@
   "cookieConsentMarketing": "我们目前在此网站上不使用营销跟踪或广告。",
   "brewhubWidgetTitle": "BrewHub",
   "brewhubWidgetDescription": "专业的软件开发课程和教学平台。访问带指导的实时培训，使用生产级工具和工作流程，提升您的开发技能。",
-  "brewhubWidgetCTA": "培训课程"
+  "brewhubWidgetCTA": "培训课程",
+  "brewhubComingSoonTitle": "Coming Soon",
+  "brewhubComingSoonDescription": "BrewHub is currently under development. We are building an amazing platform for professional software development courses and training. Stay tuned for updates!",
+  "brewhubFeature1Title": "Expert Courses",
+  "brewhubFeature1Description": "Access professional software development courses taught by industry experts.",
+  "brewhubFeature2Title": "Live Training",
+  "brewhubFeature2Description": "Participate in guided, live training sessions with production-grade tooling.",
+  "brewhubFeature3Title": "Community",
+  "brewhubFeature3Description": "Join a community of developers and learn together.",
+  "brewhubFeature4Title": "Production Tools",
+  "brewhubFeature4Description": "Learn with the same tools and workflows used in production environments.",
+  "brewhubBackToMainSite": "Back to NeedleTails"
 }

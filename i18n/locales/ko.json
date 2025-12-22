@@ -272,5 +272,16 @@
   "cookieConsentMarketing": "현재 이 웹사이트에서는 마케팅 추적이나 광고를 사용하지 않습니다.",
   "brewhubWidgetTitle": "BrewHub",
   "brewhubWidgetDescription": "전문 소프트웨어 개발 과정 및 교육 플랫폼. 프로덕션 수준의 도구와 워크플로우를 사용한 가이드형 실시간 교육에 액세스하여 개발 기술을 향상시키세요.",
-  "brewhubWidgetCTA": "교육 과정"
+  "brewhubWidgetCTA": "교육 과정",
+  "brewhubComingSoonTitle": "Coming Soon",
+  "brewhubComingSoonDescription": "BrewHub is currently under development. We are building an amazing platform for professional software development courses and training. Stay tuned for updates!",
+  "brewhubFeature1Title": "Expert Courses",
+  "brewhubFeature1Description": "Access professional software development courses taught by industry experts.",
+  "brewhubFeature2Title": "Live Training",
+  "brewhubFeature2Description": "Participate in guided, live training sessions with production-grade tooling.",
+  "brewhubFeature3Title": "Community",
+  "brewhubFeature3Description": "Join a community of developers and learn together.",
+  "brewhubFeature4Title": "Production Tools",
+  "brewhubFeature4Description": "Learn with the same tools and workflows used in production environments.",
+  "brewhubBackToMainSite": "Back to NeedleTails"
 }

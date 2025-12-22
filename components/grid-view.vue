@@ -150,9 +150,17 @@ const props = withDefaults(defineProps<Props>(), {
   subtitleBgColor: 'transparent'
 })
 
+const router = useRouter()
+
 const handleTap = (item: GridItem): void => {
   if (item.externalUrl && item.externalUrl !== '') {
-    window.location.replace(item.externalUrl)
+    // Check if it's an external URL (starts with http:// or https://)
+    if (item.externalUrl.startsWith('http://') || item.externalUrl.startsWith('https://')) {
+      window.location.replace(item.externalUrl)
+    } else {
+      // Internal route - use Vue Router
+      router.push(item.externalUrl)
+    }
   }
 }
 

@@ -184,7 +184,7 @@ const gridItems = computed((): BusinessGridItem[] => [
     t('serviceDescriptionTraining'),
     'betweenText',
     'brew-hub-logo.svg',
-    'https://brewhub.needletails.com/all-courses'
+    '/brewhub-coming-soon'
   ),
   createGridItem(
     '',

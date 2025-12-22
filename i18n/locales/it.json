@@ -266,5 +266,16 @@
   "cookieConsentMarketing": "Attualmente non utilizziamo il tracciamento marketing o la pubblicità su questo sito web.",
   "brewhubWidgetTitle": "BrewHub",
   "brewhubWidgetDescription": "Piattaforma professionale di corsi e istruzione per lo sviluppo software. Accedi a formazione guidata in diretta con strumenti e flussi di lavoro di livello produzione per migliorare le tue competenze di sviluppo.",
-  "brewhubWidgetCTA": "Corsi di Formazione"
+  "brewhubWidgetCTA": "Corsi di Formazione",
+  "brewhubComingSoonTitle": "Coming Soon",
+  "brewhubComingSoonDescription": "BrewHub is currently under development. We are building an amazing platform for professional software development courses and training. Stay tuned for updates!",
+  "brewhubFeature1Title": "Expert Courses",
+  "brewhubFeature1Description": "Access professional software development courses taught by industry experts.",
+  "brewhubFeature2Title": "Live Training",
+  "brewhubFeature2Description": "Participate in guided, live training sessions with production-grade tooling.",
+  "brewhubFeature3Title": "Community",
+  "brewhubFeature3Description": "Join a community of developers and learn together.",
+  "brewhubFeature4Title": "Production Tools",
+  "brewhubFeature4Description": "Learn with the same tools and workflows used in production environments.",
+  "brewhubBackToMainSite": "Back to NeedleTails"
 }

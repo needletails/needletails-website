@@ -272,5 +272,16 @@
   "webDevelopmentOverview": "In the field of web development, we provide a diverse array of services that enable customers to utilize various types of websites, including portfolio sites to showcase creative work, blogs for sharing content, corporate websites to represent businesses, interactive web applications for specific functionalities, and targeted landing pages for marketing campaigns. Our technology stack features Vue.js with TypeScript, along with Swift solutions like Vapor, Hummingbird 2, and Toucan. Utilizing these technologies, we create responsive and user-friendly web experiences, delivering solutions that are both visually engaging and functionally robust.",
   "brewhubWidgetTitle": "Learn with BrewHub",
   "brewhubWidgetDescription": "Professional software development courses and training platform.",
-  "brewhubWidgetCTA": "Explore Courses"
+  "brewhubWidgetCTA": "Explore Courses",
+  "brewhubComingSoonTitle": "Coming Soon",
+  "brewhubComingSoonDescription": "BrewHub is currently under development. We're building an amazing platform for professional software development courses and training. Stay tuned for updates!",
+  "brewhubFeature1Title": "Expert Courses",
+  "brewhubFeature1Description": "Access professional software development courses taught by industry experts.",
+  "brewhubFeature2Title": "Live Training",
+  "brewhubFeature2Description": "Participate in guided, live training sessions with production-grade tooling.",
+  "brewhubFeature3Title": "Community",
+  "brewhubFeature3Description": "Join a community of developers and learn together.",
+  "brewhubFeature4Title": "Production Tools",
+  "brewhubFeature4Description": "Learn with the same tools and workflows used in production environments.",
+  "brewhubBackToMainSite": "Back to NeedleTails"
 }
