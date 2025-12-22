@@ -269,5 +269,8 @@
   "cookieConsentNecessary": "必要なストレージには、お好みの言語でコンテンツを提供するための言語検出が含まれます。",
   "cookieConsentAnalytics": "現在、このウェブサイトでは分析追跡を使用していません。",
   "cookieConsentPreferences": "設定ストレージは、テーマやユーザー設定などの設定を記憶して、体験をパーソナライズします。",
-  "cookieConsentMarketing": "現在、このウェブサイトではマーケティング追跡や広告を使用していません。"
+  "cookieConsentMarketing": "現在、このウェブサイトではマーケティング追跡や広告を使用していません。",
+  "brewhubWidgetTitle": "BrewHub",
+  "brewhubWidgetDescription": "プロフェッショナルなソフトウェア開発コースと指導プラットフォーム。本番レベルのツールとワークフローを使用したガイド付きライブトレーニングにアクセスして、開発スキルを向上させます。",
+  "brewhubWidgetCTA": "トレーニングコース"
 }

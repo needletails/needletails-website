@@ -269,5 +269,8 @@
   "distributionComplianceDescription": "Ensure your app meets the requirements for various distribution channels, including app stores and alternative platforms.",
   "webDevelopmentExpertiseHeader": "Web Application Development",
   "webDevelopmentExpertiseDescription": "We leverage our in-depth expertise to build and sustain a strong online presence for your business.",
-  "webDevelopmentOverview": "In the field of web development, we provide a diverse array of services that enable customers to utilize various types of websites, including portfolio sites to showcase creative work, blogs for sharing content, corporate websites to represent businesses, interactive web applications for specific functionalities, and targeted landing pages for marketing campaigns. Our technology stack features Vue.js with TypeScript, along with Swift solutions like Vapor, Hummingbird 2, and Toucan. Utilizing these technologies, we create responsive and user-friendly web experiences, delivering solutions that are both visually engaging and functionally robust."
+  "webDevelopmentOverview": "In the field of web development, we provide a diverse array of services that enable customers to utilize various types of websites, including portfolio sites to showcase creative work, blogs for sharing content, corporate websites to represent businesses, interactive web applications for specific functionalities, and targeted landing pages for marketing campaigns. Our technology stack features Vue.js with TypeScript, along with Swift solutions like Vapor, Hummingbird 2, and Toucan. Utilizing these technologies, we create responsive and user-friendly web experiences, delivering solutions that are both visually engaging and functionally robust.",
+  "brewhubWidgetTitle": "Learn with BrewHub",
+  "brewhubWidgetDescription": "Professional software development courses and training platform.",
+  "brewhubWidgetCTA": "Explore Courses"
 }

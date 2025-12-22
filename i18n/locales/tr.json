@@ -269,5 +269,8 @@
   "cookieConsentNecessary": "Gerekli depolama, tercih ettiğiniz dilde içerik sağlamak için dil algılamasını içerir.",
   "cookieConsentAnalytics": "Şu anda bu web sitesinde analitik takibi kullanmıyoruz.",
   "cookieConsentPreferences": "Tercih depolaması, deneyiminizi kişiselleştirmek için tema ve kullanıcı tercihleri gibi ayarlarınızı hatırlar.",
-  "cookieConsentMarketing": "Şu anda bu web sitesinde pazarlama takibi veya reklam kullanmıyoruz."
+  "cookieConsentMarketing": "Şu anda bu web sitesinde pazarlama takibi veya reklam kullanmıyoruz.",
+  "brewhubWidgetTitle": "BrewHub",
+  "brewhubWidgetDescription": "Profesyonel yazılım geliştirme kursları ve eğitim platformu. Geliştirme becerilerinizi geliştirmek için üretim seviyesi araçlar ve iş akışlarıyla rehberli, canlı eğitime erişin.",
+  "brewhubWidgetCTA": "Eğitim Kursları"
 }

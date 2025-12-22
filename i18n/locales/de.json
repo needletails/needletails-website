@@ -269,5 +269,8 @@
   "cookieConsentNecessary": "Notwendiger Speicher umfasst die Spracherkennung, um Inhalte in Ihrer bevorzugten Sprache bereitzustellen.",
   "cookieConsentAnalytics": "Wir verwenden derzeit kein Analyse-Tracking auf dieser Website.",
   "cookieConsentPreferences": "Präferenz-Speicher merkt sich Ihre Einstellungen wie Theme und Benutzereinstellungen, um Ihre Erfahrung zu personalisieren.",
-  "cookieConsentMarketing": "Wir verwenden derzeit kein Marketing-Tracking oder Werbung auf dieser Website."
+  "cookieConsentMarketing": "Wir verwenden derzeit kein Marketing-Tracking oder Werbung auf dieser Website.",
+  "brewhubWidgetTitle": "BrewHub",
+  "brewhubWidgetDescription": "Professionelle Plattform für Softwareentwicklungskurse und -unterricht. Zugriff auf geführte, Live-Schulungen mit Produktions-Tools und -Workflows zur Verbesserung Ihrer Entwicklungskompetenzen.",
+  "brewhubWidgetCTA": "Schulungskurse"
 }

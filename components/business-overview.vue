@@ -81,7 +81,7 @@
       >
         <div class="text-center">
           <h3 class="text-3xl sm:text-4xl font-bold text-white mb-8">
-            {{ t('ourServices') }} <span class="text-blue-400">{{ t('ourServices') }}</span>
+            <span class="text-blue-400">{{ t('ourServices') }}</span>
           </h3>
           <p class="text-lg text-gray-300 max-w-3xl mx-auto leading-relaxed">
             {{ t('servicesDescription') }}
@@ -184,7 +184,7 @@ const gridItems = computed((): BusinessGridItem[] => [
     t('serviceDescriptionTraining'),
     'betweenText',
     'brew-hub-logo.svg',
-    'https://brewhub.needletails.com/browse'
+    'https://brewhub.needletails.com/all-courses'
   ),
   createGridItem(
     '',

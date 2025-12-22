@@ -88,7 +88,7 @@ const routeManagement = (): void => {
 }
 
 const routeTraining = (): void => {
-  window.location.href = 'https://brewhub.needletails.com/browse'
+  window.location.href = 'https://brewhub.needletails.com/all-courses'
 }
 
 const contactClicked = (): void => {

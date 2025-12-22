@@ -269,5 +269,8 @@
   "cookieConsentNecessary": "必要的儲存包括語言檢測，以您偏好的語言提供內容。",
   "cookieConsentAnalytics": "我們目前在此網站上不使用分析追蹤。",
   "cookieConsentPreferences": "偏好儲存記住您的設定，如主題和用戶偏好，以個人化您的體驗。",
-  "cookieConsentMarketing": "我們目前在此網站上不使用行銷追蹤或廣告。"
+  "cookieConsentMarketing": "我們目前在此網站上不使用行銷追蹤或廣告。",
+  "brewhubWidgetTitle": "BrewHub",
+  "brewhubWidgetDescription": "專業軟件開發課程同教學平台。存取帶指導嘅實時培訓，使用生產級工具同工作流程，提升您嘅開發技能。",
+  "brewhubWidgetCTA": "培訓課程"
 }

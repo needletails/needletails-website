@@ -77,7 +77,7 @@ const items = ref([
   {
     icon: '',
     title: 'Courses',
-    to: 'https://brewhub.needletails.com/browse',
+    to: 'https://brewhub.needletails.com/all-courses',
     isCustomSVG: false,
     externalPath: true,
     isClickable: true,

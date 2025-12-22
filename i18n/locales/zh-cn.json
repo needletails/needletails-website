@@ -269,5 +269,8 @@
   "cookieConsentNecessary": "必要的存储包括语言检测，以您偏好的语言提供内容。",
   "cookieConsentAnalytics": "我们目前在此网站上不使用分析跟踪。",
   "cookieConsentPreferences": "偏好存储记住您的设置，如主题和用户偏好，以个性化您的体验。",
-  "cookieConsentMarketing": "我们目前在此网站上不使用营销跟踪或广告。"
+  "cookieConsentMarketing": "我们目前在此网站上不使用营销跟踪或广告。",
+  "brewhubWidgetTitle": "BrewHub",
+  "brewhubWidgetDescription": "专业的软件开发课程和教学平台。访问带指导的实时培训，使用生产级工具和工作流程，提升您的开发技能。",
+  "brewhubWidgetCTA": "培训课程"
 }

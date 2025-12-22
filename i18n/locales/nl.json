@@ -269,5 +269,8 @@
   "cookieConsentNecessary": "Noodzakelijke opslag omvat taalherkenning om inhoud in uw voorkeurstaal te leveren.",
   "cookieConsentAnalytics": "We gebruiken momenteel geen analytische tracking op deze website.",
   "cookieConsentPreferences": "Voorkeursopslag onthoudt uw instellingen zoals thema en gebruikersvoorkeuren om uw ervaring te personaliseren.",
-  "cookieConsentMarketing": "We gebruiken momenteel geen marketing tracking of advertenties op deze website."
+  "cookieConsentMarketing": "We gebruiken momenteel geen marketing tracking of advertenties op deze website.",
+  "brewhubWidgetTitle": "BrewHub",
+  "brewhubWidgetDescription": "Professioneel platform voor softwareontwikkelingscursussen en -instructie. Toegang tot begeleide, live training met productieklasse tools en workflows om uw ontwikkelingsvaardigheden te verbeteren.",
+  "brewhubWidgetCTA": "Training Cursussen"
 }

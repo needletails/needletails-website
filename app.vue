@@ -11,6 +11,9 @@
     
     <!-- Cookie Consent Banner -->
     <CookieConsentBanner />
+    
+    <!-- BrewHub Scroll Widget -->
+    <BrewhubScrollWidget />
   </div>
 </template>
 
@@ -19,6 +22,7 @@
 import Header from '~/components/base/header.vue'
 import Footer from '~/components/base/footer.vue'
 import CookieConsentBanner from '~/components/controls/cookie-consent-banner.vue'
+import BrewhubScrollWidget from '~/components/brewhub-scroll-widget.vue'
 
 // Auto-scroll to top on route changes
 const router = useRouter()

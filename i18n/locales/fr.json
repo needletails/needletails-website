@@ -269,5 +269,8 @@
   "cookieConsentNecessary": "Le stockage nécessaire inclut la détection de langue pour fournir du contenu dans votre langue préférée.",
   "cookieConsentAnalytics": "Nous n'utilisons actuellement pas de suivi d'analyse sur ce site web.",
   "cookieConsentPreferences": "Le stockage des préférences mémorise vos paramètres comme le thème et les préférences utilisateur pour personnaliser votre expérience.",
-  "cookieConsentMarketing": "Nous n'utilisons actuellement pas de suivi marketing ou de publicité sur ce site web."
+  "cookieConsentMarketing": "Nous n'utilisons actuellement pas de suivi marketing ou de publicité sur ce site web.",
+  "brewhubWidgetTitle": "BrewHub",
+  "brewhubWidgetDescription": "Plateforme professionnelle de cours et d'instruction en développement logiciel. Accédez à une formation guidée en direct avec des outils et des flux de travail de niveau production pour améliorer vos compétences en développement.",
+  "brewhubWidgetCTA": "Cours de Formation"
 }
