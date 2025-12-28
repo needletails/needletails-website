@@ -6,7 +6,7 @@
         <div class="inline-flex items-center justify-center rounded-full bg-black/70 ring-2 ring-yellow-400/60 shadow-[0_0_20px_rgba(250,204,21,0.45)] px-6 py-4">
           <img
             src="/images/brew-hub-logo.svg"
-            alt="BrewHub Logo"
+            :alt="t('brewhubLogoAlt')"
             class="h-24 w-auto max-w-[120px] drop-shadow-[0_4px_18px_rgba(0,0,0,0.8)]"
           />
         </div>
@@ -78,7 +78,7 @@
         href="https://brewhub.needletails.com"
         class="inline-flex items-center px-6 py-3 bg-yellow-500 hover:bg-yellow-400 text-black font-semibold rounded-lg transition-all duration-200 hover:scale-105 active:scale-95 shadow-lg hover:shadow-xl border border-yellow-300/60"
       >
-        Go to BrewHub
+        {{ t('brewhubBackToMainSite') }}
         <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
         </svg>
@@ -95,16 +95,16 @@ definePageMeta({
 })
 
 useHead({
-  title: 'BrewHub | NeedleTails',
+  title: t('brewhubMetaTitle'),
   meta: [
     {
       name: 'description',
-      content: 'BrewHub is NeedleTails\' professional software development courses and training platform.'
+      content: t('brewhubMetaDescription')
     },
-    { property: 'og:title', content: 'BrewHub | NeedleTails' },
+    { property: 'og:title', content: t('brewhubMetaTitle') },
     {
       property: 'og:description',
-      content: 'Professional software development courses and training platform.'
+      content: t('brewhubOgDescription')
     },
     { property: 'og:type', content: 'website' }
   ]

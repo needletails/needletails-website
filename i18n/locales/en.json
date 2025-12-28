@@ -283,5 +283,9 @@
   "brewhubFeature3Description": "Join a community of developers and learn together.",
   "brewhubFeature4Title": "Production Tools",
   "brewhubFeature4Description": "Learn with the same tools and workflows used in production environments.",
-  "brewhubBackToMainSite": "Go to BrewHub"
+  "brewhubBackToMainSite": "Go to BrewHub",
+  "brewhubMetaTitle": "BrewHub | NeedleTails",
+  "brewhubMetaDescription": "BrewHub is NeedleTails' professional software development courses and training platform.",
+  "brewhubOgDescription": "Professional software development courses and training platform.",
+  "brewhubLogoAlt": "BrewHub Logo"
 }
