@@ -12,14 +12,14 @@
         </div>
       </div>
 
-      <!-- Coming Soon Title -->
+      <!-- Title -->
       <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-white via-yellow-100 to-yellow-300 bg-clip-text text-transparent">
-        {{ t('brewhubComingSoonTitle') }}
+        BrewHub
       </h1>
 
       <!-- Description -->
       <p class="text-lg sm:text-xl text-gray-300 mb-8 leading-relaxed max-w-xl mx-auto">
-        {{ t('brewhubComingSoonDescription') }}
+        {{ t('brewhubWidgetDescription') }}
       </p>
 
       <!-- Features List -->
@@ -73,12 +73,12 @@
         </div>
       </div>
 
-      <!-- Back to Main Site Link -->
+      <!-- Go to BrewHub -->
       <a
         href="https://brewhub.needletails.com"
         class="inline-flex items-center px-6 py-3 bg-yellow-500 hover:bg-yellow-400 text-black font-semibold rounded-lg transition-all duration-200 hover:scale-105 active:scale-95 shadow-lg hover:shadow-xl border border-yellow-300/60"
       >
-        {{ t('brewhubBackToMainSite') }}
+        Go to BrewHub
         <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
         </svg>
@@ -90,27 +90,23 @@
 <script setup lang="ts">
 const { t } = useI18n()
 
-// Use minimal layout without header/footer
 definePageMeta({
   layout: 'brewhub-coming-soon'
 })
 
-// SEO Meta Tags
 useHead({
-  title: 'BrewHub - Available | NeedleTails',
+  title: 'BrewHub | NeedleTails',
   meta: [
-    { name: 'description', content: 'BrewHub is now available. Visit BrewHub for professional software development courses and training.' },
-    { name: 'robots', content: 'noindex, follow' },
-    { property: 'og:title', content: 'BrewHub - Available | NeedleTails' },
-    { property: 'og:description', content: 'BrewHub is now available. Visit BrewHub for professional software development courses and training.' },
-    { property: 'og:type', content: 'website' },
-    { name: 'twitter:card', content: 'summary' },
-    { name: 'twitter:title', content: 'BrewHub - Available | NeedleTails' },
-    { name: 'twitter:description', content: 'BrewHub is now available. Visit BrewHub for professional software development courses and training.' }
+    {
+      name: 'description',
+      content: 'BrewHub is NeedleTails\' professional software development courses and training platform.'
+    },
+    { property: 'og:title', content: 'BrewHub | NeedleTails' },
+    {
+      property: 'og:description',
+      content: 'Professional software development courses and training platform.'
+    },
+    { property: 'og:type', content: 'website' }
   ]
 })
 </script>
-
-<style scoped>
-/* Additional styling if needed */
-</style>

@@ -27,6 +27,12 @@ export default defineEventHandler(async (event) => {
       priority: 0.8
     },
     {
+      url: '/brewhub',
+      lastmod: new Date().toISOString(),
+      changefreq: 'monthly',
+      priority: 0.8
+    },
+    {
       url: '/privacy',
       lastmod: new Date().toISOString(),
       changefreq: 'yearly',

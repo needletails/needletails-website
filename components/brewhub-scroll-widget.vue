@@ -41,7 +41,7 @@
 
           <!-- CTA Button -->
           <NuxtLink
-            to="/brewhub-coming-soon"
+            to="/brewhub"
             class="block w-full bg-yellow-500 hover:bg-yellow-400 text-black font-semibold py-2.5 px-4 rounded-lg text-center transition-all duration-200 hover:scale-105 active:scale-95 shadow-lg hover:shadow-xl border border-yellow-300/60"
           >
             {{ t('brewhubWidgetCTA') }}

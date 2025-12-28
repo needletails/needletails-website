@@ -88,7 +88,7 @@ const routeManagement = (): void => {
 }
 
 const routeTraining = (): void => {
-  router.push(localePath('/brewhub-coming-soon'))
+  router.push(localePath('/brewhub'))
 }
 
 const contactClicked = (): void => {

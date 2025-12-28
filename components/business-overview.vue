@@ -184,7 +184,7 @@ const gridItems = computed((): BusinessGridItem[] => [
     t('serviceDescriptionTraining'),
     'betweenText',
     'brew-hub-logo.svg',
-    '/brewhub-coming-soon'
+    '/brewhub'
   ),
   createGridItem(
     '',

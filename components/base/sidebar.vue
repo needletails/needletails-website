@@ -77,7 +77,7 @@ const items = ref([
   {
     icon: '',
     title: 'Courses',
-    to: '/brewhub-coming-soon',
+    to: '/brewhub',
     isCustomSVG: false,
     externalPath: false,
     isClickable: true,
