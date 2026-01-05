@@ -1,5 +1,5 @@
 <template>
-  <div class="min-h-screen bg-black flex items-center justify-center px-4">
+  <div class="min-h-screen bg-black flex items-center justify-center px-4 pt-40 sm:pt-48 md:pt-56 lg:pt-60">
     <div class="max-w-2xl w-full text-center">
       <!-- Logo -->
       <div class="flex justify-center mb-8">
@@ -76,7 +76,7 @@
       <!-- Go to BrewHub -->
       <a
         href="https://brewhub.needletails.com"
-        class="inline-flex items-center px-6 py-3 bg-yellow-500 hover:bg-yellow-400 text-black font-semibold rounded-lg transition-all duration-200 hover:scale-105 active:scale-95 shadow-lg hover:shadow-xl border border-yellow-300/60"
+        class="inline-flex items-center px-6 py-3 bg-yellow-500 hover:bg-yellow-400 text-black font-semibold rounded-lg transition-all duration-200 hover:scale-105 active:scale-95 shadow-lg hover:shadow-xl border border-yellow-300/60 mb-10"
       >
         {{ t('brewhubBackToMainSite') }}
         <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
