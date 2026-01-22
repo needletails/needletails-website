@@ -14,6 +14,9 @@
     
     <!-- BrewHub Scroll Widget -->
     <BrewhubScrollWidget />
+    
+    <!-- Nudge Scroll Widget -->
+    <NudgeScrollWidget />
   </div>
 </template>
 
@@ -23,6 +26,7 @@ import Header from '~/components/base/header.vue'
 import Footer from '~/components/base/footer.vue'
 import CookieConsentBanner from '~/components/controls/cookie-consent-banner.vue'
 import BrewhubScrollWidget from '~/components/brewhub-scroll-widget.vue'
+import NudgeScrollWidget from '~/components/nudge-scroll-widget.vue'
 
 // Auto-scroll to top on route changes
 const router = useRouter()

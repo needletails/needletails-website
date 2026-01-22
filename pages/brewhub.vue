@@ -88,10 +88,26 @@
 </template>
 
 <script setup lang="ts">
-const { t } = useI18n()
+const { t, locale, setLocale } = useI18n()
+const route = useRoute()
 
 definePageMeta({
   layout: 'brewhub-coming-soon'
+})
+
+// Ensure locale is preserved from route
+onMounted(() => {
+  if (import.meta.client) {
+    // Get locale from route path (for prefix_except_default strategy)
+    const pathParts = route.path.split('/').filter(Boolean)
+    const validLocales: Array<'es' | 'fr' | 'de' | 'zh-cn' | 'zh-tw' | 'ja' | 'pt' | 'it' | 'nl' | 'ko' | 'tr' | 'he'> = ['es', 'fr', 'de', 'zh-cn', 'zh-tw', 'ja', 'pt', 'it', 'nl', 'ko', 'tr', 'he']
+    const pathLocale: 'en' | 'es' | 'fr' | 'de' | 'zh-cn' | 'zh-tw' | 'ja' | 'pt' | 'it' | 'nl' | 'ko' | 'tr' | 'he' = (pathParts[0] && validLocales.includes(pathParts[0] as any)) ? (pathParts[0] as any) : 'en'
+    
+    // Set locale if it doesn't match
+    if (locale.value !== pathLocale) {
+      setLocale(pathLocale)
+    }
+  }
 })
 
 useHead({
@@ -101,12 +117,22 @@ useHead({
       name: 'description',
       content: t('brewhubMetaDescription')
     },
+    { name: 'keywords', content: t('brewhubMetaKeywords') },
     { property: 'og:title', content: t('brewhubMetaTitle') },
     {
       property: 'og:description',
       content: t('brewhubOgDescription')
     },
-    { property: 'og:type', content: 'website' }
+    { property: 'og:type', content: 'website' },
+    { property: 'og:url', content: 'https://needletails.com/brewhub' },
+    { property: 'og:image', content: 'https://needletails.com/images/brew-hub-logo.svg' },
+    { name: 'twitter:card', content: 'summary_large_image' },
+    { name: 'twitter:title', content: t('brewhubMetaTitle') },
+    { name: 'twitter:description', content: t('brewhubOgDescription') },
+    { name: 'twitter:image', content: 'https://needletails.com/images/brew-hub-logo.svg' }
+  ],
+  link: [
+    { rel: 'canonical', href: 'https://needletails.com/brewhub' }
   ]
 })
 </script>

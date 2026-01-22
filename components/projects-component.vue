@@ -82,7 +82,7 @@ const gridItems = computed((): ProjectGridItem[] => [
     t('needleTailKitDescription'),
     'betweenText',
     'needletail_kit.svg',
-    'https://github.com/needletails',
+    '/needletail-kit',
     ''
   ),
   createGridItem(

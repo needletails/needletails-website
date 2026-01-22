@@ -16,18 +16,40 @@
         <!-- Content -->
         <div 
           v-scrollanimation="{ threshold: 0.2, rootMargin: '50px' }" 
-          class="text-white space-y-8"
+          class="text-white"
         >
           <!-- Badge -->
-          <div class="inline-flex items-center px-4 py-2 rounded-full bg-blue-600/10 border border-blue-500/20 text-blue-400 text-sm font-medium">
+          <div class="inline-flex items-center px-4 py-2 rounded-full bg-blue-600/10 border border-blue-500/20 text-blue-400 text-sm font-medium mt-8">
             <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
             </svg>
             {{ t('swiftSoftwareSpecialists') }}
           </div>
 
+          <!-- Platform Badges -->
+          <div class="flex flex-wrap gap-2 mt-1.5 mb-8">
+            <div class="inline-flex items-center px-3 py-1.5 rounded-full bg-green-600/10 border border-green-500/20 text-green-400 text-xs sm:text-sm font-medium">
+              <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4 mr-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
+              </svg>
+              {{ t('badgeMobile') }}
+            </div>
+            <div class="inline-flex items-center px-3 py-1.5 rounded-full bg-blue-600/10 border border-blue-500/20 text-blue-400 text-xs sm:text-sm font-medium">
+              <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4 mr-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path>
+              </svg>
+              {{ t('badgeWeb') }}
+            </div>
+            <div class="inline-flex items-center px-3 py-1.5 rounded-full bg-purple-600/10 border border-purple-500/20 text-purple-400 text-xs sm:text-sm font-medium">
+              <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4 mr-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01"></path>
+              </svg>
+              {{ t('badgeServer') }}
+            </div>
+          </div>
+
           <!-- Main Heading -->
-          <h1 class="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight">
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight mb-8">
             <span class="bg-gradient-to-r from-white via-gray-100 to-gray-300 bg-clip-text text-transparent">
               {{ t('makingYour') }}
             </span>
@@ -38,12 +60,12 @@
           </h1>
 
           <!-- Description -->
-          <p class="text-lg sm:text-xl lg:text-2xl text-gray-300 leading-relaxed font-light max-w-2xl">
+          <p class="text-lg sm:text-xl lg:text-2xl text-gray-300 leading-relaxed font-light max-w-2xl mb-8">
             {{ t('introHeaderTwo') }}
           </p>
 
           <!-- CTA Buttons -->
-          <div class="flex flex-col sm:flex-row gap-4 pt-4">
+          <div class="flex flex-col sm:flex-row gap-4 mb-8">
             <button 
               @click="scrollToServices"
               class="group relative px-8 py-4 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl hover:-translate-y-1 active:translate-y-0 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-black"
@@ -70,7 +92,7 @@
           </div>
 
           <!-- Stats -->
-          <div class="grid grid-cols-3 gap-8 pt-8 border-t border-gray-800">
+          <div class="grid grid-cols-3 gap-8 border-t border-gray-800 pt-8">
             <div class="text-center">
               <div class="text-2xl sm:text-3xl font-bold text-blue-400">100%</div>
               <div class="text-sm text-gray-400">{{ t('swiftNative') }}</div>

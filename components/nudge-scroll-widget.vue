@@ -1,10 +1,10 @@
 <template>
-  <Transition name="slide-fade">
+  <Transition name="slide-fade-left">
     <div
       v-if="isVisible && !isDismissed"
-      class="fixed right-4 bottom-4 z-50 max-w-xs w-full"
+      class="fixed left-4 bottom-4 z-50 max-w-xs w-full"
     >
-      <div class="bg-gradient-to-br from-gray-900/95 via-black/95 to-gray-900/95 border border-yellow-500/40 rounded-2xl shadow-[0_0_25px_rgba(250,204,21,0.25)] overflow-hidden backdrop-blur-md min-h-[260px]">
+      <div class="bg-gradient-to-br from-gray-900/95 via-black/95 to-gray-900/95 border border-blue-500/40 rounded-2xl shadow-[0_0_25px_rgba(59,130,246,0.25)] overflow-hidden backdrop-blur-md min-h-[260px]">
         <!-- Close Button -->
         <button
           @click="dismiss"
@@ -20,31 +20,31 @@
         <div class="p-5 space-y-4">
           <!-- Logo -->
           <div class="flex justify-center mb-2">
-            <div class="inline-flex items-center justify-center rounded-full bg-black/70 ring-2 ring-yellow-400/60 shadow-[0_0_20px_rgba(250,204,21,0.45)] px-4 py-3">
+            <div class="inline-flex items-center justify-center rounded-full bg-black/70 ring-2 ring-blue-400/60 shadow-[0_0_20px_rgba(59,130,246,0.45)] px-4 py-3">
               <img
-                src="/images/brew-hub-logo.svg"
-                alt="BrewHub Logo"
+                src="/images/nudge.svg"
+                :alt="t('nudgeWidgetLogoAlt')"
                 class="h-20 w-auto max-w-[96px] drop-shadow-[0_4px_18px_rgba(0,0,0,0.8)]"
               />
             </div>
           </div>
 
           <!-- Title -->
-          <h3 class="font-semibold text-lg mb-1 text-center bg-gradient-to-r from-white via-yellow-100 to-yellow-300 bg-clip-text text-transparent">
-            {{ t('brewhubWidgetTitle') }}
+          <h3 class="font-semibold text-lg mb-1 text-center bg-gradient-to-r from-white via-blue-100 to-blue-300 bg-clip-text text-transparent">
+            {{ t('nudgeWidgetTitle') }}
           </h3>
 
           <!-- Description -->
           <p class="text-gray-300/90 text-sm mb-2 text-center leading-relaxed">
-            {{ t('brewhubWidgetDescription') }}
+            {{ t('nudgeWidgetDescription') }}
           </p>
 
           <!-- CTA Button -->
           <NuxtLink
-            :to="localePath('/brewhub')"
-            class="block w-full bg-yellow-500 hover:bg-yellow-400 text-black font-semibold py-2.5 px-4 rounded-lg text-center transition-all duration-200 hover:scale-105 active:scale-95 shadow-lg hover:shadow-xl border border-yellow-300/60"
+            :to="localePath('/nudge')"
+            class="block w-full bg-blue-500 hover:bg-blue-400 text-white font-semibold py-2.5 px-4 rounded-lg text-center transition-all duration-200 hover:scale-105 active:scale-95 shadow-lg hover:shadow-xl border border-blue-300/60"
           >
-            {{ t('brewhubWidgetCTA') }}
+            {{ t('nudgeWidgetCTA') }}
           </NuxtLink>
         </div>
       </div>
@@ -62,8 +62,8 @@ const localePath = useLocalePath()
 const isVisible = ref<boolean>(false)
 const isDismissed = ref<boolean>(false)
 
-// Scroll threshold - show widget after scrolling 300px
-const SCROLL_THRESHOLD = 300
+// Scroll threshold - show widget after scrolling 500px (different from BrewHub to stagger them)
+const SCROLL_THRESHOLD = 500
 
 const handleScroll = (): void => {
   if (import.meta.client) {
@@ -76,14 +76,14 @@ const dismiss = (): void => {
   isDismissed.value = true
   // Store dismissal in localStorage to persist across page reloads
   if (import.meta.client) {
-    localStorage.setItem('brewhub-widget-dismissed', 'true')
+    localStorage.setItem('nudge-widget-dismissed', 'true')
   }
 }
 
 onMounted(() => {
   if (import.meta.client) {
     // Check if widget was previously dismissed
-    const dismissed = localStorage.getItem('brewhub-widget-dismissed')
+    const dismissed = localStorage.getItem('nudge-widget-dismissed')
     if (dismissed === 'true') {
       isDismissed.value = true
     } else {
@@ -103,27 +103,27 @@ onBeforeUnmount(() => {
 </script>
 
 <style scoped>
-/* Slide and fade animation */
-.slide-fade-enter-active {
+/* Slide and fade animation from left */
+.slide-fade-left-enter-active {
   transition: all 0.3s ease-out;
 }
 
-.slide-fade-leave-active {
+.slide-fade-left-leave-active {
   transition: all 0.3s ease-in;
 }
 
-.slide-fade-enter-from {
-  transform: translateX(100%);
+.slide-fade-left-enter-from {
+  transform: translateX(-100%);
   opacity: 0;
 }
 
-.slide-fade-leave-to {
-  transform: translateX(100%);
+.slide-fade-left-leave-to {
+  transform: translateX(-100%);
   opacity: 0;
 }
 
-.slide-fade-enter-to,
-.slide-fade-leave-from {
+.slide-fade-left-enter-to,
+.slide-fade-left-leave-from {
   transform: translateX(0);
   opacity: 1;
 }

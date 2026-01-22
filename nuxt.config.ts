@@ -5,7 +5,7 @@ export default defineNuxtConfig({
   // Static site generation for GitHub Pages
   nitro: {
     prerender: {
-      routes: ['/sitemap.xml', '/brewhub', '/brewhub-coming-soon']
+      routes: ['/sitemap.xml', '/brewhub', '/brewhub-coming-soon', '/needletail-kit', '/nudge']
     },
     compressPublicAssets: true,
     minify: true

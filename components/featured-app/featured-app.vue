@@ -161,7 +161,7 @@ const featuredAppData = computed((): FeaturedAppItem[] => [
     'nudgeDescription',
     'aboveHeader',
     'nudge.svg',
-    ''
+    '/nudge'
   ),
   createGridItem(
     'BrewHub',
@@ -169,7 +169,7 @@ const featuredAppData = computed((): FeaturedAppItem[] => [
     'streamStackDescription',
     'aboveHeader',
     'brew-hub-logo.svg',
-    ''
+    '/brewhub'
   ),
 ])
 
@@ -189,10 +189,19 @@ const goToSlide = (index: number): void => {
   currentIndex.value = index
 }
 
+const router = useRouter()
+const localePath = useLocalePath()
+
 const itemClicked = (index: number): void => {
   const item = featuredAppData.value[index]
-  if (item) {
-    // Handle item click - can be extended for analytics or navigation
+  if (item && item.externalUrl) {
+    // Check if it's an external URL (starts with http:// or https://)
+    if (item.externalUrl.startsWith('http://') || item.externalUrl.startsWith('https://')) {
+      window.location.href = item.externalUrl
+    } else {
+      // Internal route - use Vue Router
+      router.push(localePath(item.externalUrl))
+    }
   }
 }
 

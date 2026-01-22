@@ -26,7 +26,29 @@
             </span>
           </h2>
 
-          <p class="text-lg sm:text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+          <!-- Platform Badges -->
+          <div class="flex flex-wrap justify-center gap-3 pt-2">
+            <div class="inline-flex items-center px-3 py-1.5 rounded-full bg-green-600/10 border border-green-500/20 text-green-400 text-xs sm:text-sm font-medium">
+              <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4 mr-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
+              </svg>
+              {{ t('badgeMobile') }}
+            </div>
+            <div class="inline-flex items-center px-3 py-1.5 rounded-full bg-blue-600/10 border border-blue-500/20 text-blue-400 text-xs sm:text-sm font-medium">
+              <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4 mr-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path>
+              </svg>
+              {{ t('badgeWeb') }}
+            </div>
+            <div class="inline-flex items-center px-3 py-1.5 rounded-full bg-purple-600/10 border border-purple-500/20 text-purple-400 text-xs sm:text-sm font-medium">
+              <svg class="w-3.5 h-3.5 sm:w-4 sm:h-4 mr-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01"></path>
+              </svg>
+              {{ t('badgeServer') }}
+            </div>
+          </div>
+
+          <p class="text-lg sm:text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed pt-4">
             {{ t('businessOverviewDescription') }}
           </p>
         </div>

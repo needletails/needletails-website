@@ -114,3 +114,4 @@ useHead({
 <style scoped>
 /* Additional styling if needed */
 </style>
+
