@@ -23,16 +23,16 @@ import LocalBusinessSchema from '../components/local-business-schema.vue';
 useHead({
   title: 'NeedleTails - Professional Software Development Services',
   meta: [
-    { name: 'description', content: 'Expert software development services specializing in web applications, mobile apps, and backend solutions. Custom development, consulting, and project management.' },
-    { name: 'keywords', content: 'software development, web development, mobile apps, backend development, consulting, project management, custom software' },
-    { property: 'og:title', content: 'NeedleTails - Professional Software Development Services' },
-    { property: 'og:description', content: 'Expert software development services specializing in web applications, mobile apps, and backend solutions. Custom development, consulting, and project management.' },
+    { name: 'description', content: 'We solve your software challenges—apps, websites, and integrated solutions. NeedleTails builds and integrates mobile, web, and backend systems so you can focus on your business.' },
+    { name: 'keywords', content: 'software development, web development, mobile apps, backend development, consulting, project management, custom software, build my app, build my website, software solutions' },
+    { property: 'og:title', content: 'NeedleTails - We Build Your Apps, Websites & Software Solutions' },
+    { property: 'og:description', content: 'We solve your software challenges—apps, websites, and integrated solutions. NeedleTails builds and integrates mobile, web, and backend systems so you can focus on your business.' },
     { property: 'og:type', content: 'website' },
     { property: 'og:url', content: 'https://needletails.com' },
     { property: 'og:image', content: '/images/needletails_logo.svg' },
     { name: 'twitter:card', content: 'summary_large_image' },
-    { name: 'twitter:title', content: 'NeedleTails - Professional Software Development Services' },
-    { name: 'twitter:description', content: 'Expert software development services specializing in web applications, mobile apps, and backend solutions. Custom development, consulting, and project management.' },
+    { name: 'twitter:title', content: 'NeedleTails - We Build Your Apps, Websites & Software Solutions' },
+    { name: 'twitter:description', content: 'We solve your software challenges—apps, websites, and integrated solutions. NeedleTails builds and integrates mobile, web, and backend systems so you can focus on your business.' },
     { name: 'twitter:image', content: '/images/needletails_logo.svg' }
   ],
   link: [
@@ -47,7 +47,7 @@ useHead({
         name: 'NeedleTails',
         url: 'https://needletails.com',
         logo: 'https://needletails.com/images/needletails_logo.svg',
-        description: 'Expert software development services specializing in web applications, mobile apps, and backend solutions.',
+        description: 'We solve your software challenges—apps, websites, and integrated solutions. NeedleTails builds and integrates mobile, web, and backend systems.',
         sameAs: [
           'https://twitter.com/needletails',
           'https://github.com/needletails'

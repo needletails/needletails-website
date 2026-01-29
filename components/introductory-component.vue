@@ -49,7 +49,7 @@
           </div>
 
           <!-- Main Heading -->
-          <h1 class="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight mb-8">
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight mb-4">
             <span class="bg-gradient-to-r from-white via-gray-100 to-gray-300 bg-clip-text text-transparent">
               {{ t('makingYour') }}
             </span>
@@ -58,6 +58,11 @@
               {{ t('ideasReality') }}
             </span>
           </h1>
+
+          <!-- Tagline: solutions to challenges -->
+          <p class="text-base sm:text-lg text-blue-300/90 font-medium mb-6 max-w-2xl">
+            {{ t('heroTagline') }}
+          </p>
 
           <!-- Description -->
           <p class="text-lg sm:text-xl lg:text-2xl text-gray-300 leading-relaxed font-light max-w-2xl mb-8">

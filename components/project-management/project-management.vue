@@ -1,66 +1,78 @@
 <template>
-  <div class="max-w-4xl mx-auto space-y-12">
-    <!-- Product Management Section -->
-    <div class="bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl shadow-2xl border border-gray-700/50 overflow-hidden">
-      <header class="text-center py-12 px-6 sm:px-8 border-b border-gray-700/50">
-        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-white via-gray-100 to-gray-300 bg-clip-text text-transparent mb-4">
-          {{ productManagementExpertiseHeader }}
-        </h1>
-        <p class="text-lg sm:text-xl text-gray-300 leading-relaxed max-w-3xl mx-auto">
-          {{ productManagementExpertiseDescription }}
-        </p>
-      </header>
+  <div class="max-w-5xl mx-auto">
+    <!-- Page intro -->
+    <header class="text-center mb-16 sm:mb-20">
+      <p class="text-sm font-medium tracking-wider text-blue-400/90 uppercase mb-3">{{ t('managementPageLabel') }}</p>
+      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight mb-5 max-w-3xl mx-auto">
+        {{ t('managementPageTitle') }}
+      </h1>
+      <p class="text-lg sm:text-xl text-gray-400 leading-relaxed max-w-2xl mx-auto">
+        {{ t('managementPageLead') }}
+      </p>
+    </header>
 
-      <div class="p-6 sm:p-8 space-y-8">
-        <section class="bg-gray-800/30 rounded-xl p-6 border-l-4 border-blue-500">
-          <h2 class="text-xl sm:text-2xl font-semibold text-blue-400 mb-4">{{ t('overview') }}</h2>
-          <p class="text-gray-300 leading-relaxed">{{ productManagementOverview }}</p>
-        </section>
+    <div class="space-y-16 sm:space-y-20">
+      <!-- Product Management Section -->
+      <article class="rounded-2xl border border-gray-700/60 bg-gray-900/50 overflow-hidden shadow-xl">
+        <div class="px-6 sm:px-10 pt-10 sm:pt-12 pb-6">
+          <span class="inline-block text-xs font-semibold tracking-wider text-blue-400/80 uppercase mb-4">Product</span>
+          <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-4">
+            {{ productManagementExpertiseHeader }}
+          </h2>
+          <p class="text-lg text-gray-400 leading-relaxed max-w-2xl">
+            {{ productManagementExpertiseDescription }}
+          </p>
+        </div>
+        <div class="px-6 sm:px-10 pb-10 sm:pb-12 space-y-10">
+          <section class="rounded-xl bg-gray-800/40 border border-gray-700/40 p-6 sm:p-8">
+            <h3 class="text-sm font-semibold text-blue-400/90 uppercase tracking-wider mb-3">{{ t('overview') }}</h3>
+            <p class="text-gray-300 leading-relaxed">{{ productManagementOverview }}</p>
+          </section>
+          <section>
+            <h3 class="text-sm font-semibold text-blue-400/90 uppercase tracking-wider mb-6">{{ t('productManagementPoints') }}</h3>
+            <GridView :items="productGridItems" :columns="2" />
+          </section>
+        </div>
+      </article>
 
-        <section class="space-y-6">
-          <h2 class="text-xl sm:text-2xl font-semibold text-blue-400 mb-6">{{ t('productManagementPoints') }}</h2>
-          <GridView :items="productGridItems" :columns="2" />
-        </section>
-      </div>
+      <!-- Project Management Section -->
+      <article class="rounded-2xl border border-gray-700/60 bg-gray-900/50 overflow-hidden shadow-xl">
+        <div class="px-6 sm:px-10 pt-10 sm:pt-12 pb-6">
+          <span class="inline-block text-xs font-semibold tracking-wider text-blue-400/80 uppercase mb-4">Project</span>
+          <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-4">
+            {{ projectManagementExpertiseHeader }}
+          </h2>
+          <p class="text-lg text-gray-400 leading-relaxed max-w-2xl">
+            {{ projectManagementExpertiseDescription }}
+          </p>
+        </div>
+        <div class="px-6 sm:px-10 pb-10 sm:pb-12 space-y-10">
+          <section class="rounded-xl bg-gray-800/40 border border-gray-700/40 p-6 sm:p-8">
+            <h3 class="text-sm font-semibold text-blue-400/90 uppercase tracking-wider mb-3">{{ t('overview') }}</h3>
+            <p class="text-gray-300 leading-relaxed">{{ projectManagementOverview }}</p>
+          </section>
+          <section>
+            <h3 class="text-sm font-semibold text-blue-400/90 uppercase tracking-wider mb-6">{{ t('projectManagementPoints') }}</h3>
+            <GridView :items="projectGridItems" :columns="2" />
+          </section>
+        </div>
+      </article>
     </div>
 
-    <!-- Project Management Section -->
-    <div class="bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl shadow-2xl border border-gray-700/50 overflow-hidden">
-      <header class="text-center py-12 px-6 sm:px-8 border-b border-gray-700/50">
-        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-white via-gray-100 to-gray-300 bg-clip-text text-transparent mb-4">
-          {{ projectManagementExpertiseHeader }}
-        </h1>
-        <p class="text-lg sm:text-xl text-gray-300 leading-relaxed max-w-3xl mx-auto">
-          {{ projectManagementExpertiseDescription }}
-        </p>
-      </header>
-
-      <div class="p-6 sm:p-8 space-y-8">
-        <section class="bg-gray-800/30 rounded-xl p-6 border-l-4 border-blue-500">
-          <h2 class="text-xl sm:text-2xl font-semibold text-blue-400 mb-4">{{ t('overview') }}</h2>
-          <p class="text-gray-300 leading-relaxed">{{ projectManagementOverview }}</p>
-        </section>
-
-        <section class="space-y-6">
-          <h2 class="text-xl sm:text-2xl font-semibold text-blue-400 mb-6">{{ t('projectManagementPoints') }}</h2>
-          <GridView :items="projectGridItems" :columns="2" />
-        </section>
-      </div>
-    </div>
-
-    <!-- Contact Button -->
-    <div class="text-center pt-8">
-      <button 
-        @click="handleGetInTouch"
-        class="group px-8 py-4 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl hover:-translate-y-1 active:translate-y-0 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-black"
-      >
-        <span class="flex items-center justify-center">
+    <!-- CTA strip -->
+    <div class="mt-16 sm:mt-20 pt-12 border-t border-gray-700/50">
+      <div class="text-center">
+        <p class="text-gray-400 mb-6">{{ t('managementCtaLead') }}</p>
+        <button
+          @click="handleGetInTouch"
+          class="inline-flex items-center justify-center gap-2 px-8 py-4 text-base font-semibold text-white bg-blue-600 hover:bg-blue-500 rounded-xl shadow-lg hover:shadow-blue-500/20 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-black"
+        >
           {{ getInTouch }}
-          <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
           </svg>
-        </span>
-      </button>
+        </button>
+      </div>
     </div>
   </div>
 </template>

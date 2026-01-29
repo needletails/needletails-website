@@ -11,18 +11,18 @@ import ProjectManagement from '../components/project-management/project-manageme
 
 // SEO Meta Tags
 useHead({
-  title: 'Project Management Services - NeedleTails',
+  title: 'Product & Project Management | NeedleTails',
   meta: [
-    { name: 'description', content: 'Professional project management services for software development projects. Expert project planning, execution, and delivery from NeedleTails development team.' },
-    { name: 'keywords', content: 'project management, software project management, development project planning, agile project management, technical project management' },
-    { property: 'og:title', content: 'Project Management Services - NeedleTails' },
-    { property: 'og:description', content: 'Professional project management services for software development projects. Expert project planning, execution, and delivery from NeedleTails development team.' },
+    { name: 'description', content: 'Product and project management for software delivery. Roadmap, requirements, risk and resource management—so your projects stay on scope, schedule, and quality.' },
+    { name: 'keywords', content: 'project management, product management, software delivery, roadmap, risk management, resource management, agile delivery' },
+    { property: 'og:title', content: 'Product & Project Management | NeedleTails' },
+    { property: 'og:description', content: 'Product and project management for software delivery. Roadmap, requirements, and delivery discipline—on scope, schedule, and quality.' },
     { property: 'og:type', content: 'website' },
     { property: 'og:url', content: 'https://needletails.com/management' },
     { property: 'og:image', content: '/images/needletails_logo.svg' },
     { name: 'twitter:card', content: 'summary_large_image' },
-    { name: 'twitter:title', content: 'Project Management Services - NeedleTails' },
-    { name: 'twitter:description', content: 'Professional project management services for software development projects. Expert project planning, execution, and delivery from NeedleTails development team.' },
+    { name: 'twitter:title', content: 'Product & Project Management | NeedleTails' },
+    { name: 'twitter:description', content: 'Product and project management for software delivery—on scope, schedule, and quality.' },
     { name: 'twitter:image', content: '/images/needletails_logo.svg' }
   ],
   link: [

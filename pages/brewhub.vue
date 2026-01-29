@@ -75,7 +75,7 @@
 
       <!-- Go to BrewHub -->
       <a
-        href="https://brewhub.needletails.com"
+        href="https://brewhub.needletails.com/all-courses"
         class="inline-flex items-center px-6 py-3 bg-yellow-500 hover:bg-yellow-400 text-black font-semibold rounded-lg transition-all duration-200 hover:scale-105 active:scale-95 shadow-lg hover:shadow-xl border border-yellow-300/60 mb-10"
       >
         {{ t('brewhubBackToMainSite') }}

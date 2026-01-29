@@ -1,43 +1,46 @@
 <template>
-  <div class="max-w-4xl mx-auto">
-    <div class="bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl shadow-2xl border border-gray-700/50 overflow-hidden">
-      <header class="text-center py-12 px-6 sm:px-8 border-b border-gray-700/50">
-        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-white via-gray-100 to-gray-300 bg-clip-text text-transparent mb-4">
-          {{ consultingTitle }}
-        </h1>
-        <p class="text-lg sm:text-xl text-gray-300 leading-relaxed max-w-3xl mx-auto">
-          {{ consultingOverview }}
+  <div class="max-w-5xl mx-auto">
+    <!-- Page intro -->
+    <header class="text-center mb-16 sm:mb-20">
+      <p class="text-sm font-medium tracking-wider text-blue-400/90 uppercase mb-3">{{ t('consultationPageLabel') }}</p>
+      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight mb-5 max-w-3xl mx-auto">
+        {{ consultingTitle }}
+      </h1>
+      <p class="text-lg sm:text-xl text-gray-400 leading-relaxed max-w-2xl mx-auto">
+        {{ consultingOverview }}
+      </p>
+    </header>
+
+    <article class="rounded-2xl border border-gray-700/60 bg-gray-900/50 overflow-hidden shadow-xl">
+      <!-- Discuss your initiative -->
+      <section class="px-6 sm:px-10 py-8 sm:py-10 rounded-t-2xl bg-gray-800/30 border-b border-gray-700/50">
+        <h2 class="text-sm font-semibold text-blue-400/90 uppercase tracking-wider mb-4">{{ t('consultWithUs') }}</h2>
+        <p class="text-gray-300 leading-relaxed text-lg max-w-3xl">
+          {{ consultingWithUsMessage }}
         </p>
-      </header>
+      </section>
 
-      <div class="p-6 sm:p-8 space-y-8">
-        <section class="bg-gray-800/30 rounded-xl p-6 border-l-4 border-blue-500">
-          <h2 class="text-xl sm:text-2xl font-semibold text-blue-400 mb-4">{{ t('consultWithUs') }}</h2>
-          <p class="text-gray-300 leading-relaxed">
-            {{ consultingWithUsMessage }}
-          </p>
-        </section>
-
-        <section class="space-y-6">
-          <h2 class="text-xl sm:text-2xl font-semibold text-blue-400 mb-6">{{ t('whatToConsultAbout') }}</h2>
-          <GridView :items="consultingData" :columns="2" />
-        </section>
+      <!-- Disciplines grid -->
+      <div class="px-6 sm:px-10 py-10 sm:py-12">
+        <h2 class="text-sm font-semibold text-blue-400/90 uppercase tracking-wider mb-8">{{ t('whatToConsultAbout') }}</h2>
+        <GridView :items="consultingData" :columns="2" />
       </div>
-    </div>
+    </article>
 
-    <!-- Contact Button -->
-    <div class="text-center pt-8">
-      <button 
-        @click="handleGetInTouch"
-        class="group px-8 py-4 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl hover:-translate-y-1 active:translate-y-0 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-black"
-      >
-        <span class="flex items-center justify-center">
+    <!-- CTA strip -->
+    <div class="mt-16 sm:mt-20 pt-12 border-t border-gray-700/50">
+      <div class="text-center">
+        <p class="text-gray-400 mb-6">{{ t('consultationCtaLead') }}</p>
+        <button
+          @click="handleGetInTouch"
+          class="inline-flex items-center justify-center gap-2 px-8 py-4 text-base font-semibold text-white bg-blue-600 hover:bg-blue-500 rounded-xl shadow-lg hover:shadow-blue-500/20 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-black"
+        >
           {{ getInTouch }}
-          <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
           </svg>
-        </span>
-      </button>
+        </button>
+      </div>
     </div>
   </div>
 </template>

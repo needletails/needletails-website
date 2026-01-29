@@ -9,18 +9,18 @@
 <script setup lang="ts">
 // SEO Meta Tags
 useHead({
-  title: 'Software Development Solutions - NeedleTails',
+  title: 'Software Solutions | Server, Native & Web | NeedleTails',
   meta: [
-    { name: 'description', content: 'Comprehensive software development solutions including web applications, mobile apps, and backend services. Expert development team delivering custom solutions.' },
-    { name: 'keywords', content: 'software solutions, web development, mobile apps, backend services, custom software, development services' },
-    { property: 'og:title', content: 'Software Development Solutions - NeedleTails' },
-    { property: 'og:description', content: 'Comprehensive software development solutions including web applications, mobile apps, and backend services. Expert development team delivering custom solutions.' },
+    { name: 'description', content: 'Server-side, native app, and web development. Production-grade backends, iOS/Android apps, and web applications—built for scale, security, and your business.' },
+    { name: 'keywords', content: 'software solutions, server-side development, native app development, web development, backend APIs, mobile apps, custom software' },
+    { property: 'og:title', content: 'Software Solutions | NeedleTails' },
+    { property: 'og:description', content: 'Server-side, native app, and web development. Production-grade backends, iOS/Android apps, and web applications—built for scale and security.' },
     { property: 'og:type', content: 'website' },
     { property: 'og:url', content: 'https://needletails.com/solutions' },
     { property: 'og:image', content: '/images/needletails_logo.svg' },
     { name: 'twitter:card', content: 'summary_large_image' },
-    { name: 'twitter:title', content: 'Software Development Solutions - NeedleTails' },
-    { name: 'twitter:description', content: 'Comprehensive software development solutions including web applications, mobile apps, and backend services. Expert development team delivering custom solutions.' },
+    { name: 'twitter:title', content: 'Software Solutions | NeedleTails' },
+    { name: 'twitter:description', content: 'Server-side, native app, and web development. Production-grade backends, apps, and web—built for scale and security.' },
     { name: 'twitter:image', content: '/images/needletails_logo.svg' }
   ],
   link: [

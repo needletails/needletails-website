@@ -11,18 +11,18 @@ import ConsultationComponent from '../components/consultation/consultation-compo
 
 // SEO Meta Tags
 useHead({
-  title: 'Software Development Consultation - NeedleTails',
+  title: 'Software Consulting | Architecture, Security & Delivery | NeedleTails',
   meta: [
-    { name: 'description', content: 'Get expert software development consultation from NeedleTails. Professional advice on web development, mobile apps, and backend solutions for your business needs.' },
-    { name: 'keywords', content: 'software consultation, development advice, technical consulting, web development consultation, mobile app consultation' },
-    { property: 'og:title', content: 'Software Development Consultation - NeedleTails' },
-    { property: 'og:description', content: 'Get expert software development consultation from NeedleTails. Professional advice on web development, mobile apps, and backend solutions for your business needs.' },
+    { name: 'description', content: 'Software consulting: architecture, technology selection, security and compliance, and delivery practices. Structured guidance so your decisions are informed and aligned with business goals.' },
+    { name: 'keywords', content: 'software consulting, architecture consulting, technology selection, security review, software delivery, technical advisory' },
+    { property: 'og:title', content: 'Software Consulting | NeedleTails' },
+    { property: 'og:description', content: 'Software consulting: architecture, security, and delivery. Structured guidance so your decisions are informed and aligned with business goals.' },
     { property: 'og:type', content: 'website' },
     { property: 'og:url', content: 'https://needletails.com/consultation' },
     { property: 'og:image', content: '/images/needletails_logo.svg' },
     { name: 'twitter:card', content: 'summary_large_image' },
-    { name: 'twitter:title', content: 'Software Development Consultation - NeedleTails' },
-    { name: 'twitter:description', content: 'Get expert software development consultation from NeedleTails. Professional advice on web development, mobile apps, and backend solutions for your business needs.' },
+    { name: 'twitter:title', content: 'Software Consulting | NeedleTails' },
+    { name: 'twitter:description', content: 'Software consulting: architecture, security, and delivery—informed by experience, aligned with your goals.' },
     { name: 'twitter:image', content: '/images/needletails_logo.svg' }
   ],
   link: [
