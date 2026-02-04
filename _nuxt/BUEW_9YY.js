@@ -1,0 +1,1 @@
+import{_ as o}from"./CmDADJaI.js";import{M as r,N as s,a9 as n}from"./DwDRHN2R.js";const t={},c={class:"min-h-screen bg-black"};function a(e,_){return s(),r("div",c,[n(e.$slots,"default")])}const i=o(t,[["render",a]]);export{i as default};

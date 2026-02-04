@@ -1,0 +1,21 @@
+{
+  "name": "NeedleTails - Software Development Services",
+  "short_name": "NeedleTails",
+  "description": "Expert software development services specializing in web applications, mobile apps, and backend solutions.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#000000",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/images/needletail_right.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["business", "productivity", "utilities"],
+  "lang": "en",
+  "dir": "ltr"
+} 
