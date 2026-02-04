@@ -4,7 +4,7 @@
       <!-- Main header row with logo and navigation -->
       <div class="flex justify-between items-center h-20 lg:h-24">
         <!-- Logo - left side, hanging down -->
-        <div class="flex items-center -mb-16 lg:-mb-20">
+        <div class="flex items-center -mb-12 sm:-mb-16 lg:-mb-20">
           <div 
             class="cursor-pointer transition-all duration-300 hover:scale-105 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 rounded-lg p-1" 
             @click="routeHome()"

@@ -1,5 +1,5 @@
 <template>
-  <section class="padding-top relative bg-black min-h-screen flex items-center overflow-hidden">
+  <section class="pt-24 sm:pt-28 lg:pt-[180px] relative bg-black min-h-screen flex items-center overflow-hidden">
     <!-- Background Pattern -->
     <div class="absolute inset-0 opacity-5">
       <div class="absolute inset-0 bg-gradient-to-br from-blue-600/20 via-transparent to-purple-600/20"></div>
@@ -97,7 +97,7 @@
           </div>
 
           <!-- Stats -->
-          <div class="grid grid-cols-3 gap-8 border-t border-gray-800 pt-8">
+          <div class="grid grid-cols-3 gap-4 sm:gap-6 lg:gap-8 border-t border-gray-800 pt-8">
             <div class="text-center">
               <div class="text-2xl sm:text-3xl font-bold text-blue-400">100%</div>
               <div class="text-sm text-gray-400">{{ t('swiftNative') }}</div>
@@ -177,9 +177,3 @@ const contactClicked = (): void => {
   window.location.href = mailto_link
 }
 </script>
-
-<style scoped>
-.padding-top {
-  padding-top: 180px;
-}
-</style>

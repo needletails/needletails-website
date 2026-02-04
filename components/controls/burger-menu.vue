@@ -3,7 +3,7 @@
     <!-- Burger Button -->
     <button 
       @click="toggleMenu" 
-      class="relative z-[60] p-2 rounded-lg bg-gray-800/50 hover:bg-gray-700/70 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+      class="relative z-[60] min-w-[44px] min-h-[44px] p-3 rounded-lg bg-gray-800/50 hover:bg-gray-700/70 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 flex items-center justify-center"
       :aria-expanded="isOpen"
       aria-label="Toggle navigation menu"
     >
@@ -121,6 +121,7 @@ import LanguageSwitcher from './language-switcher.vue'
 
 const { t } = useI18n()
 const router = useRouter()
+const localePath = useLocalePath()
 const isOpen = ref(false)
 
 const toggleMenu = (): void => {
@@ -139,7 +140,7 @@ const closeMenu = (): void => {
 }
 
 const navigateTo = (path: string): void => {
-  router.push(path)
+  router.push(localePath(path))
   closeMenu()
 }
 

@@ -1,18 +1,18 @@
 <template>
-  <footer class="relative bg-gradient-to-b from-[rgb(18,18,18)] to-black min-h-screen">
+  <footer class="relative bg-gradient-to-b from-[rgb(18,18,18)] to-black min-h-0 lg:min-h-screen">
     <!-- Background Pattern -->
     <div class="absolute inset-0 opacity-5">
       <div class="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(51,188,229,0.1),transparent_50%)]"></div>
     </div>
 
     <!-- Main Footer Content -->
-    <div class="relative flex flex-col items-center justify-center min-h-screen px-4 sm:px-6 lg:px-8 pt-16 sm:pt-20 lg:pt-32">
+    <div class="relative flex flex-col items-center justify-center min-h-0 py-16 sm:py-20 lg:min-h-screen lg:py-32 px-4 sm:px-6 lg:px-8">
       <div class="max-w-7xl mx-auto w-full">
         
 
 
         <!-- Sponsor Section -->
-        <div class="flex flex-col lg:flex-row items-center justify-center space-y-12 lg:space-y-0 lg:space-x-24 mb-16">
+        <div class="flex flex-col lg:flex-row items-center justify-center space-y-12 lg:space-y-0 lg:space-x-24 mb-8 sm:mb-12 lg:mb-16">
           <!-- DigitalOcean -->
           <a 
             href="https://m.do.co/c/9186a24b57b1" 
@@ -48,7 +48,7 @@
         </div>
 
         <!-- Contact Section -->
-        <div class="text-center mb-16">
+        <div class="text-center mb-8 sm:mb-12 lg:mb-16">
           <div class="bg-gradient-to-r from-gray-900/50 to-gray-800/50 rounded-2xl p-8 lg:p-12 border border-gray-700/50">
             <h3 class="text-3xl sm:text-4xl font-bold text-white mb-6">
               {{ t('readyToGetStarted') }}

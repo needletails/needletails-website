@@ -72,7 +72,7 @@ const gridItems = computed((): ProjectGridItem[] => [
     t('spineTailedKitTitle'),
     t('spineTailedKitDescription'),
     'betweenText',
-    'spinetailed_kit.svg',
+    'pqsRTC.svg',
     'https://github.com/needletails',
     ''
   ),
@@ -113,39 +113,12 @@ const gridItems = computed((): ProjectGridItem[] => [
     ''
   ),
   createGridItem(
-    t('projectTitle_3'),
-    t('whiteTippedSocketsTitle'),
-    t('whiteTippedSocketsDescription'),
+    '',
+    t('doubleRatchetKitTitle'),
+    t('doubleRatchetKitDescription'),
     'betweenText',
-    'whitetipped_sockets.svg',
-    'https://github.com/needletails/white-tipped-sockets',
-    ''
-  ),
-  createGridItem(
-    t('projectTitle_5'),
-    t('swiftHlsTitle'),
-    t('swiftHlsDescription'),
-    'betweenText',
-    'swift_hls.svg',
-    'https://github.com/needletails/swift-hls',
-    ''
-  ),
-  createGridItem(
-    t('projectTitle_2'),
-    t('swiftIapTitle'),
-    t('swiftIapDescription'),
-    'betweenText',
-    'iap_engine.svg',
-    'https://github.com/needletails/iap-entitlement-engine',
-    ''
-  ),
-  createGridItem(
-    t('projectTitle_4'),
-    t('stompTitle'),
-    t('stompDescription'),
-    'betweenText',
-    'swift_stomp.svg',
-    'https://github.com/needletails/swift-stomp',
+    'doubleRatchetKit.svg',
+    'https://github.com/needletails/double-ratchet-kit',
     ''
   )
 ])

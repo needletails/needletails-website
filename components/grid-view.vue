@@ -75,7 +75,7 @@
           </div>
 
           <!-- Description -->
-          <p class="text-gray-300 leading-relaxed flex-1 line-clamp-6 sm:line-clamp-8" :style="{ color: item.fontColor }">
+          <p class="text-base sm:text-lg text-gray-300 leading-relaxed flex-1 line-clamp-6 sm:line-clamp-8" :style="{ color: item.fontColor }">
             {{ item.text }}
           </p>
 

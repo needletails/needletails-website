@@ -214,15 +214,7 @@ img {
   box-sizing: border-box;
 }
 
-/* Prevent text selection */
-* {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-/* Allow text selection for specific elements if needed */
+/* Text selection: allow by default for better UX (copy, accessibility). Images stay non-selectable via img rules above. */
 .allow-select {
   -webkit-user-select: text;
   -moz-user-select: text;
@@ -230,7 +222,6 @@ img {
   user-select: text;
 }
 
-/* Allow text selection for input fields and textareas */
 input, textarea, [contenteditable="true"] {
   -webkit-user-select: text;
   -moz-user-select: text;

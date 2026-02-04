@@ -16,6 +16,7 @@ import BusinessOverview from '../components/business-overview.vue';
 import FeaturedApp from '../components/featured-app/featured-app.vue';
 import ProjectsComponent from '../components/projects-component.vue';
 import SolutionsComponent from '../components/solutions-content/solutions-component.vue';
+import CostSavingsSection from '../components/cost-savings-section.vue';
 import FaqSection from '../components/faq-section.vue';
 import LocalBusinessSchema from '../components/local-business-schema.vue';
 

@@ -1,13 +1,13 @@
 <template>
-  <section class="relative bg-gradient-to-b from-[rgb(2,2,19)] to-black py-24 px-4 sm:px-6 lg:px-8" data-section="services">
-    <!-- Background Pattern -->
-    <div class="absolute inset-0 opacity-5">
-      <div class="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(51,188,229,0.1),transparent_50%)]"></div>
-    </div>
-
-    <div class="relative max-w-7xl mx-auto">
-      <!-- Section Header -->
-      <div class="text-center mb-16">
+  <section class="relative" data-section="services">
+    <!-- Swift Software Specialists: original gradient background -->
+    <div class="relative bg-gradient-to-b from-[rgb(2,2,19)] to-black py-16 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-8">
+      <div class="absolute inset-0 opacity-5 pointer-events-none">
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(51,188,229,0.1),transparent_50%)]"></div>
+      </div>
+      <div class="relative max-w-7xl mx-auto">
+        <!-- Section Header -->
+        <div class="text-center mb-16">
         <div 
           v-scrollanimation="{ threshold: 0.2, rootMargin: '50px' }"
           class="space-y-6"
@@ -52,13 +52,15 @@
             {{ t('businessOverviewDescription') }}
           </p>
         </div>
+        </div>
       </div>
 
       <!-- Swift Benefits Grid -->
-      <div 
-        v-scrollanimation="{ threshold: 0.2, rootMargin: '50px' }"
-        class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20"
-      >
+      <div class="max-w-7xl mx-auto">
+        <div 
+          v-scrollanimation="{ threshold: 0.2, rootMargin: '50px' }"
+          class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-12 sm:mb-16 lg:mb-20"
+        >
         <div class="group p-6 rounded-2xl bg-gray-900/50 border border-gray-800/50 hover:border-blue-500/50 transition-all duration-300 hover:bg-gray-900/70">
           <div class="w-12 h-12 bg-blue-600/20 rounded-xl flex items-center justify-center mb-4 group-hover:bg-blue-600/30 transition-colors duration-300">
             <svg class="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -94,48 +96,56 @@
             {{ t('threadSafetyDescription') }}
           </p>
         </div>
-      </div>
-
-      <!-- Services Section -->
-      <div 
-        v-scrollanimation="{ threshold: 0.2, rootMargin: '50px' }"
-        class="space-y-16"
-      >
-        <div class="text-center">
-          <h3 class="text-3xl sm:text-4xl font-bold text-white mb-8">
-            <span class="text-blue-400">{{ t('ourServices') }}</span>
-          </h3>
-          <p class="text-lg text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            {{ t('servicesDescription') }}
-          </p>
-        </div>
-
-        <!-- Services Grid -->
-        <GridView :items="gridItems" :columns="2" />
-
-        <!-- CTA Section -->
-        <div class="text-center pt-12">
-          <button 
-            @click="handleGetInTouch"
-            class="group relative px-8 py-4 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl hover:-translate-y-1 active:translate-y-0 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-black"
-          >
-            <span class="flex items-center justify-center">
-              {{ t('startYourProject') }}
-              <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-              </svg>
-            </span>
-          </button>
         </div>
       </div>
+    </div>
 
-      <!-- Open Source Section -->
-      <div 
-        v-scrollanimation="{ threshold: 0.2, rootMargin: '50px' }"
-        class="mt-24"
-      >
-        <div class="bg-gradient-to-r from-gray-900/50 to-gray-800/50 rounded-2xl p-8 lg:p-12 border border-gray-700/50">
-          <GridView :items="openSourceItems" :columns="1" />
+    <!-- Cost savings + How we solve your challenges + Open Source: black background -->
+    <div class="bg-black px-4 sm:px-6 lg:px-8">
+      <div class="max-w-7xl mx-auto">
+        <cost-savings-section />
+
+        <!-- Services Section (How we solve your problems) -->
+        <div 
+          v-scrollanimation="{ threshold: 0.2, rootMargin: '50px' }"
+          class="space-y-16 mt-24 sm:mt-28 lg:mt-32"
+        >
+          <div class="text-center">
+            <h3 class="text-3xl sm:text-4xl font-bold text-white mb-8">
+              <span class="text-blue-400">{{ t('ourServices') }}</span>
+            </h3>
+            <p class="text-lg text-gray-300 max-w-3xl mx-auto leading-relaxed">
+              {{ t('servicesDescription') }}
+            </p>
+          </div>
+
+          <!-- Services Grid -->
+          <GridView :items="gridItems" :columns="2" />
+
+          <!-- CTA Section -->
+          <div class="text-center pt-12">
+            <button 
+              @click="handleGetInTouch"
+              class="group relative px-8 py-4 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl hover:-translate-y-1 active:translate-y-0 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-black"
+            >
+              <span class="flex items-center justify-center">
+                {{ t('startYourProject') }}
+                <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                </svg>
+              </span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Open Source Section -->
+        <div 
+          v-scrollanimation="{ threshold: 0.2, rootMargin: '50px' }"
+          class="mt-24 pb-24"
+        >
+          <div class="bg-gradient-to-r from-gray-900/50 to-gray-800/50 rounded-2xl p-8 lg:p-12 border border-gray-700/50">
+            <GridView :items="openSourceItems" :columns="1" />
+          </div>
         </div>
       </div>
     </div>
@@ -144,6 +154,7 @@
 
 <script setup lang="ts">
 import { computed } from 'vue'
+import CostSavingsSection from './cost-savings-section.vue'
 
 const { t } = useI18n()
 
