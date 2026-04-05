@@ -75,7 +75,7 @@
 
       <!-- Checkout Button -->
       <a
-        href="https://staging-nudge.needletails.com"
+        href="https://nudge.needletails.com"
         target="_blank"
         rel="noopener noreferrer"
         class="inline-flex items-center px-6 py-3 bg-blue-500 hover:bg-blue-400 text-white font-semibold rounded-lg transition-all duration-200 hover:scale-105 active:scale-95 shadow-lg hover:shadow-xl border border-blue-300/60 mb-10"
