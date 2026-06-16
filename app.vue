@@ -4,7 +4,9 @@
     <Header />
     
     <!-- Page Content - Nuxt handles transitions automatically -->
-    <NuxtPage />
+    <NuxtLayout>
+      <NuxtPage />
+    </NuxtLayout>
     
     <!-- Footer - Fixed and persistent across page transitions -->
     <Footer />
@@ -42,4 +44,4 @@ watch(() => router.currentRoute.value.path, () => {
     })
   })
 })
-</script> 
+</script>

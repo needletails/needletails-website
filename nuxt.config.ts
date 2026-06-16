@@ -5,7 +5,7 @@ export default defineNuxtConfig({
   // Static site generation for GitHub Pages
   nitro: {
     prerender: {
-      routes: ['/sitemap.xml', '/brewhub', '/brewhub-coming-soon', '/needletail-kit', '/nudge']
+      routes: ['/sitemap.xml', '/brewhub', '/brewhub-coming-soon', '/nudge-kit', '/nudge']
     },
     compressPublicAssets: true,
     minify: true
@@ -109,8 +109,7 @@ export default defineNuxtConfig({
       rollupOptions: {
         output: {
           manualChunks: {
-            vendor: ['vue', 'vue-router'],
-            utils: ['@vueuse/core']
+            vendor: ['vue', 'vue-router']
           }
         }
       }

@@ -78,11 +78,11 @@ const gridItems = computed((): ProjectGridItem[] => [
   ),
   createGridItem(
     t('projectTitle_1'),
-    t('needleTailKitTitle'),
-    t('needleTailKitDescription'),
+    t('nudgeKitTitle'),
+    t('nudgeKitDescription'),
     'betweenText',
-    'needletail_kit.svg',
-    '/needletail-kit',
+    'nudge_kit.svg',
+    '/nudge-kit',
     ''
   ),
   createGridItem(
