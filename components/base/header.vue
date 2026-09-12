@@ -40,12 +40,22 @@
           >
             {{ t('menuItemTwo') }}
           </button>
-          <button 
-            @click="routeTraining()" 
+          <a
+            href="https://brewhub.needletails.com/all-courses"
+            target="_blank"
+            rel="noopener noreferrer"
             class="text-base font-medium text-gray-300 hover:text-white transition-all duration-300 hover:scale-105 px-4 py-2 rounded-lg hover:bg-gray-800/50 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-gray-800/50"
           >
             {{ t('menuItemOne') }}
-          </button>
+          </a>
+          <a
+            href="https://store.needletails.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-base font-medium text-gray-300 hover:text-white transition-all duration-300 hover:scale-105 px-4 py-2 rounded-lg hover:bg-gray-800/50 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-gray-800/50"
+          >
+            {{ t('menuItemStore') }}
+          </a>
           
           <!-- Contact Button -->
           <button 
@@ -86,10 +96,6 @@ const routeConsultation = (): void => {
 
 const routeManagement = (): void => {
   router.push(localePath('/management'))
-}
-
-const routeTraining = (): void => {
-  router.push(localePath('/brewhub'))
 }
 
 const contactClicked = (): void => {

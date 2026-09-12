@@ -104,6 +104,15 @@
             >
               {{ t('termsConditions') }}
             </NuxtLink>
+            <span class="hidden sm:inline">|</span>
+            <a
+              href="https://store.needletails.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="hover:text-white transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 rounded px-2 py-1"
+            >
+              {{ t('menuItemStore') }}
+            </a>
           </div>
           <div class="flex items-center space-x-2">
             <span>{{ t('needleTailsCopyright') }}{{ new Date().getFullYear() }}</span>
