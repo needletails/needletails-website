@@ -1,0 +1,22 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://needletails.com/sitemap.xml
+
+# Crawl-delay
+Crawl-delay: 1
+
+# Disallow admin areas (if any)
+Disallow: /admin/
+Disallow: /api/
+Disallow: /_nuxt/
+Disallow: /_ipx/
+
+# Allow important pages
+Allow: /solutions/
+Allow: /consultation/
+Allow: /training/
+Allow: /management/
+Allow: /privacy/
+Allow: /terms/

@@ -1,0 +1,1 @@
+import{U as e,b as t,q as n}from"./D_NZN0s3.js";import{a as r}from"#entry";var i={},a={class:`min-h-screen bg-black`};function o(r,i){return e(),t(`div`,a,[n(r.$slots,`default`)])}var s=r(i,[[`render`,o]]);export{s as default};
