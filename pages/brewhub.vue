@@ -1,5 +1,6 @@
 <template>
-  <div class="min-h-screen bg-black flex items-center justify-center px-4 pt-40 sm:pt-48 md:pt-56 lg:pt-60">
+  <!-- We want to disable BrewHub right now. -->
+  <div v-if="false" class="min-h-screen bg-black flex items-center justify-center px-4 pt-40 sm:pt-48 md:pt-56 lg:pt-60">
     <div class="max-w-2xl w-full text-center">
       <!-- Logo -->
       <div class="flex justify-center mb-8">
@@ -112,29 +113,30 @@ onMounted(() => {
   }
 })
 
-useHead({
-  title: t('brewhubMetaTitle'),
-  meta: [
-    {
-      name: 'description',
-      content: t('brewhubMetaDescription')
-    },
-    { name: 'keywords', content: t('brewhubMetaKeywords') },
-    { property: 'og:title', content: t('brewhubMetaTitle') },
-    {
-      property: 'og:description',
-      content: t('brewhubOgDescription')
-    },
-    { property: 'og:type', content: 'website' },
-    { property: 'og:url', content: 'https://needletails.com/brewhub' },
-    { property: 'og:image', content: 'https://needletails.com/images/brew-hub-logo.svg' },
-    { name: 'twitter:card', content: 'summary_large_image' },
-    { name: 'twitter:title', content: t('brewhubMetaTitle') },
-    { name: 'twitter:description', content: t('brewhubOgDescription') },
-    { name: 'twitter:image', content: 'https://needletails.com/images/brew-hub-logo.svg' }
-  ],
-  link: [
-    { rel: 'canonical', href: 'https://needletails.com/brewhub' }
-  ]
-})
+// We want to disable BrewHub right now.
+// useHead({
+//   title: t('brewhubMetaTitle'),
+//   meta: [
+//     {
+//       name: 'description',
+//       content: t('brewhubMetaDescription')
+//     },
+//     { name: 'keywords', content: t('brewhubMetaKeywords') },
+//     { property: 'og:title', content: t('brewhubMetaTitle') },
+//     {
+//       property: 'og:description',
+//       content: t('brewhubOgDescription')
+//     },
+//     { property: 'og:type', content: 'website' },
+//     { property: 'og:url', content: 'https://needletails.com/brewhub' },
+//     { property: 'og:image', content: 'https://needletails.com/images/brew-hub-logo.svg' },
+//     { name: 'twitter:card', content: 'summary_large_image' },
+//     { name: 'twitter:title', content: t('brewhubMetaTitle') },
+//     { name: 'twitter:description', content: t('brewhubOgDescription') },
+//     { name: 'twitter:image', content: 'https://needletails.com/images/brew-hub-logo.svg' }
+//   ],
+//   link: [
+//     { rel: 'canonical', href: 'https://needletails.com/brewhub' }
+//   ]
+// })
 </script>

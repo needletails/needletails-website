@@ -211,14 +211,15 @@ const gridItems = computed((): BusinessGridItem[] => [
     'needletail_right.svg',
     ''
   ),
-  createGridItem(
-    '',
-    t('serviceHeaderTraining'),
-    t('serviceDescriptionTraining'),
-    'betweenText',
-    'brew-hub-logo.svg',
-    '/brewhub'
-  ),
+  // We want to disable BrewHub right now.
+  // createGridItem(
+  //   '',
+  //   t('serviceHeaderTraining'),
+  //   t('serviceDescriptionTraining'),
+  //   'betweenText',
+  //   'brew-hub-logo.svg',
+  //   '/brewhub'
+  // ),
   createGridItem(
     '',
     t('serviceHeaderWebDevelopment'),

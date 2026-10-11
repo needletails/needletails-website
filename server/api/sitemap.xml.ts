@@ -26,12 +26,13 @@ export default defineEventHandler(async (event) => {
       changefreq: 'monthly',
       priority: 0.8
     },
-    {
-      url: '/brewhub',
-      lastmod: new Date().toISOString(),
-      changefreq: 'monthly',
-      priority: 0.8
-    },
+    // We want to disable BrewHub right now.
+    // {
+    //   url: '/brewhub',
+    //   lastmod: new Date().toISOString(),
+    //   changefreq: 'monthly',
+    //   priority: 0.8
+    // },
     {
       url: '/privacy',
       lastmod: new Date().toISOString(),

@@ -1,5 +1,6 @@
 <template>
-  <div class="min-h-screen bg-black flex items-center justify-center px-4">
+  <!-- We want to disable BrewHub right now. -->
+  <div v-if="false" class="min-h-screen bg-black flex items-center justify-center px-4">
     <div class="max-w-2xl w-full text-center">
       <!-- Logo -->
       <div class="flex justify-center mb-8">
@@ -97,20 +98,20 @@ definePageMeta({
   layout: 'brewhub-coming-soon'
 })
 
-// SEO Meta Tags
-useHead({
-  title: 'BrewHub - Available | NeedleTails',
-  meta: [
-    { name: 'description', content: 'BrewHub is now available. Visit BrewHub for professional software development courses and training.' },
-    { name: 'robots', content: 'noindex, follow' },
-    { property: 'og:title', content: 'BrewHub - Available | NeedleTails' },
-    { property: 'og:description', content: 'BrewHub is now available. Visit BrewHub for professional software development courses and training.' },
-    { property: 'og:type', content: 'website' },
-    { name: 'twitter:card', content: 'summary' },
-    { name: 'twitter:title', content: 'BrewHub - Available | NeedleTails' },
-    { name: 'twitter:description', content: 'BrewHub is now available. Visit BrewHub for professional software development courses and training.' }
-  ]
-})
+// We want to disable BrewHub right now.
+// useHead({
+//   title: 'BrewHub - Available | NeedleTails',
+//   meta: [
+//     { name: 'description', content: 'BrewHub is now available. Visit BrewHub for professional software development courses and training.' },
+//     { name: 'robots', content: 'noindex, follow' },
+//     { property: 'og:title', content: 'BrewHub - Available | NeedleTails' },
+//     { property: 'og:description', content: 'BrewHub is now available. Visit BrewHub for professional software development courses and training.' },
+//     { property: 'og:type', content: 'website' },
+//     { name: 'twitter:card', content: 'summary' },
+//     { name: 'twitter:title', content: 'BrewHub - Available | NeedleTails' },
+//     { name: 'twitter:description', content: 'BrewHub is now available. Visit BrewHub for professional software development courses and training.' }
+//   ]
+// })
 </script>
 
 <style scoped>

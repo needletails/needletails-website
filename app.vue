@@ -14,8 +14,10 @@
     <!-- Cookie Consent Banner -->
     <CookieConsentBanner />
     
-    <!-- BrewHub Scroll Widget -->
+    <!-- We want to disable BrewHub right now. -->
+    <!--
     <BrewhubScrollWidget />
+    -->
     
     <!-- Nudge Scroll Widget -->
     <NudgeScrollWidget />
@@ -27,7 +29,8 @@
 import Header from '~/components/base/header.vue'
 import Footer from '~/components/base/footer.vue'
 import CookieConsentBanner from '~/components/controls/cookie-consent-banner.vue'
-import BrewhubScrollWidget from '~/components/brewhub-scroll-widget.vue'
+// We want to disable BrewHub right now.
+// import BrewhubScrollWidget from '~/components/brewhub-scroll-widget.vue'
 import NudgeScrollWidget from '~/components/nudge-scroll-widget.vue'
 
 // Auto-scroll to top on route changes

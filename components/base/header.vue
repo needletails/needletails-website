@@ -40,6 +40,8 @@
           >
             {{ t('menuItemTwo') }}
           </button>
+          <!-- We want to disable BrewHub and the Store right now. -->
+          <!--
           <a
             href="https://brewhub.needletails.com/all-courses"
             target="_blank"
@@ -56,6 +58,7 @@
           >
             {{ t('menuItemStore') }}
           </a>
+          -->
           
           <!-- Contact Button -->
           <button 

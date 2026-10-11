@@ -163,14 +163,15 @@ const featuredAppData = computed((): FeaturedAppItem[] => [
     'nudge.svg',
     '/nudge'
   ),
-  createGridItem(
-    'BrewHub',
-    'streamStackTitle',
-    'streamStackDescription',
-    'aboveHeader',
-    'brew-hub-logo.svg',
-    '/brewhub'
-  ),
+  // We want to disable BrewHub right now.
+  // createGridItem(
+  //   'BrewHub',
+  //   'streamStackTitle',
+  //   'streamStackDescription',
+  //   'aboveHeader',
+  //   'brew-hub-logo.svg',
+  //   '/brewhub'
+  // ),
 ])
 
 const nextItem = (): void => {

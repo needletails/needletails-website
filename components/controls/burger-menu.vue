@@ -78,6 +78,8 @@
               Consultation
             </button>
             
+            <!-- We want to disable BrewHub and the Store right now. -->
+            <!--
             <button 
               @click="navigateToExternal('https://brewhub.needletails.com/all-courses')"
               class="w-full text-left px-4 py-3 text-lg font-medium text-gray-300 hover:text-white hover:bg-gray-800/30 rounded-lg transition-all duration-300 flex items-center"
@@ -97,6 +99,7 @@
               </svg>
               {{ t('menuItemStore') }}
             </button>
+            -->
           </div>
 
           <!-- Contact Button -->

@@ -74,14 +74,15 @@ const logoItem = ref([
 ])
 
 const items = ref([
-  {
-    icon: '',
-    title: 'Courses',
-    to: '/brewhub',
-    isCustomSVG: false,
-    externalPath: false,
-    isClickable: true,
-  },
+  // We want to disable BrewHub right now.
+  // {
+  //   icon: '',
+  //   title: 'Courses',
+  //   to: '/brewhub',
+  //   isCustomSVG: false,
+  //   externalPath: false,
+  //   isClickable: true,
+  // },
   {
     icon: '',
     title: 'Consultation',

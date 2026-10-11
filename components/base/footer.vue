@@ -104,6 +104,8 @@
             >
               {{ t('termsConditions') }}
             </NuxtLink>
+            <!-- We want to disable the Store right now. -->
+            <!--
             <span class="hidden sm:inline">|</span>
             <a
               href="https://store.needletails.com"
@@ -113,6 +115,7 @@
             >
               {{ t('menuItemStore') }}
             </a>
+            -->
           </div>
           <div class="flex items-center space-x-2">
             <span>{{ t('needleTailsCopyright') }}{{ new Date().getFullYear() }}</span>
