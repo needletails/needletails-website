@@ -418,5 +418,9 @@
   "costSavingsProductionVideoWhy": "高效信令與 API 層降低成本。單伺服器控制流量能力更高。",
   "costSavingsProductionSocial": "社群與內容平台",
   "costSavingsProductionSocialNeeds": "極高請求量、動態、媒體元資料、全球分發。單請求成本累積。",
-  "costSavingsProductionSocialWhy": "高吞吐與低記憶體降低百萬請求成本。規模下整體規模更小。"
+  "costSavingsProductionSocialWhy": "高吞吐與低記憶體降低百萬請求成本。規模下整體規模更小。",
+  "menuItemChat": "聊天",
+  "chatWidgetTitle": "與 NeedleBot 聊天",
+  "chatWidgetOpen": "開啟與 NeedleBot 的聊天",
+  "chatWidgetClose": "關閉聊天"
 }

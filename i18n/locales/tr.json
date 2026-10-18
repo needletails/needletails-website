@@ -418,5 +418,9 @@
   "costSavingsProductionVideoWhy": "Verimli sinyal ve API katmanları maliyeti düşürür. Kontrol trafiği için sunucu başına daha fazla kapasite.",
   "costSavingsProductionSocial": "Sosyal ve içerik platformları",
   "costSavingsProductionSocialNeeds": "Çok yüksek istek hacmi, akışlar, medya meta verileri, küresel dağıtım. İstek başına maliyet birikir.",
-  "costSavingsProductionSocialWhy": "Yüksek verim ve düşük bellek milyon istek başına maliyeti düşürür. Ölçekte daha küçük filo."
+  "costSavingsProductionSocialWhy": "Yüksek verim ve düşük bellek milyon istek başına maliyeti düşürür. Ölçekte daha küçük filo.",
+  "menuItemChat": "Sohbet",
+  "chatWidgetTitle": "NeedleBot ile sohbet edin",
+  "chatWidgetOpen": "NeedleBot sohbetini aç",
+  "chatWidgetClose": "Sohbeti kapat"
 }

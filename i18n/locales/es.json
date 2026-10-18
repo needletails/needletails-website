@@ -418,5 +418,9 @@
   "costSavingsProductionVideoWhy": "Capas de señalización y API eficientes reducen costes. Más capacidad por servidor para tráfico de control.",
   "costSavingsProductionSocial": "Plataformas sociales y de contenido",
   "costSavingsProductionSocialNeeds": "Volumen de peticiones muy alto, feeds, metadatos de medios, distribución global. El coste por petición se acumula.",
-  "costSavingsProductionSocialWhy": "Alto rendimiento y poca memoria reducen el coste por millón de peticiones. Flota más pequeña a escala."
+  "costSavingsProductionSocialWhy": "Alto rendimiento y poca memoria reducen el coste por millón de peticiones. Flota más pequeña a escala.",
+  "menuItemChat": "Chat",
+  "chatWidgetTitle": "Chatea con NeedleBot",
+  "chatWidgetOpen": "Abrir chat con NeedleBot",
+  "chatWidgetClose": "Cerrar chat"
 }

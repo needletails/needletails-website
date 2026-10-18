@@ -418,5 +418,9 @@
   "costSavingsProductionVideoWhy": "Couches de signalisation et API efficaces réduisent les coûts. Plus de capacité par serveur pour le trafic de contrôle.",
   "costSavingsProductionSocial": "Plateformes sociales et de contenu",
   "costSavingsProductionSocialNeeds": "Très fort volume de requêtes, flux, métadonnées médias, distribution globale. Le coût par requête s’accumule.",
-  "costSavingsProductionSocialWhy": "Fort débit et faible mémoire réduisent le coût par million de requêtes. Flotte plus petite à l’échelle."
+  "costSavingsProductionSocialWhy": "Fort débit et faible mémoire réduisent le coût par million de requêtes. Flotte plus petite à l’échelle.",
+  "menuItemChat": "Chat",
+  "chatWidgetTitle": "Discuter avec NeedleBot",
+  "chatWidgetOpen": "Ouvrir le chat avec NeedleBot",
+  "chatWidgetClose": "Fermer le chat"
 }

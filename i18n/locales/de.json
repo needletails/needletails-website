@@ -418,5 +418,9 @@
   "costSavingsProductionVideoWhy": "Effiziente Signalisierungs- und API-Ebenen senken Kosten. Mehr Kapazität pro Server für Steuerverkehr.",
   "costSavingsProductionSocial": "Soziale und Content-Plattformen",
   "costSavingsProductionSocialNeeds": "Sehr hohes Anfragevolumen, Feeds, Medien-Metadaten, globale Verteilung. Kosten pro Anfrage summieren sich.",
-  "costSavingsProductionSocialWhy": "Hoher Durchsatz und wenig Speicher senken Kosten pro Million Anfragen. Kleinere Flotte im Maßstab."
+  "costSavingsProductionSocialWhy": "Hoher Durchsatz und wenig Speicher senken Kosten pro Million Anfragen. Kleinere Flotte im Maßstab.",
+  "menuItemChat": "Chat",
+  "chatWidgetTitle": "Mit NeedleBot chatten",
+  "chatWidgetOpen": "Chat mit NeedleBot öffnen",
+  "chatWidgetClose": "Chat schließen"
 }

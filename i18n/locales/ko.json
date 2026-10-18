@@ -418,5 +418,9 @@
   "costSavingsProductionVideoWhy": "효율적인 시그널링·API 계층으로 비용 절감. 제어 트래픽에 서버당 용량 증가.",
   "costSavingsProductionSocial": "소셜 및 콘텐츠 플랫폼",
   "costSavingsProductionSocialNeeds": "매우 높은 요청량, 피드, 미디어 메타데이터, 글로벌 배포. 요청당 비용이 쌓입니다.",
-  "costSavingsProductionSocialWhy": "높은 처리량과 낮은 메모리로 백만 요청당 비용 감소. 규모에서 더 작은 플릿."
+  "costSavingsProductionSocialWhy": "높은 처리량과 낮은 메모리로 백만 요청당 비용 감소. 규모에서 더 작은 플릿.",
+  "menuItemChat": "채팅",
+  "chatWidgetTitle": "NeedleBot과 채팅",
+  "chatWidgetOpen": "NeedleBot 채팅 열기",
+  "chatWidgetClose": "채팅 닫기"
 }

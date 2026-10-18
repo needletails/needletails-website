@@ -418,5 +418,9 @@
   "costSavingsProductionVideoWhy": "シグナリングとAPI層の効率でコスト削減。制御トラフィックのサーバーあたり能力が上がる。",
   "costSavingsProductionSocial": "ソーシャル・コンテンツプラットフォーム",
   "costSavingsProductionSocialNeeds": "非常に多いリクエスト、フィード、メディアメタデータ、グローバル配信。リクエスト単価が積み上がる。",
-  "costSavingsProductionSocialWhy": "高スループット・低メモリで100万リクエストあたりコストを削減。規模が大きくてもフリートを小さく保てる。"
+  "costSavingsProductionSocialWhy": "高スループット・低メモリで100万リクエストあたりコストを削減。規模が大きくてもフリートを小さく保てる。",
+  "menuItemChat": "チャット",
+  "chatWidgetTitle": "NeedleBot とチャット",
+  "chatWidgetOpen": "NeedleBot とのチャットを開く",
+  "chatWidgetClose": "チャットを閉じる"
 }

@@ -418,5 +418,9 @@
   "costSavingsProductionVideoWhy": "Camadas de sinalização e API eficientes reduzem custos. Mais capacidade por servidor para tráfego de controle.",
   "costSavingsProductionSocial": "Plataformas sociais e de conteúdo",
   "costSavingsProductionSocialNeeds": "Volume de requisições muito alto, feeds, metadados de mídia, distribuição global. Custo por requisição se acumula.",
-  "costSavingsProductionSocialWhy": "Alto throughput e pouca memória reduzem custo por milhão de requisições. Frota menor em escala."
+  "costSavingsProductionSocialWhy": "Alto throughput e pouca memória reduzem custo por milhão de requisições. Frota menor em escala.",
+  "menuItemChat": "Chat",
+  "chatWidgetTitle": "Converse com o NeedleBot",
+  "chatWidgetOpen": "Abrir chat com o NeedleBot",
+  "chatWidgetClose": "Fechar chat"
 }

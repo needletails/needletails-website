@@ -40,6 +40,17 @@
           >
             {{ t('menuItemTwo') }}
           </button>
+          <a
+            :href="chatUrl"
+            target="_blank"
+            rel="noopener"
+            class="inline-flex items-center gap-2 text-base font-medium text-gray-300 hover:text-white transition-all duration-300 hover:scale-105 px-4 py-2 rounded-lg hover:bg-gray-800/50 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-gray-800/50"
+          >
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z"></path>
+            </svg>
+            {{ t('menuItemChat') }}
+          </a>
           <!-- We want to disable BrewHub and the Store right now. -->
           <!--
           <a
@@ -87,6 +98,7 @@ import LanguageSwitcher from '../controls/language-switcher.vue'
 const { t } = useI18n()
 const router = useRouter()
 const localePath = useLocalePath()
+const { chatUrl } = useChatLinks()
 
 const routeHome = (): void => {
   router.push(localePath('/'))

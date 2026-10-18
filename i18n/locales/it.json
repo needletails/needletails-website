@@ -412,5 +412,9 @@
   "costSavingsProductionVideoWhy": "Livelli di segnalazione e API efficienti riducono i costi. Più capacità per server per il traffico di controllo.",
   "costSavingsProductionSocial": "Piattaforme social e di contenuti",
   "costSavingsProductionSocialNeeds": "Volume di richieste molto alto, feed, metadati media, distribuzione globale. Il costo per richiesta si accumula.",
-  "costSavingsProductionSocialWhy": "Alto throughput e poca memoria riducono il costo per milione di richieste. Flotta più piccola in scala."
+  "costSavingsProductionSocialWhy": "Alto throughput e poca memoria riducono il costo per milione di richieste. Flotta più piccola in scala.",
+  "menuItemChat": "Chat",
+  "chatWidgetTitle": "Chatta con NeedleBot",
+  "chatWidgetOpen": "Apri la chat con NeedleBot",
+  "chatWidgetClose": "Chiudi la chat"
 }

@@ -418,5 +418,9 @@
   "nudgeMetaTitle": "Nudge - Secure End-to-End Encrypted Messaging | NeedleTails",
   "nudgeMetaDescription": "Optionally self-monitored, end-to-end encrypted messaging application with complete data control. Secure communication with no data persistence risks.",
   "nudgeMetaKeywords": "Nudge, secure messaging, end-to-end encryption, encrypted messaging app, optionally self-monitored messaging, private messaging, secure communication, data privacy, messaging security, encrypted chat, secure chat app, privacy-focused messaging",
-  "nudgeOgDescription": "Optionally self-monitored, end-to-end encrypted messaging with complete data control and enterprise-grade security."
+  "nudgeOgDescription": "Optionally self-monitored, end-to-end encrypted messaging with complete data control and enterprise-grade security.",
+  "menuItemChat": "Chat",
+  "chatWidgetTitle": "Chat with NeedleBot",
+  "chatWidgetOpen": "Open chat with NeedleBot",
+  "chatWidgetClose": "Close chat"
 }

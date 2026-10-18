@@ -21,6 +21,9 @@
     
     <!-- Nudge Scroll Widget -->
     <NudgeScrollWidget />
+
+    <!-- NeedleBot, framed from NeedleTails Chat -->
+    <ChatBotWidget />
   </div>
 </template>
 
@@ -32,6 +35,7 @@ import CookieConsentBanner from '~/components/controls/cookie-consent-banner.vue
 // We want to disable BrewHub right now.
 // import BrewhubScrollWidget from '~/components/brewhub-scroll-widget.vue'
 import NudgeScrollWidget from '~/components/nudge-scroll-widget.vue'
+import ChatBotWidget from '~/components/chat-bot-widget.vue'
 
 // Auto-scroll to top on route changes
 const router = useRouter()

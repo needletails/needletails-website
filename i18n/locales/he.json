@@ -418,5 +418,9 @@
   "costSavingsProductionVideoWhy": "שכבות signaling ו-API יעילות מורידות עלות. יותר קיבולת לשרת לטראפיק שליטה.",
   "costSavingsProductionSocial": "פלטפורמות חברתיות ותוכן",
   "costSavingsProductionSocialNeeds": "נפח בקשות גבוה מאוד, פידים, מטא-דאטה של מדיה, הפצה גלובלית. עלות לבקשה מצטברת.",
-  "costSavingsProductionSocialWhy": "throughput גבוה וזיכרון נמוך מורידים עלות למיליון בקשות. צי קטן יותר בקנה מידה."
+  "costSavingsProductionSocialWhy": "throughput גבוה וזיכרון נמוך מורידים עלות למיליון בקשות. צי קטן יותר בקנה מידה.",
+  "menuItemChat": "צ'אט",
+  "chatWidgetTitle": "שוחחו עם NeedleBot",
+  "chatWidgetOpen": "פתיחת צ'אט עם NeedleBot",
+  "chatWidgetClose": "סגירת הצ'אט"
 }

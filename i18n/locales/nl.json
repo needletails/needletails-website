@@ -418,5 +418,9 @@
   "costSavingsProductionVideoWhy": "Efficiënte signaling- en API-lagen verlagen kosten. Meer capaciteit per server voor controlverkeer.",
   "costSavingsProductionSocial": "Sociale en contentplatforms",
   "costSavingsProductionSocialNeeds": "Zeer hoog requestvolume, feeds, mediametadata, mondiale distributie. Kosten per request lopen op.",
-  "costSavingsProductionSocialWhy": "Hoge throughput en weinig geheugen verlagen kosten per miljoen requests. Kleinere vloot op schaal."
+  "costSavingsProductionSocialWhy": "Hoge throughput en weinig geheugen verlagen kosten per miljoen requests. Kleinere vloot op schaal.",
+  "menuItemChat": "Chat",
+  "chatWidgetTitle": "Chat met NeedleBot",
+  "chatWidgetOpen": "Chat met NeedleBot openen",
+  "chatWidgetClose": "Chat sluiten"
 }

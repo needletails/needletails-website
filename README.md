@@ -74,6 +74,14 @@ yarn dev
 bun run dev
 ```
 
+### NeedleTails Chat
+
+The header's **Chat** link opens NeedleTails Chat, and the chat bubble in the corner frames its
+NeedleBot widget (`<chat URL>/embed`). Both use `https://chat.needletails.com` unless
+`NUXT_PUBLIC_CHAT_URL` is set when you build or run the site, for example
+`NUXT_PUBLIC_CHAT_URL=http://localhost:3000` against a local chat client. The chat client only lets
+the sites in its `NUXT_EMBED_ANCESTORS` frame the widget.
+
 ### Production Build
 
 Build the application for production:
