@@ -29,6 +29,7 @@ export default defineNuxtConfig({
       // NeedleTails Chat: the header's Chat link and the NeedleBot widget (<chatUrl>/embed in an iframe).
       // Override with NUXT_PUBLIC_CHAT_URL when generating, e.g. http://localhost:3000 for local testing.
       chatUrl: 'https://chat.needletails.com'
+//        chatUrl: 'http://localhost:3001'
     }
   },
   modules: [

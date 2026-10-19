@@ -6,7 +6,6 @@
     <projects-component />
     <solutions-component />
     <faq-section />
-    <local-business-schema />
   </main>
 </template>
 
@@ -18,7 +17,6 @@ import ProjectsComponent from '../components/projects-component.vue';
 import SolutionsComponent from '../components/solutions-content/solutions-component.vue';
 import CostSavingsSection from '../components/cost-savings-section.vue';
 import FaqSection from '../components/faq-section.vue';
-import LocalBusinessSchema from '../components/local-business-schema.vue';
 
 // SEO Meta Tags
 useHead({
@@ -48,56 +46,12 @@ useHead({
         name: 'NeedleTails',
         url: 'https://needletails.com',
         logo: 'https://needletails.com/images/needletails_logo.svg',
-        description: 'We solve your software challenges—apps, websites, and integrated solutions. NeedleTails builds and integrates mobile, web, and backend systems.',
+        email: 'support@needletails.com',
+        description: 'Swift Software Specialists. We solve your challenges—apps, websites, and integrated software solutions.',
         sameAs: [
-          'https://twitter.com/needletails',
-          'https://github.com/needletails'
-        ],
-        contactPoint: {
-          '@type': 'ContactPoint',
-          contactType: 'customer service',
-          availableLanguage: 'English',
-          email: 'support@needletails.com'
-        },
-        serviceType: [
-          'Software Development',
-          'Web Development',
-          'Mobile App Development',
-          'Backend Development',
-          'Consulting',
-          'Project Management'
-        ],
-        areaServed: 'Worldwide',
-        hasOfferCatalog: {
-          '@type': 'OfferCatalog',
-          name: 'Software Development Services',
-          itemListElement: [
-            {
-              '@type': 'Offer',
-              itemOffered: {
-                '@type': 'Service',
-                name: 'Web Development',
-                description: 'Custom web applications and websites'
-              }
-            },
-            {
-              '@type': 'Offer',
-              itemOffered: {
-                '@type': 'Service',
-                name: 'Mobile App Development',
-                description: 'iOS and Android mobile applications'
-              }
-            },
-            {
-              '@type': 'Offer',
-              itemOffered: {
-                '@type': 'Service',
-                name: 'Backend Development',
-                description: 'Server-side solutions and APIs'
-              }
-            }
-          ]
-        }
+          'https://github.com/needletails',
+          'https://twitter.com/needletails'
+        ]
       })
     }
   ]
