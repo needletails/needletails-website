@@ -1,0 +1,1 @@
+import{G as e,S as t,Y as n}from"./Dn_sumUp.js";import{i as r}from"#entry";var i={},a={class:`min-h-screen bg-black`};function o(r,i){return e(),t(`div`,a,[n(r.$slots,`default`)])}var s=r(i,[[`render`,o]]);export{s as default};

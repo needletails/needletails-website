@@ -1,0 +1,1 @@
+import{k as e,x as t}from"./Dn_sumUp.js";import{n}from"./DAqFwCXB.js";import{i as r}from"#entry";import{t as i}from"./CnVumILs.js";import"./jZx_a1Ea.js";var a=r(e({__name:`brewhub-coming-soon`,setup(e){let{t:r}=n();return i({layout:`brewhub-coming-soon`}),(e,n)=>t(``,!0)}}),[[`__scopeId`,`data-v-61dec348`]]);export{a as default};
